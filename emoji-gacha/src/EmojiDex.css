@@ -1,0 +1,268 @@
+.emoji-dex-container {
+  padding: var(--spacing-lg);
+  max-width: 1200px;
+  margin: 0 auto;
+  flex: 1; /* 사용 가능한 공간을 모두 채우도록 설정 */
+}
+
+.filter-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--spacing-lg);
+  gap: var(--spacing-md); /* 간격 좁힘 */
+  flex-wrap: wrap;
+}
+
+.filter-tab {
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: var(--font-size-lg); /* 글씨 크기 키움 */
+  font-weight: bold;
+  color: var(--button-text-color); /* 메인 버튼과 동일한 텍스트 색상 */
+  background-color: var(--ad-button-background-color); /* 메인 버튼과 동일한 배경색 */
+  border: none;
+  border-radius: var(--border-radius-lg); /* 메인 버튼과 동일한 둥근 모서리 */
+  cursor: pointer;
+  transition: background-color 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease, transform 0.1s ease; /* 전환 효과 및 transform 추가 */
+  box-shadow: var(--shadow-md); /* 메인 버튼과 동일한 그림자 */
+}
+
+.filter-tab:hover {
+  background-color: var(--ad-button-hover-background-color); /* 메인 버튼과 동일한 호버 배경색 */
+  filter: brightness(1.1); /* 미세하게 밝아지는 효과 */
+  box-shadow: var(--shadow-lg); /* 호버 시 그림자 강조 */
+}
+
+.filter-tab:active {
+  transform: scale(0.98); /* 클릭 시 살짝 눌리는 효과 */
+}
+
+.filter-tab.active {
+  border: 2px solid var(--accent-primary); /* 활성화된 탭 테두리 강조 */
+  filter: brightness(1.1); /* 활성화된 탭 미세하게 밝게 */
+}
+
+.collected-toggle {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  margin-left: var(--spacing-lg); /* 등급 필터와 간격 */
+  color: var(--text-primary);
+  font-size: var(--font-size-md);
+  cursor: pointer;
+}
+
+.collected-toggle input[type="checkbox"] {
+  /* 기본 체크박스 숨기기 */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 1.2em;
+  height: 1.2em;
+  border: 2px solid var(--accent-secondary);
+  border-radius: 4px;
+  background-color: var(--background-secondary);
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.collected-toggle input[type="checkbox"]:checked {
+  background-color: var(--accent-primary);
+  border-color: var(--accent-primary);
+}
+
+.collected-toggle input[type="checkbox"]:checked::before {
+  content: '\2713'; /* 체크 표시 (✓) */
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1em;
+  color: var(--background-main); /* 체크 표시 색상 */
+}
+
+/* PC 그리드 레이아웃 */
+@media (min-width: 769px) {
+  .emoji-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr)); /* 120px -> 7.5rem */
+    gap: var(--spacing-md);
+    justify-items: center;
+    align-items: center;
+    padding: var(--spacing-sm);
+  }
+}
+
+.emoji-card {
+  background-color: var(--background-secondary);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-sm);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease-in-out, filter 0.3s ease; /* transform 전환 추가 */
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 6.25rem; /* 100px -> 6.25rem */
+  height: 6.25rem; /* 100px -> 6.25rem */
+  position: relative;
+  overflow: hidden; /* Ensure content stays within bounds */
+  border: 2px solid transparent; /* 기본 테두리 */
+}
+
+.emoji-card:hover {
+  transform: scale(1.05);
+  border-color: var(--accent-secondary); /* 호버 시 테두리 색상 변경 */
+}
+
+.emoji-card:active {
+  transform: scale(0.98); /* 클릭 시 살짝 눌리는 효과 */
+}
+
+.emoji-card.collected {
+  filter: none;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.emoji-card.uncollected {
+  filter: grayscale(100%);
+  opacity: 0.5;
+  cursor: default;
+}
+
+.emoji-card.featured {
+  border: 2px solid gold;
+  box-shadow: 0 0 10px gold; /* 대표 이모지 강조 */
+}
+
+.emoji-card .emoji-display {
+  font-size: var(--font-size-xxl);
+  margin-bottom: var(--spacing-xs);
+}
+
+.emoji-card .emoji-name {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+  overflow: hidden; /* 넘치는 텍스트 숨김 */
+  text-overflow: ellipsis; /* 넘치는 텍스트 ...으로 표시 */
+  width: 100%; /* 부모 너비에 맞춤 */
+  position: absolute; /* 이름 숨기기 */
+  bottom: 0; /* 하단에 배치 */
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* 배경색 */
+  padding: var(--spacing-xs);
+  transform: translateY(100%); /* 기본적으로 숨김 */
+  transition: transform 0.3s ease-out;
+}
+
+.emoji-card:hover .emoji-name {
+  transform: translateY(0); /* 호버 시 나타남 */
+}
+
+/* 모바일 캐러셀 레이아웃 */
+@media (max-width: 768px) {
+  .filter-tab {
+    font-size: var(--font-size-md); /* 모바일에서 필터 탭 글씨 크기 조정 */
+  }
+
+  .rarity-section h3 {
+    font-size: var(--font-size-xl);
+  }
+
+  .emoji-carousel-container {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: var(--spacing-md); /* For pagination buttons */
+  }
+
+  .emoji-carousel {
+    display: flex;
+    overflow-x: scroll; /* 스크롤바 표시 */
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    padding-bottom: var(--spacing-sm);
+  }
+
+  .emoji-carousel-page {
+    flex: 0 0 100%; /* 각 페이지가 전체 너비를 차지 */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(5rem, 1fr)); /* 80px -> 5rem */
+    gap: var(--spacing-sm);
+    justify-items: center;
+    align-items: center;
+    scroll-snap-align: start;
+    padding: var(--spacing-sm);
+  }
+
+  .pagination-controls {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+  }
+
+  .pagination-controls button {
+    background-color: var(--accent-secondary);
+    color: var(--text-primary);
+    border: none;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--border-radius-md);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .pagination-controls button:hover {
+    background-color: var(--accent-primary);
+  }
+
+  .pagination-controls button:disabled {
+    background-color: var(--text-secondary);
+    cursor: not-allowed;
+  }
+
+  .emoji-card {
+    width: 5rem; /* 80px -> 5rem */
+    height: 5rem; /* 80px -> 5rem */
+  }
+
+  .emoji-card .emoji-display {
+    font-size: var(--font-size-xl);
+  }
+
+  /* 모바일에서 터치 시 이름 표시 */
+  .emoji-card.name-visible .emoji-name {
+    transform: translateY(0);
+  }
+}
+
+.no-emojis-message {
+  color: var(--text-secondary);
+  font-size: var(--font-size-lg);
+  text-align: center;
+  margin-top: var(--spacing-xl);
+  width: 100%;
+}
+
+/* 희귀도별 카드 테두리 색상 */
+.emoji-card.rarity-common {
+  border-color: #A9A9A9; /* DarkGray */
+}
+.emoji-card.rarity-uncommon {
+  border-color: #8BC34A; /* LightGreen */
+}
+.emoji-card.rarity-rare {
+  border-color: #2196F3; /* Blue */
+}
+.emoji-card.rarity-epic {
+  border-color: #9C27B0; /* Purple */
+}
+.emoji-card.rarity-legendary {
+  border-color: #FFEB3B; /* Yellow */
+  box-shadow: 0 0 15px #FFEB3B; /* Legendary 이모지 강조 */
+}

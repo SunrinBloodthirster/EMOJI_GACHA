@@ -1,0 +1,251 @@
+@import './styles/designTokens.css';
+
+@font-face {
+    font-family: 'DungGeunMo';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  scroll-behavior: smooth; /* 부드러운 스크롤 */
+}
+
+body {
+  margin: 0;
+  background-color: var(--background-main);
+  color: var(--text-primary);
+  font-family: 'DungGeunMo', sans-serif;
+  image-rendering: pixelated;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: grayscale; /* Keep for other browsers */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'DungGeunMo', sans-serif;
+  font-weight: normal; /* DungGeunMo 폰트는 굵기 조절이 의미 없음 */
+  color: var(--accent-primary); /* 제목 색상 강조 */
+}
+
+a {
+  text-decoration: none;
+  color: var(--accent-secondary);
+}
+
+a:hover {
+  color: var(--accent-primary);
+}
+
+button {
+  background-color: var(--accent-primary);
+  color: var(--background-main);
+  font-family: 'DungGeunMo', sans-serif;
+  font-size: var(--font-size-md); /* 디자인 토큰 사용 */
+  border: none;
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-sm) var(--spacing-md);
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--button-hover-background-color); /* 디자인 토큰 사용 */
+}
+
+code {
+  font-family: 'DungGeunMo', monospace;
+}
+
+/* Header Styles */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-md) var(--spacing-lg);
+  background-color: var(--background-secondary);
+  border-bottom: 1px solid var(--accent-secondary);
+  box-shadow: var(--shadow-sm);
+}
+
+.app-header .app-title-link {
+  text-decoration: none;
+}
+
+.app-header h1 {
+  font-size: var(--font-size-xxxl); /* 더 크게 */
+  color: var(--accent-primary);
+  margin: 0;
+  text-shadow: 0 0 10px rgba(23, 162, 184, 0.7), 0 0 20px rgba(23, 162, 184, 0.5); /* 그림자 추가 */
+}
+
+.app-header .header-right {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.app-header .nav-link {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: var(--font-size-md);
+  transition: color 0.3s ease;
+}
+
+.app-header .nav-link:hover {
+  color: var(--accent-primary);
+}
+
+.app-header .profile-container {
+  position: relative;
+}
+
+.app-header .profile-icon-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem; /* 터치 영역 확보 */
+  height: 3rem; /* 터치 영역 확보 */
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.app-header .profile-picture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.app-header .material-icons {
+  font-size: 3rem; /* 아이콘 크기 */
+  color: var(--text-secondary);
+}
+
+.app-header .profile-dropdown {
+  position: absolute;
+  top: calc(100% + var(--spacing-sm));
+  right: 0;
+  background-color: var(--background-secondary);
+  border: 1px solid var(--accent-secondary);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  min-width: 150px;
+  z-index: 100;
+}
+
+.app-header .profile-dropdown button {
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  padding: var(--spacing-sm) var(--spacing-md);
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: var(--font-size-md);
+}
+
+.app-header .profile-dropdown button:hover {
+  background-color: var(--background-main);
+}
+
+/* Footer Styles */
+.app-footer {
+  padding: var(--spacing-md) var(--spacing-lg);
+  background-color: var(--background-secondary);
+  border-top: 1px solid var(--accent-secondary);
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+.app-footer nav {
+  margin-bottom: var(--spacing-sm);
+}
+
+.app-footer nav a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  margin: 0 var(--spacing-sm);
+  transition: color 0.3s ease;
+}
+
+.app-footer nav a:hover {
+  color: var(--accent-primary);
+}
+
+.app-footer p {
+  margin: 0;
+}
+
+/* Mobile Specific Styles for Header/Footer */
+@media (max-width: 768px) {
+  .app-header h1 {
+    font-size: var(--font-size-xxl); /* 모바일에서 적절한 크기 */
+  }
+
+  .app-header .desktop-only-nav {
+    display: none; /* 모바일에서는 숨김 */
+  }
+
+  .app-header .profile-icon-button {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .app-header .material-icons {
+    font-size: 2.5rem;
+  }
+
+  .app-footer nav {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+
+  .app-footer nav a {
+    margin: 0;
+  }
+}
+
+/* General Content Page Styles */
+.content-page-container {
+  padding: var(--spacing-lg);
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.content-page-container h2 {
+  font-size: var(--font-size-xxl);
+  margin-bottom: var(--spacing-lg);
+  color: var(--accent-primary);
+}
+
+.content-page-container p {
+  font-size: var(--font-size-md);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .content-page-container h2 {
+    font-size: var(--font-size-xl);
+  }
+  .content-page-container p {
+    font-size: var(--font-size-sm);
+  }
+}

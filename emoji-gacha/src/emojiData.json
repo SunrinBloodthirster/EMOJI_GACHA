@@ -1,0 +1,1211 @@
+{
+  "rarityProbabilities": {
+    "Common": 0.7,
+    "Uncommon": 0.2,
+    "Rare": 0.07,
+    "Epic": 0.02,
+    "Legendary": 0.01
+  },
+  "emojis": [
+  {
+    "id": 1,
+    "emoji": "💎",
+    "name": "Diamond",
+    "rarity": "Legendary"
+  },
+  {
+    "id": 2,
+    "emoji": "🦄",
+    "name": "Unicorn",
+    "rarity": "Legendary"
+  },
+  {
+    "id": 3,
+    "emoji": "🐉",
+    "name": "Dragon",
+    "rarity": "Legendary"
+  },
+  {
+    "id": 4,
+    "emoji": "👑",
+    "name": "Crown",
+    "rarity": "Legendary"
+  },
+  {
+    "id": 5,
+    "emoji": "🚀",
+    "name": "Rocket",
+    "rarity": "Legendary"
+  },
+  {
+    "id": 6,
+    "emoji": "🌌",
+    "name": "Milky Way",
+    "rarity": "Legendary"
+  },
+  {
+    "id": 7,
+    "emoji": "🏆",
+    "name": "Trophy",
+    "rarity": "Legendary"
+  },
+  {
+    "id": 8,
+    "emoji": "🌍",
+    "name": "Globe Showing Europe-Africa",
+    "rarity": "Legendary"
+  },
+  {
+    "id": 9,
+    "emoji": "🌠",
+    "name": "Shooting Star",
+    "rarity": "Legendary"
+  },
+  {
+    "id": 10,
+    "emoji": "🏛️",
+    "name": "Classical Building",
+    "rarity": "Legendary"
+  },
+  {
+    "id": 11,
+    "emoji": "🗿",
+    "name": "Moyai",
+    "rarity": "Uncommon"
+  },
+  {
+    "id": 12,
+    "emoji": "🦊",
+    "name": "Fox",
+    "rarity": "Uncommon"
+  },
+  {
+    "id": 13,
+    "emoji": "🦉",
+    "name": "Owl",
+    "rarity": "Uncommon"
+  },
+  {
+    "id": 14,
+    "emoji": "🦖",
+    "name": "T-Rex",
+    "rarity": "Uncommon"
+  },
+  {
+    "id": 15,
+    "emoji": "🐙",
+    "name": "Octopus",
+    "rarity": "Uncommon"
+  },
+  {
+    "id": 16,
+    "emoji": "🦂",
+    "name": "Scorpion",
+    "rarity": "Epic"
+  },
+  {
+    "id": 17,
+    "emoji": "🤖",
+    "name": "Robot",
+    "rarity": "Epic"
+  },
+  {
+    "id": 18,
+    "emoji": "👽",
+    "name": "Alien",
+    "rarity": "Epic"
+  },
+  {
+    "id": 19,
+    "emoji": "🕵️‍♀️",
+    "name": "Woman Detective",
+    "rarity": "Epic"
+  },
+  {
+    "id": 20,
+    "emoji": "👨‍🚀",
+    "name": "Man Astronaut",
+    "rarity": "Epic"
+  },
+  {
+    "id": 21,
+    "emoji": "🧙",
+    "name": "Mage",
+    "rarity": "Rare"
+  },
+  {
+    "id": 22,
+    "emoji": "🧚",
+    "name": "Fairy",
+    "rarity": "Rare"
+  },
+  {
+    "id": 23,
+    "emoji": "🧛",
+    "name": "Vampire",
+    "rarity": "Rare"
+  },
+  {
+    "id": 24,
+    "emoji": "🎸",
+    "name": "Guitar",
+    "rarity": "Rare"
+  },
+  {
+    "id": 25,
+    "emoji": "🛸",
+    "name": "Flying Saucer",
+    "rarity": "Rare"
+  },
+  {
+    "id": 26,
+    "emoji": "🔮",
+    "name": "Crystal Ball",
+    "rarity": "Rare"
+  },
+  {
+    "id": 27,
+    "emoji": "🧬",
+    "name": "DNA",
+    "rarity": "Rare"
+  },
+  {
+    "id": 28,
+    "emoji": "💣",
+    "name": "Bomb",
+    "rarity": "Rare"
+  },
+  {
+    "id": 29,
+    "emoji": "💰",
+    "name": "Money Bag",
+    "rarity": "Rare"
+  },
+  {
+    "id": 30,
+    "emoji": "📜",
+    "name": "Scroll",
+    "rarity": "Rare"
+  },
+  {
+    "id": 31,
+    "emoji": "⚱️",
+    "name": "Funeral Urn",
+    "rarity": "Rare"
+  },
+  {
+    "id": 32,
+    "emoji": "🔑",
+    "name": "Key",
+    "rarity": "Rare"
+  },
+  {
+    "id": 33,
+    "emoji": "🗺️",
+    "name": "World Map",
+    "rarity": "Rare"
+  },
+  {
+    "id": 34,
+    "emoji": "🗡️",
+    "name": "Dagger",
+    "rarity": "Rare"
+  },
+  {
+    "id": 35,
+    "emoji": "🛡️",
+    "name": "Shield",
+    "rarity": "Rare"
+  },
+  {
+    "id": 36,
+    "emoji": "🏹",
+    "name": "Bow and Arrow",
+    "rarity": "Rare"
+  },
+  {
+    "id": 37,
+    "emoji": "⛓️",
+    "name": "Chains",
+    "rarity": "Rare"
+  },
+  {
+    "id": 38,
+    "emoji": "💽",
+    "name": "Computer Disk",
+    "rarity": "Rare"
+  },
+  {
+    "id": 39,
+    "emoji": "📼",
+    "name": "Videocassette",
+    "rarity": "Rare"
+  },
+  {
+    "id": 40,
+    "emoji": "🔬",
+    "name": "Microscope",
+    "rarity": "Rare"
+  },
+  {
+    "id": 41,
+    "emoji": "😂",
+    "name": "Face with Tears of Joy",
+    "rarity": "Uncommon"
+  },
+  {
+    "id": 42,
+    "emoji": "😍",
+    "name": "Smiling Face with Heart-Eyes",
+    "rarity": "Uncommon"
+  },
+  {
+    "id": 43,
+    "emoji": "😭",
+    "name": "Loudly Crying Face",
+    "rarity": "Uncommon"
+  },
+  {
+    "id": 44,
+    "emoji": "😊",
+    "name": "Smiling Face with Smiling Eyes",
+    "rarity": "Uncommon"
+  },
+  {
+    "id": 45,
+    "emoji": "🤔",
+    "name": "Thinking Face",
+    "rarity": "Uncommon"
+  },
+  {
+    "id": 46,
+    "emoji": "🤯",
+    "name": "Exploding Head",
+    "rarity": "Epic"
+  },
+  {
+    "id": 47,
+    "emoji": "😱",
+    "name": "Face Screaming in Fear",
+    "rarity": "Epic"
+  },
+  {
+    "id": 48,
+    "emoji": "😡",
+    "name": "Pouting Face",
+    "rarity": "Epic"
+  },
+  {
+    "id": 49,
+    "emoji": "😴",
+    "name": "Sleeping Face",
+    "rarity": "Epic"
+  },
+  {
+    "id": 50,
+    "emoji": "🥳",
+    "name": "Partying Face",
+    "rarity": "Epic"
+  },
+  {
+    "id": 51,
+    "emoji": "😀",
+    "name": "Grinning Face",
+    "rarity": "Common"
+  },
+  {
+    "id": 52,
+    "emoji": "😃",
+    "name": "Grinning Face with Big Eyes",
+    "rarity": "Common"
+  },
+  {
+    "id": 53,
+    "emoji": "😄",
+    "name": "Grinning Face with Smiling Eyes",
+    "rarity": "Common"
+  },
+  {
+    "id": 54,
+    "emoji": "😁",
+    "name": "Beaming Face with Smiling Eyes",
+    "rarity": "Common"
+  },
+  {
+    "id": 55,
+    "emoji": "😆",
+    "name": "Grinning Squinting Face",
+    "rarity": "Common"
+  },
+  {
+    "id": 56,
+    "emoji": "😅",
+    "name": "Grinning Face with Sweat",
+    "rarity": "Common"
+  },
+  {
+    "id": 57,
+    "emoji": "🤣",
+    "name": "Rolling on the Floor Laughing",
+    "rarity": "Common"
+  },
+  {
+    "id": 58,
+    "emoji": "😇",
+    "name": "Smiling Face with Halo",
+    "rarity": "Common"
+  },
+  {
+    "id": 59,
+    "emoji": "😉",
+    "name": "Winking Face",
+    "rarity": "Common"
+  },
+  {
+    "id": 60,
+    "emoji": "😌",
+    "name": "Relieved Face",
+    "rarity": "Common"
+  },
+  {
+    "id": 61,
+    "emoji": "😋",
+    "name": "Face Savoring Food",
+    "rarity": "Common"
+  },
+  {
+    "id": 62,
+    "emoji": "😛",
+    "name": "Face with Tongue",
+    "rarity": "Common"
+  },
+  {
+    "id": 63,
+    "emoji": "🤨",
+    "name": "Face with Raised Eyebrow",
+    "rarity": "Common"
+  },
+  {
+    "id": 64,
+    "emoji": "🧐",
+    "name": "Face with Monocle",
+    "rarity": "Common"
+  },
+  {
+    "id": 65,
+    "emoji": "🤓",
+    "name": "Nerd Face",
+    "rarity": "Common"
+  },
+  {
+    "id": 66,
+    "emoji": "😎",
+    "name": "Smiling Face with Sunglasses",
+    "rarity": "Common"
+  },
+  {
+    "id": 67,
+    "emoji": "🤩",
+    "name": "Star-Struck",
+    "rarity": "Common"
+  },
+  {
+    "id": 68,
+    "emoji": "😏",
+    "name": "Smirking Face",
+    "rarity": "Common"
+  },
+  {
+    "id": 69,
+    "emoji": "😒",
+    "name": "Unamused Face",
+    "rarity": "Common"
+  },
+  {
+    "id": 70,
+    "emoji": "😥",
+    "name": "Sad but Relieved Face",
+    "rarity": "Common"
+  },
+  {
+    "id": 71,
+    "emoji": "😮",
+    "name": "Face with Open Mouth",
+    "rarity": "Common"
+  },
+  {
+    "id": 72,
+    "emoji": "🤐",
+    "name": "Zipper-Mouth Face",
+    "rarity": "Common"
+  },
+  {
+    "id": 73,
+    "emoji": "😬",
+    "name": "Grimacing Face",
+    "rarity": "Common"
+  },
+  {
+    "id": 74,
+    "emoji": "😑",
+    "name": "Expressionless Face",
+    "rarity": "Common"
+  },
+  {
+    "id": 75,
+    "emoji": "😶",
+    "name": "Face Without Mouth",
+    "rarity": "Common"
+  },
+  {
+    "id": 76,
+    "emoji": "🤫",
+    "name": "Shushing Face",
+    "rarity": "Common"
+  },
+  {
+    "id": 77,
+    "emoji": "🤧",
+    "name": "Sneezing Face",
+    "rarity": "Common"
+  },
+  {
+    "id": 78,
+    "emoji": "🤮",
+    "name": "Face Vomiting",
+    "rarity": "Common"
+  },
+  {
+    "id": 79,
+    "emoji": "🤪",
+    "name": "Zany Face",
+    "rarity": "Common"
+  },
+  {
+    "id": 80,
+    "emoji": "😵",
+    "name": "Dizzy Face",
+    "rarity": "Common"
+  },
+  {
+    "id": 81,
+    "emoji": "🫠",
+    "name": "Melting Face",
+    "rarity": "Common"
+  },
+  {
+    "id": 82,
+    "emoji": "🫡",
+    "name": "Saluting Face",
+    "rarity": "Common"
+  },
+  {
+    "id": 83,
+    "emoji": "🥹",
+    "name": "Face Holding Back Tears",
+    "rarity": "Common"
+  },
+  {
+    "id": 84,
+    "emoji": "🫣",
+    "name": "Face with Peeking Eye",
+    "rarity": "Common"
+  },
+  {
+    "id": 85,
+    "emoji": "🫥",
+    "name": "Dotted Line Face",
+    "rarity": "Common"
+  },
+  {
+    "id": 86,
+    "emoji": "🤠",
+    "name": "Cowboy Hat Face",
+    "rarity": "Common"
+  },
+  {
+    "id": 87,
+    "emoji": "🤡",
+    "name": "Clown Face",
+    "rarity": "Common"
+  },
+  {
+    "id": 88,
+    "emoji": "👻",
+    "name": "Ghost",
+    "rarity": "Common"
+  },
+  {
+    "id": 89,
+    "emoji": "💀",
+    "name": "Skull",
+    "rarity": "Common"
+  },
+  {
+    "id": 90,
+    "emoji": "💪",
+    "name": "Flexed Biceps",
+    "rarity": "Common"
+  },
+  {
+    "id": 91,
+    "emoji": "👀",
+    "name": "Eyes",
+    "rarity": "Common"
+  },
+  {
+    "id": 92,
+    "emoji": "🧠",
+    "name": "Brain",
+    "rarity": "Common"
+  },
+  {
+    "id": 93,
+    "emoji": "🗣️",
+    "name": "Speaking Head",
+    "rarity": "Common"
+  },
+  {
+    "id": 94,
+    "emoji": "👍",
+    "name": "Thumbs Up",
+    "rarity": "Common"
+  },
+  {
+    "id": 95,
+    "emoji": "👎",
+    "name": "Thumbs Down",
+    "rarity": "Common"
+  },
+  {
+    "id": 96,
+    "emoji": "❤️",
+    "name": "Red Heart",
+    "rarity": "Common"
+  },
+  {
+    "id": 97,
+    "emoji": "💔",
+    "name": "Broken Heart",
+    "rarity": "Common"
+  },
+  {
+    "id": 98,
+    "emoji": "❤️‍🔥",
+    "name": "Heart on Fire",
+    "rarity": "Common"
+  },
+  {
+    "id": 99,
+    "emoji": "💯",
+    "name": "Hundred Points",
+    "rarity": "Common"
+  },
+  {
+    "id": 100,
+    "emoji": "🙏",
+    "name": "Folded Hands",
+    "rarity": "Common"
+  },
+  {
+    "id": 101,
+    "emoji": "👋",
+    "name": "Waving Hand",
+    "rarity": "Common"
+  },
+  {
+    "id": 102,
+    "emoji": "👌",
+    "name": "OK Hand",
+    "rarity": "Common"
+  },
+  {
+    "id": 103,
+    "emoji": "🔥",
+    "name": "Fire",
+    "rarity": "Common"
+  },
+  {
+    "id": 104,
+    "emoji": "✨",
+    "name": "Sparkles",
+    "rarity": "Common"
+  },
+  {
+    "id": 105,
+    "emoji": "👏",
+    "name": "Clapping Hands",
+    "rarity": "Common"
+  },
+  {
+    "id": 106,
+    "emoji": "🙌",
+    "name": "Raising Hands",
+    "rarity": "Common"
+  },
+  {
+    "id": 107,
+    "emoji": "🫶",
+    "name": "Heart Hands",
+    "rarity": "Common"
+  },
+  {
+    "id": 108,
+    "emoji": "🤙",
+    "name": "Call Me Hand",
+    "rarity": "Common"
+  },
+  {
+    "id": 109,
+    "emoji": "🤌",
+    "name": "Pinched Fingers",
+    "rarity": "Common"
+  },
+  {
+    "id": 110,
+    "emoji": "🤏",
+    "name": "Pinching Hand",
+    "rarity": "Common"
+  },
+  {
+    "id": 111,
+    "emoji": "✌️",
+    "name": "Victory Hand",
+    "rarity": "Common"
+  },
+  {
+    "id": 112,
+    "emoji": "🤞",
+    "name": "Crossed Fingers",
+    "rarity": "Common"
+  },
+  {
+    "id": 113,
+    "emoji": "🐶",
+    "name": "Dog Face",
+    "rarity": "Common"
+  },
+  {
+    "id": 114,
+    "emoji": "🐱",
+    "name": "Cat Face",
+    "rarity": "Common"
+  },
+  {
+    "id": 115,
+    "emoji": "🐭",
+    "name": "Mouse Face",
+    "rarity": "Common"
+  },
+  {
+    "id": 116,
+    "emoji": "🐹",
+    "name": "Hamster",
+    "rarity": "Common"
+  },
+  {
+    "id": 117,
+    "emoji": "🐰",
+    "name": "Rabbit Face",
+    "rarity": "Common"
+  },
+  {
+    "id": 118,
+    "emoji": "🐻",
+    "name": "Bear",
+    "rarity": "Common"
+  },
+  {
+    "id": 119,
+    "emoji": "🐼",
+    "name": "Panda",
+    "rarity": "Common"
+  },
+  {
+    "id": 120,
+    "emoji": "🐨",
+    "name": "Koala",
+    "rarity": "Common"
+  },
+  {
+    "id": 121,
+    "emoji": "🐯",
+    "name": "Tiger Face",
+    "rarity": "Common"
+  },
+  {
+    "id": 122,
+    "emoji": "🦁",
+    "name": "Lion",
+    "rarity": "Common"
+  },
+  {
+    "id": 123,
+    "emoji": "🐮",
+    "name": "Cow Face",
+    "rarity": "Common"
+  },
+  {
+    "id": 124,
+    "emoji": "🐷",
+    "name": "Pig Face",
+    "rarity": "Common"
+  },
+  {
+    "id": 125,
+    "emoji": "🐸",
+    "name": "Frog",
+    "rarity": "Common"
+  },
+  {
+    "id": 126,
+    "emoji": "🐵",
+    "name": "Monkey Face",
+    "rarity": "Common"
+  },
+  {
+    "id": 127,
+    "emoji": "🐔",
+    "name": "Chicken",
+    "rarity": "Common"
+  },
+  {
+    "id": 128,
+    "emoji": "🐧",
+    "name": "Penguin",
+    "rarity": "Common"
+  },
+  {
+    "id": 129,
+    "emoji": "🐦",
+    "name": "Bird",
+    "rarity": "Common"
+  },
+  {
+    "id": 130,
+    "emoji": "🐤",
+    "name": "Baby Chick",
+    "rarity": "Common"
+  },
+  {
+    "id": 131,
+    "emoji": "🦋",
+    "name": "Butterfly",
+    "rarity": "Common"
+  },
+  {
+    "id": 132,
+    "emoji": "🐞",
+    "name": "Lady Beetle",
+    "rarity": "Common"
+  },
+  {
+    "id": 133,
+    "emoji": "🐢",
+    "name": "Turtle",
+    "rarity": "Common"
+  },
+  {
+    "id": 134,
+    "emoji": "🐍",
+    "name": "Snake",
+    "rarity": "Common"
+  },
+  {
+    "id": 135,
+    "emoji": "🦎",
+    "name": "Lizard",
+    "rarity": "Common"
+  },
+  {
+    "id": 136,
+    "emoji": "🦈",
+    "name": "Shark",
+    "rarity": "Common"
+  },
+  {
+    "id": 137,
+    "emoji": "🐬",
+    "name": "Dolphin",
+    "rarity": "Common"
+  },
+  {
+    "id": 138,
+    "emoji": "🐳",
+    "name": "Spouting Whale",
+    "rarity": "Common"
+  },
+  {
+    "id": 139,
+    "emoji": "🐠",
+    "name": "Tropical Fish",
+    "rarity": "Common"
+  },
+  {
+    "id": 140,
+    "emoji": "🦀",
+    "name": "Crab",
+    "rarity": "Common"
+  },
+  {
+    "id": 141,
+    "emoji": "🦐",
+    "name": "Shrimp",
+    "rarity": "Common"
+  },
+  {
+    "id": 142,
+    "emoji": "🦑",
+    "name": "Squid",
+    "rarity": "Common"
+  },
+  {
+    "id": 143,
+    "emoji": "🐌",
+    "name": "Snail",
+    "rarity": "Common"
+  },
+  {
+    "id": 144,
+    "emoji": "🐜",
+    "name": "Ant",
+    "rarity": "Common"
+  },
+  {
+    "id": 145,
+    "emoji": "🐝",
+    "name": "Honeybee",
+    "rarity": "Common"
+  },
+  {
+    "id": 146,
+    "emoji": "🕷️",
+    "name": "Spider",
+    "rarity": "Common"
+  },
+  {
+    "id": 147,
+    "emoji": "🦇",
+    "name": "Bat",
+    "rarity": "Common"
+  },
+  {
+    "id": 148,
+    "emoji": "🐺",
+    "name": "Wolf",
+    "rarity": "Common"
+  },
+  {
+    "id": 149,
+    "emoji": "🐗",
+    "name": "Boar",
+    "rarity": "Common"
+  },
+  {
+    "id": 150,
+    "emoji": "🐴",
+    "name": "Horse Face",
+    "rarity": "Common"
+  },
+  {
+    "id": 151,
+    "emoji": "🦓",
+    "name": "Zebra",
+    "rarity": "Common"
+  },
+  {
+    "id": 152,
+    "emoji": "🦒",
+    "name": "Giraffe",
+    "rarity": "Common"
+  },
+  {
+    "id": 153,
+    "emoji": "🐘",
+    "name": "Elephant",
+    "rarity": "Common"
+  },
+  {
+    "id": 154,
+    "emoji": "🦏",
+    "name": "Rhinoceros",
+    "rarity": "Common"
+  },
+  {
+    "id": 155,
+    "emoji": "🐪",
+    "name": "Camel",
+    "rarity": "Common"
+  },
+  {
+    "id": 156,
+    "emoji": "🐫",
+    "name": "Two-Hump Camel",
+    "rarity": "Common"
+  },
+  {
+    "id": 157,
+    "emoji": "🐿️",
+    "name": "Chipmunk",
+    "rarity": "Common"
+  },
+  {
+    "id": 158,
+    "emoji": "🦔",
+    "name": "Hedgehog",
+    "rarity": "Common"
+  },
+  {
+    "id": 159,
+    "emoji": "☀️",
+    "name": "Sun",
+    "rarity": "Common"
+  },
+  {
+    "id": 160,
+    "emoji": "🌙",
+    "name": "Crescent Moon",
+    "rarity": "Common"
+  },
+  {
+    "id": 161,
+    "emoji": "⭐",
+    "name": "Star",
+    "rarity": "Common"
+  },
+  {
+    "id": 162,
+    "emoji": "☁️",
+    "name": "Cloud",
+    "rarity": "Common"
+  },
+  {
+    "id": 163,
+    "emoji": "💧",
+    "name": "Droplet",
+    "rarity": "Common"
+  },
+  {
+    "id": 164,
+    "emoji": "🌊",
+    "name": "Water Wave",
+    "rarity": "Common"
+  },
+  {
+    "id": 165,
+    "emoji": "🌈",
+    "name": "Rainbow",
+    "rarity": "Common"
+  },
+  {
+    "id": 166,
+    "emoji": "⚡",
+    "name": "High Voltage",
+    "rarity": "Common"
+  },
+  {
+    "id": 167,
+    "emoji": "❄️",
+    "name": "Snowflake",
+    "rarity": "Common"
+  },
+  {
+    "id": 168,
+    "emoji": "🌸",
+    "name": "Cherry Blossom",
+    "rarity": "Common"
+  },
+  {
+    "id": 169,
+    "emoji": "🌷",
+    "name": "Tulip",
+    "rarity": "Common"
+  },
+  {
+    "id": 170,
+    "emoji": "🌹",
+    "name": "Rose",
+    "rarity": "Common"
+  },
+  {
+    "id": 171,
+    "emoji": "🌺",
+    "name": "Hibiscus",
+    "rarity": "Common"
+  },
+  {
+    "id": 172,
+    "emoji": "🌻",
+    "name": "Sunflower",
+    "rarity": "Common"
+  },
+  {
+    "id": 173,
+    "emoji": "🌼",
+    "name": "Blossom",
+    "rarity": "Common"
+  },
+  {
+    "id": 174,
+    "emoji": "🌳",
+    "name": "Deciduous Tree",
+    "rarity": "Common"
+  },
+  {
+    "id": 175,
+    "emoji": "🌲",
+    "name": "Evergreen Tree",
+    "rarity": "Common"
+  },
+  {
+    "id": 176,
+    "emoji": "🌵",
+    "name": "Cactus",
+    "rarity": "Common"
+  },
+  {
+    "id": 177,
+    "emoji": "🌿",
+    "name": "Herb",
+    "rarity": "Common"
+  },
+  {
+    "id": 178,
+    "emoji": "🍀",
+    "name": "Four Leaf Clover",
+    "rarity": "Common"
+  },
+  {
+    "id": 179,
+    "emoji": "🍄",
+    "name": "Mushroom",
+    "rarity": "Common"
+  },
+  {
+    "id": 180,
+    "emoji": "🍁",
+    "name": "Maple Leaf",
+    "rarity": "Common"
+  },
+  {
+    "id": 181,
+    "emoji": "🍎",
+    "name": "Red Apple",
+    "rarity": "Common"
+  },
+  {
+    "id": 182,
+    "emoji": "🍊",
+    "name": "Tangerine",
+    "rarity": "Common"
+  },
+  {
+    "id": 183,
+    "emoji": "🍓",
+    "name": "Strawberry",
+    "rarity": "Common"
+  },
+  {
+    "id": 184,
+    "emoji": "🍉",
+    "name": "Watermelon",
+    "rarity": "Common"
+  },
+  {
+    "id": 185,
+    "emoji": "🍌",
+    "name": "Banana",
+    "rarity": "Common"
+  },
+  {
+    "id": 186,
+    "emoji": "🍕",
+    "name": "Pizza",
+    "rarity": "Common"
+  },
+  {
+    "id": 187,
+    "emoji": "🍔",
+    "name": "Hamburger",
+    "rarity": "Common"
+  },
+  {
+    "id": 188,
+    "emoji": "🍟",
+    "name": "French Fries",
+    "rarity": "Common"
+  },
+  {
+    "id": 189,
+    "emoji": "🍣",
+    "name": "Sushi",
+    "rarity": "Common"
+  },
+  {
+    "id": 190,
+    "emoji": "☕",
+    "name": "Hot Beverage",
+    "rarity": "Common"
+  },
+  {
+    "id": 191,
+    "emoji": "⚽",
+    "name": "Soccer Ball",
+    "rarity": "Common"
+  },
+  {
+    "id": 192,
+    "emoji": "🏀",
+    "name": "Basketball",
+    "rarity": "Common"
+  },
+  {
+    "id": 193,
+    "emoji": "🏈",
+    "name": "American Football",
+    "rarity": "Common"
+  },
+  {
+    "id": 194,
+    "emoji": "⚾",
+    "name": "Baseball",
+    "rarity": "Common"
+  },
+  {
+    "id": 195,
+    "emoji": "🎾",
+    "name": "Tennis",
+    "rarity": "Common"
+  },
+  {
+    "id": 196,
+    "emoji": "🎱",
+    "name": "Pool 8 Ball",
+    "rarity": "Common"
+  },
+  {
+    "id": 197,
+    "emoji": "💻",
+    "name": "Laptop",
+    "rarity": "Common"
+  },
+  {
+    "id": 198,
+    "emoji": "📱",
+    "name": "Mobile Phone",
+    "rarity": "Common"
+  },
+  {
+    "id": 199,
+    "emoji": "⌚",
+    "name": "Watch",
+    "rarity": "Common"
+  },
+  {
+    "id": 200,
+    "emoji": "💡",
+    "name": "Light Bulb",
+    "rarity": "Common"
+  }
+]
+}

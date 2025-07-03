@@ -1,0 +1,239 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8); /* 어두운 배경 */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* 모달 콘텐츠를 중앙에 정렬 */
+  z-index: 1000;
+  opacity: 0; /* 초기 투명 */
+  animation: fadeIn 0.3s forwards; /* 애니메이션 추가 */
+}
+
+.modal-content.gacha-modal-content {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  perspective: 1000px; /* 3D 효과를 위한 원근감 */
+  max-height: 90vh; /* 모달 최대 높이 제한 */
+  transform: scale(0.9); /* 초기 크기 축소 */
+  animation: scaleIn 0.3s forwards; /* 애니메이션 추가 */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* 카드 컨테이너 및 희귀도 효과 */
+.gacha-card-container {
+  width: min(300px, 90vw); /* 뷰포트 너비에 따라 최대 300px */
+  height: min(400px, 70vh); /* 뷰포트 높이에 따라 최대 400px */
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px; /* 모서리 둥글기 통일 */
+  background-color: var(--background-secondary); /* 배경색 추가 */
+  box-shadow: var(--shadow-lg); /* 그림자 추가 */
+}
+
+.gacha-card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* 회전 시간 단축 */
+  border-radius: 20px; /* 모서리 둥글기 통일 */
+}
+
+.gacha-card.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 20px; /* 모서리 둥글기 통일 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.card-face-front {
+  background: linear-gradient(45deg, var(--accent-primary) 0%, var(--accent-secondary) 100%); /* 디자인 토큰 사용 */
+  color: var(--button-text-color); /* 디자인 토큰 사용 */
+}
+
+.card-face-front .question-mark {
+  font-size: 6rem;
+  font-weight: bold;
+  animation: pulse-question 2s infinite;
+}
+
+@keyframes pulse-question {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.card-face-back {
+  background: var(--background-main); /* 디자인 토큰 사용 */
+  color: var(--text-primary); /* 디자인 토큰 사용 */
+  transform: rotateY(180deg);
+  padding: var(--spacing-lg); /* 디자인 토큰 사용 */
+  text-align: center; /* 텍스트 가운데 정렬 */
+  overflow: hidden; /* 카드 영역을 벗어나는 내용 숨김 */
+}
+
+.card-face-back > * {
+  opacity: 0;
+  animation: fadeInContent 0.5s ease-in forwards; /* 내용 페이드인 애니메이션 */
+  animation-delay: 0.3s; /* 카드 회전 시간 이후에 시작 */
+}
+
+@keyframes fadeInContent {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 희귀도별 카드 뒷면 스타일 */
+.rarity-common .card-face-back { background: linear-gradient(135deg, #e0e0e0 0%, #bdbdbd 100%); }
+.rarity-uncommon .card-face-back { background: linear-gradient(135deg, #a5d6a7 0%, #81c784 100%); }
+.rarity-rare .card-face-back { background: linear-gradient(135deg, #64b5f6 0%, #42a5f5 100%); }
+.rarity-epic .card-face-back { background: linear-gradient(135deg, #ba68c8 0%, #ab47bc 100%); }
+.rarity-legendary .card-face-back { background: linear-gradient(135deg, #ffd54f 0%, #ffca28 100%); }
+
+/* 희귀도별 빛 효과 */
+.gacha-card-container::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0; /* 카드와 정확히 겹치도록 */
+  padding: 10px; /* 빛이 카드 바깥으로 퍼지도록 */
+  border-radius: 24px; /* 카드보다 약간 더 크게 */
+  z-index: -1;
+  opacity: 1; /* 모든 카드에 기본 불빛 적용 */
+  box-shadow: 0 0 20px 8px rgba(255, 255, 255, 0.4); /* 기본 불빛 그림자 강화 (흰색 불빛) */
+  transition: opacity 0.5s ease-in-out 0.3s, box-shadow 0.5s ease-in-out 0.3s; /* 0.3초 지연으로 단축 */
+}
+
+.gacha-card-container.rarity-rare::before {
+  box-shadow: 0 0 30px 10px #1976D2; /* Rare 등급 불빛 강화 */
+}
+
+.gacha-card-container.rarity-epic::before {
+  box-shadow: 0 0 40px 15px #7B1FA2;
+  opacity: 1;
+  animation: epic-glow 1.5s infinite alternate;
+}
+
+@keyframes epic-glow {
+  from { box-shadow: 0 0 40px 15px #7B1FA2; }
+  to { box-shadow: 0 0 50px 20px #9C27B0; }
+}
+
+@keyframes legendary-glow {
+  from { box-shadow: 0 0 60px 25px #D4AC0D; }
+  to { box-shadow: 0 0 75px 30px #FFEB3B; }
+}
+
+
+/* 결과 표시 스타일 */
+.gacha-result-emoji {
+  font-size: 8rem; /* 더 크게 */
+  margin-bottom: 15px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.5); /* 그림자 추가 */
+}
+
+.gacha-result-name {
+  font-size: 2.5rem; /* 더 크게 */
+  font-weight: bold;
+  color: var(--text-primary);
+  margin-bottom: 10px; /* 간격 늘림 */
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* 그림자 추가 */
+}
+
+.gacha-result-rarity {
+  font-size: 1.3rem; /* 더 크게 */
+  padding: 8px 20px; /* 패딩 늘림 */
+  border-radius: 25px; /* 더 둥글게 */
+  color: var(--button-text-color); /* 버튼 텍스트 색상으로 변경 */
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0 auto 15px auto; /* 가운데 정렬 및 아래 간격 추가 */
+  /* 희귀도별 배경색은 아래에서 정의 */
+}
+
+/* 희귀도별 카드 뒷면 스타일 */
+.rarity-common .card-face-back { background: linear-gradient(135deg, #e0e0e0 0%, #bdbdbd 100%); }
+.rarity-uncommon .card-face-back { background: linear-gradient(135deg, #a5d6a7 0%, #81c784 100%); }
+.rarity-rare .card-face-back { background: linear-gradient(135deg, #64b5f6 0%, #42a5f5 100%); }
+.rarity-epic .card-face-back { background: linear-gradient(135deg, #ba68c8 0%, #ab47bc 100%); }
+.rarity-legendary .card-face-back { background: linear-gradient(135deg, #ffd54f 0%, #ffca28 100%); }
+
+/* 희귀도별 텍스트 색상 및 배경색 */
+.gacha-result-rarity.rarity-common { background-color: #757575; } /* Darker Gray */
+.gacha-result-rarity.rarity-uncommon { background-color: #4CAF50; } /* Green */
+.gacha-result-rarity.rarity-rare { background-color: #2196F3; } /* Blue */
+.gacha-result-rarity.rarity-epic { background-color: #9C27B0; } /* Purple */
+.gacha-result-rarity.rarity-legendary { background-color: #FFC107; } /* Amber */
+
+.gacha-result-tmi {
+  font-size: var(--font-size-lg); /* 조금 더 작게 */
+  color: var(--text-primary); /* 기본 텍스트 색상으로 변경 */
+  margin-top: var(--spacing-xl); /* 상단 마진 늘림 */
+  padding: 0 var(--spacing-md); /* 패딩 늘림 */
+  font-style: italic;
+  line-height: 1.5; /* 줄 간격 추가 */
+  text-align: center; /* 중앙 정렬 */
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* 텍스트 그림자 추가 */
+  word-break: break-word; /* 긴 단어 줄바꿈 */
+}
+
+.back-to-main-button {
+  /* position: fixed; */ /* 뷰포트 고정 제거 */
+  margin-top: var(--spacing-xl); /* 카드 아래에 마진 추가 */
+  padding: var(--spacing-md) var(--spacing-lg); /* 디자인 토큰 사용 */
+  font-size: var(--font-size-lg); /* 디자인 토큰 사용 */
+  background-color: var(--accent-primary); /* 포인트 컬러로 고정 */
+  color: var(--button-text-color); /* 디자인 토큰 사용 */
+  border: none;
+  border-radius: var(--border-radius-md); /* 디자인 토큰 사용 */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, filter 0.3s ease, box-shadow 0.3s ease; /* box-shadow 전환 추가 */
+  z-index: 1001; /* 모달 오버레이 위에 표시 */
+  box-shadow: var(--shadow-md); /* 디자인 토큰 사용 */
+  width: fit-content; /* 내용에 맞게 너비 조절 */
+}
+
+.back-to-main-button.hidden-button {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.back-to-main-button:hover {
+  filter: brightness(1.2); /* 호버 시 미세하게 밝아지는 효과 */
+  box-shadow: var(--shadow-lg); /* 호버 시 그림자 강조 */
+}
+
+.back-to-main-button:active {
+  transform: scale(0.98); /* 클릭 시 살짝 눌리는 효과 */
+}

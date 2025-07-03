@@ -1,0 +1,93 @@
+.App-container {
+  display: flex;
+  flex-direction: column; /* 아이템 수직 정렬 */
+  min-height: 100vh; /* 최소 높이를 화면 전체 높이로 설정 */
+  position: relative; /* 가상 요소의 기준점 */
+  overflow: hidden; /* 넘치는 배경 요소 숨김 */
+}
+
+/* 배경 애니메이션 */
+.App-container::before,
+.App-container::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1; /* 배경으로 배치 */
+  pointer-events: none; /* 클릭 이벤트 방지 */
+}
+
+.App-container::before {
+  background: radial-gradient(circle at top left, var(--background-secondary) 0%, transparent 50%),
+              radial-gradient(circle at bottom right, var(--background-main) 0%, transparent 50%);
+  opacity: 0.3;
+}
+
+.App-container::after {
+  background: url('./logo.svg') no-repeat center center;
+  background-size: 50px 50px; /* 이모지 크기 */
+  animation: floatUp 30s infinite linear; /* 애니메이션 적용 */
+  opacity: 0.05; /* 매우 은은하게 */
+}
+
+@keyframes floatUp {
+  from {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(-100vh) rotate(360deg);
+    opacity: 0.1;
+  }
+}
+
+.app-header {
+  position: fixed; /* 헤더 고정 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100; /* 다른 요소 위에 표시 */
+  background-color: var(--background-main); /* 헤더 배경색 */
+  padding: var(--spacing-md) var(--spacing-lg);
+  box-shadow: var(--shadow-md);
+  transition: transform 0.3s ease-in-out; /* 슬라이드 애니메이션 */
+}
+
+.app-header.hidden {
+  transform: translateY(-100%); /* 위로 숨김 */
+}
+
+.main-content {
+  flex-grow: 1; /* 남는 공간을 모두 차지 */
+  display: flex;
+  flex-direction: column; /* 내부 아이템 수직 정렬 */
+  width: 100%; /* 가로 전체 차지 */
+  overflow: hidden; /* 메인 콘텐츠 영역에서 스크롤 방지 */
+  /* 모바일 환경에서 하단 바 높이만큼 패딩 추가 */
+  padding-bottom: 3.75rem; /* BottomNavBar 높이만큼 패딩 (60px) */
+  padding-top: 60px; /* 헤더 높이만큼 패딩 추가 */
+}
+
+/* 데스크톱 환경에서는 하단 바가 없으므로 패딩 제거 */
+@media (min-width: 769px) {
+  .main-content {
+    padding-bottom: 0;
+    padding-top: 0; /* 데스크톱에서는 헤더 패딩 제거 */
+  }
+}
+
+.scrollable {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch; /* iOS 부드러운 스크롤 */
+}
+
+.content-body {
+  flex-grow: 1; /* 남는 공간을 모두 차지 */
+  display: flex;
+  justify-content: center; /* 가로 중앙 */
+  align-items: center;    /* 세로 중앙 */
+  width: 100%;
+  height: 100%; /* 부모(main-content)의 높이를 꽉 채움 */
+}

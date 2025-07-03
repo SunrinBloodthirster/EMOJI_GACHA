@@ -1,0 +1,272 @@
+.gacha-screen-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* 부모 요소의 높이를 꽉 채움 */
+  width: 100%; /* 가로 전체 차지 */
+  overflow: hidden; /* GachaScreen 내부 스크롤 방지 */
+  background-color: var(--background-main); /* Changed to main background */
+  flex-grow: 1; /* Allow it to take available space */
+  padding: var(--spacing-xl); /* 컨테이너 패딩 추가 */
+  box-sizing: border-box; /* 패딩이 너비에 포함되도록 */
+}
+
+.gacha-screen-fullscreen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999; /* Ensure it's above main content but below modal */
+  background-color: var(--background-main); /* Ensure consistent background */
+}
+
+.gacha-main-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg); /* 24px -> 1.5rem */
+  align-items: center; /* 모든 요소 중앙 정렬 */
+  width: 100%; /* 부모 너비에 맞춤 */
+  max-width: 400px; /* 최대 너비 제한 */
+}
+
+.total-pulls-display {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  color: var(--text-primary);
+  font-size: var(--font-size-xxl); /* 훨씬 큰 폰트 */
+  font-weight: bold; /* 훨씬 굵은 폰트 */
+  margin-bottom: var(--spacing-xl); /* 버튼과의 간격 */
+}
+
+.total-pulls-display .material-icons {
+  font-size: var(--font-size-xxl); /* 아이콘 크기 */
+  color: var(--accent-primary);
+}
+
+.gacha-button {
+  padding: var(--spacing-lg) var(--spacing-xl);
+  font-size: var(--font-size-xxl);
+  font-weight: bold;
+  color: var(--button-text-color);
+  background-color: var(--button-background-color);
+  border: none;
+  border-radius: var(--border-radius-lg);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: var(--shadow-md);
+  animation: pulse 2s infinite;
+  width: 100%;
+  text-align: center;
+  position: relative; /* For pseudo-elements */
+  overflow: hidden; /* For background effects */
+}
+
+@media (max-width: 768px) {
+  .gacha-button {
+    padding: var(--spacing-md) var(--spacing-lg);
+    font-size: var(--font-size-lg);
+  }
+}
+
+.gacha-button:hover {
+  background-color: var(--button-hover-background-color);
+  transform: scale(1.05);
+  box-shadow: var(--shadow-lg);
+  animation-play-state: paused;
+}
+
+.gacha-button:active {
+  transform: scale(0.98);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Gacha Button Background Effect */
+.gacha-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transition: width 0.4s ease-out, height 0.4s ease-out, opacity 0.4s ease-out;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  z-index: 0;
+}
+
+.gacha-button:hover::before {
+  width: 200%;
+  height: 200%;
+  opacity: 1;
+}
+
+.gacha-button span {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 193, 7, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 193, 7, 0);
+  }
+}
+
+.gacha-button.ad-button {
+  background-color: var(--ad-button-background-color);
+}
+
+.gacha-button.ad-button:hover {
+  background-color: var(--ad-button-hover-background-color);
+}
+
+.gacha-login-message {
+  color: var(--text-primary);
+  font-size: var(--font-size-lg);
+  text-align: center;
+  margin-top: var(--spacing-xl); /* Added margin for better spacing */
+}
+
+@media (max-width: 768px) {
+  .gacha-login-message {
+    font-size: var(--font-size-md);
+  }
+}
+
+.total-pulls-display {
+  display: flex;
+  flex-direction: column; /* Stack icon and text */
+  align-items: center;
+  gap: var(--spacing-xs); /* Smaller gap */
+  color: var(--text-primary);
+  font-size: var(--font-size-xl); /* Slightly smaller for better fit */
+  font-weight: bold;
+  margin-top: var(--spacing-lg); /* Adjusted margin */
+  padding: var(--spacing-md);
+  background-color: var(--background-secondary);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.total-pulls-display .material-icons {
+  font-size: var(--font-size-xxl);
+  color: var(--accent-primary);
+}
+
+.total-pulls-display .total-pulls-text {
+  font-size: var(--font-size-lg); /* Adjust text size */
+}
+
+.last-gacha-section {
+  margin-top: var(--spacing-xxl); /* More space from buttons */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--text-secondary);
+  font-size: var(--font-size-md);
+  text-align: center;
+  background-color: var(--background-secondary);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+  width: 100%;
+  max-width: 300px; /* Limit width */
+}
+
+.last-gacha-title {
+  margin-bottom: var(--spacing-sm);
+  font-weight: bold;
+  color: var(--accent-secondary); /* Highlight title */
+  font-size: var(--font-size-lg);
+}
+
+.last-gacha-emoji-display {
+  font-size: var(--font-size-xxxl); /* Larger emoji */
+  background-color: var(--background-main); /* Contrast background */
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-md);
+  margin-top: var(--spacing-sm);
+}
+
+.probability-info-button {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: var(--font-size-md); /* Slightly larger font */
+  margin-top: var(--spacing-lg); /* More space */
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.probability-info-button:hover {
+  color: var(--accent-primary); /* Highlight on hover */
+}
+
+.probability-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.probability-modal-content {
+  background-color: var(--background-secondary);
+  padding: var(--spacing-xl); /* Larger padding */
+  border-radius: var(--border-radius-lg); /* More rounded */
+  box-shadow: var(--shadow-lg);
+  color: var(--text-primary);
+  text-align: center;
+  max-width: 90%; /* Responsive width */
+  width: 400px; /* Max width */
+}
+
+.probability-modal-content h3 {
+  margin-top: 0;
+  margin-bottom: var(--spacing-lg); /* More space */
+  color: var(--accent-primary);
+  font-size: var(--font-size-xxl); /* Larger title */
+}
+
+.probability-modal-content ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: var(--spacing-lg); /* More space */
+}
+
+.probability-modal-content li {
+  margin-bottom: var(--spacing-sm); /* More space between items */
+  font-size: var(--font-size-md);
+}
+
+.probability-modal-content button {
+  background-color: var(--accent-primary);
+  color: var(--button-text-color); /* Use design token */
+  border: none;
+  padding: var(--spacing-md) var(--spacing-lg); /* Larger padding */
+  border-radius: var(--border-radius-md); /* More rounded */
+  font-size: var(--font-size-lg); /* Larger font */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.probability-modal-content button:hover {
+  background-color: var(--button-hover-background-color); /* Use design token */
+}

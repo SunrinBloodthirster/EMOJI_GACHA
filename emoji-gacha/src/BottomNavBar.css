@@ -1,0 +1,48 @@
+.bottom-nav-bar {
+  display: none; /* 기본적으로 숨김 */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3.75rem; /* 60px */
+  box-sizing: content-box; /* 패딩이 높이에 포함되도록 */
+  background-color: var(--background-secondary);
+  border-top: 0.0625rem solid var(--accent-secondary);
+  justify-content: space-around;
+  align-items: center;
+  padding: var(--spacing-sm) 0;
+  box-shadow: var(--shadow-md);
+  z-index: 999;
+}
+
+@media (max-width: 768px) {
+  .bottom-nav-bar {
+    display: flex; /* 모바일에서만 보임 */
+  }
+}
+
+.bottom-nav-bar .nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--border-radius-md);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.bottom-nav-bar .nav-item:hover {
+  background-color: rgba(var(--accent-primary-rgb), 0.1);
+  color: var(--accent-primary);
+}
+
+.bottom-nav-bar .nav-item.active {
+  color: var(--accent-primary);
+}
+
+.bottom-nav-bar .nav-item span:first-child {
+  font-size: var(--font-size-xl); /* 아이콘 크기 */
+  margin-bottom: var(--spacing-xs);
+}

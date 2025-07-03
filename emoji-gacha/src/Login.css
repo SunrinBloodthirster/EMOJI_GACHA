@@ -1,0 +1,22 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - var(--spacing-xxl) * 2); /* 헤더/푸터 공간 제외 */
+  padding: var(--spacing-md);
+  text-align: center;
+}
+
+.login-container button {
+  width: 100%;
+  max-width: 300px; /* 버튼 최대 너비 제한 */
+  padding: var(--spacing-md) var(--spacing-lg);
+  font-size: var(--font-size-lg);
+}
+
+.login-container p {
+  font-size: var(--font-size-lg);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-lg);
+}

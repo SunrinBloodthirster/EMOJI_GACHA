@@ -1,0 +1,52 @@
+.profile-page-container {
+  padding: var(--spacing-lg);
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.profile-page-container h2 {
+  font-size: var(--font-size-xxl);
+  margin-bottom: var(--spacing-lg);
+  color: var(--accent-primary);
+}
+
+.profile-page-container p {
+  font-size: var(--font-size-md);
+  color: var(--text-secondary);
+}
+
+.featured-emojis-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr)); /* PC: 3개 정도 */
+  gap: var(--spacing-md);
+  justify-content: center;
+  align-items: center;
+  margin-top: var(--spacing-lg);
+}
+
+.featured-emoji-display {
+  font-size: 8rem; /* 대표 이모지 크기 */
+  background-color: var(--background-secondary);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-md);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1 / 1; /* 정사각형 유지 */
+}
+
+@media (max-width: 768px) {
+  .profile-page-container h2 {
+    font-size: var(--font-size-xl);
+  }
+
+  .featured-emojis-grid {
+    grid-template-columns: repeat(auto-fill, minmax(6rem, 1fr)); /* 모바일: 2개 정도 */
+  }
+
+  .featured-emoji-display {
+    font-size: 6rem; /* 모바일 대표 이모지 크기 */
+  }
+}
