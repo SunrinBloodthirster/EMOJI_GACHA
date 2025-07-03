@@ -1,22 +1,16 @@
 import React, { useState, useEffect, useMemo, useRef } from 'react';
-import { doc, onSnapshot, setDoc, arrayUnion, arrayRemove } from 'firebase/firestore';
-import { onAuthStateChanged } from 'firebase/auth';
-import { auth, db } from './firebase';
-import emojiData from './emojiData.json';
+import { doc, setDoc, arrayUnion, arrayRemove } from 'firebase/firestore';
+import { db } from './firebase';
 import EmojiDetailModal from './EmojiDetailModal';
-// import StatsAndGauge from './StatsAndGauge'; // StatsAndGauge 임포트 (삭제 예정)
-import CompletionGauge from './CompletionGauge'; // CompletionGauge 임포트
-import useUserStats from './hooks/useUserStats'; // useUserStats 훅 임포트
+import CompletionGauge from './components/CompletionGauge'; // CompletionGauge 임포트
+import { useUser } from './context/UserContext'; // useUser 훅 임포트
 import './EmojiDex.css'; // EmojiDex 전용 CSS 파일 임포트
 
 const EMOJIS_PER_PAGE_MOBILE = 9; // 모바일 한 페이지에 표시할 이모지 개수
 
 const EmojiDex = () => {
-  // State variables
-  const [user, setUser] = useState(null);
-  const [collectedEmojis, setCollectedEmojis] = useState([]);
+  const { user, userProfile, collectedEmojis, isLoading, allEmojis } = useUser();
   const [selectedFeaturedEmojis, setSelectedFeaturedEmojis] = useState([]);
-  const [loading, setLoading] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedEmoji, setSelectedEmoji] = useState(null);
   const [selectedRarityFilter, setSelectedRarityFilter] = useState('All'); // 필터 상태 추가
@@ -25,8 +19,6 @@ const EmojiDex = () => {
   const [rarityPages, setRarityPages] = useState({}); // 각 등급별 현재 페이지 (모바일 캐러셀용)
   const [showCollectedOnly, setShowCollectedOnly] = useState(false); // 보유 이모지 필터 상태
 
-  const { stats, isLoading: statsLoading } = useUserStats(); // useUserStats 훅 호출
-
   // Refs
   const carouselRefs = useRef({}); // 각 캐러셀의 DOM 요소를 참조 (모바일 캐러셀용)
 
@@ -34,7 +26,7 @@ const EmojiDex = () => {
   const raritiesOrder = useMemo(() => ['Legendary', 'Epic', 'Rare', 'Uncommon', 'Common'], []); // 등급 순서 정의 및 메모이제이션
 
   const filteredEmojis = useMemo(() => {
-    let emojisToFilter = emojiData.emojis;
+    let emojisToFilter = allEmojis;
 
     if (selectedRarityFilter !== 'All') {
       emojisToFilter = emojisToFilter.filter(emoji => emoji.rarity === selectedRarityFilter);
@@ -45,51 +37,27 @@ const EmojiDex = () => {
     }
 
     return emojisToFilter;
-  }, [selectedRarityFilter, showCollectedOnly, collectedEmojis]);
+  }, [selectedRarityFilter, showCollectedOnly, collectedEmojis, allEmojis]);
 
   // 등급별로 이모지를 그룹화 (모바일 캐러셀용)
   const groupedEmojisByRarity = useMemo(() => {
     const grouped = {};
     raritiesOrder.forEach(rarity => {
-      let emojisInRarity = emojiData.emojis.filter(emoji => emoji.rarity === rarity);
+      let emojisInRarity = allEmojis.filter(emoji => emoji.rarity === rarity);
       if (showCollectedOnly) {
         emojisInRarity = emojisInRarity.filter(emoji => collectedEmojis.includes(emoji.id));
       }
       grouped[rarity] = emojisInRarity;
     });
     return grouped;
-  }, [raritiesOrder, showCollectedOnly, collectedEmojis]);
+  }, [raritiesOrder, showCollectedOnly, collectedEmojis, allEmojis]);
 
   // Effects
   useEffect(() => {
-    const unsubscribeAuth = onAuthStateChanged(auth, (currentUser) => {
-      setUser(currentUser);
-      if (currentUser) {
-        setLoading(true);
-        const userDocRef = doc(db, 'users', currentUser.uid);
-        const unsubscribeFirestore = onSnapshot(userDocRef, (docSnap) => {
-          if (docSnap.exists()) {
-            const data = docSnap.data();
-            setCollectedEmojis(data.collectedEmojis || []);
-            setSelectedFeaturedEmojis(data.featuredEmojis || []);
-          } else {
-            setCollectedEmojis([]);
-            setSelectedFeaturedEmojis([]);
-          }
-          setLoading(false);
-        }, (error) => {
-          console.error("Error fetching user data:", error);
-          setLoading(false);
-        });
-        return () => unsubscribeFirestore();
-      } else {
-        setCollectedEmojis([]);
-        setSelectedFeaturedEmojis([]);
-        setLoading(false);
-      }
-    });
-    return () => unsubscribeAuth();
-  }, []);
+    if (userProfile) {
+      setSelectedFeaturedEmojis(userProfile.featuredEmojis || []);
+    }
+  }, [userProfile]);
 
   // 윈도우 크기 변경 감지
   useEffect(() => {
@@ -122,7 +90,7 @@ const EmojiDex = () => {
   const handleEmojiClick = (emojiId, isCollected) => {
     if (!isCollected) return; // 미수집 이모지는 클릭해도 아무것도 하지 않음
 
-    const emoji = emojiData.emojis.find(e => e.id === emojiId);
+    const emoji = allEmojis.find(e => e.id === emojiId);
 
     if (isMobileView) {
       if (touchedEmojiId === emojiId) {
@@ -188,7 +156,7 @@ const EmojiDex = () => {
     });
   };
 
-  if (loading) {
+  if (isLoading) {
     return <div className="loading-spinner"></div>;
   }
 
@@ -200,10 +168,10 @@ const EmojiDex = () => {
       <h2 style={{ fontSize: 'var(--font-size-xxl)', marginBottom: 'var(--spacing-lg)' }}>이모지 도감</h2>
 
       {/* StatsAndGauge 컴포넌트 제거 */}
-      {statsLoading ? (
+      {isLoading ? (
         <p>완성도 로딩 중...</p>
       ) : (
-        <CompletionGauge completionRate={stats.completionRate} />
+        <CompletionGauge />
       )}
 
       <div className="filter-tabs">

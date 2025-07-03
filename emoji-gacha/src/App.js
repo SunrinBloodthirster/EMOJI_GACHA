@@ -8,14 +8,15 @@ import PrivacyPolicy from './PrivacyPolicy';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { initGA, logPageView } from './analytics';
 import { useEffect, useState } from 'react';
-import { onAuthStateChanged } from 'firebase/auth';
-import { auth } from './firebase';
 import GachaScreen from './GachaScreen';
 import BottomNavBar from './BottomNavBar'; // BottomNavBar 임포트
+import { UserProvider, useUser } from './context/UserContext'; // UserProvider 임포트
+import LoadingSpinner from './components/LoadingSpinner'; // LoadingSpinner 임포트
+import ErrorMessage from './components/ErrorMessage'; // ErrorMessage 임포트
 
 function AppBase() {
   const location = useLocation();
-  const [user, setUser] = useState(null);
+  const { user, isLoading, error } = useUser(); // useUser 훅에서 user, isLoading, error 가져오기
   const [isGachaMode, setIsGachaMode] = useState(false);
 
   useEffect(() => {
@@ -27,12 +28,13 @@ function AppBase() {
     logPageView(location.pathname);
   }, [location]);
 
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      setUser(currentUser);
-    });
-    return () => unsubscribe();
-  }, []);
+  if (isLoading) {
+    return <LoadingSpinner />; // 로딩 중일 때 LoadingSpinner 표시
+  }
+
+  if (error) {
+    return <ErrorMessage message={error.message} />; // 에러 발생 시 ErrorMessage 표시
+  }
 
   return (
     <div className="App-container">
@@ -40,7 +42,7 @@ function AppBase() {
       <main className={`main-content ${location.pathname === '/dex' ? 'scrollable' : ''}`}>
         <div className="content-body">
           <Routes>
-            <Route path="/" element={<GachaScreen user={user} setIsGachaMode={setIsGachaMode} />} />
+            <Route path="/" element={<GachaScreen setIsGachaMode={setIsGachaMode} />} />
             <Route path="/dex" element={<EmojiDex />} />
             <Route path="/profile/:userId" element={<ProfilePage />} />
             <Route path="/terms" element={<TermsOfService />} />
@@ -57,7 +59,9 @@ function AppBase() {
 function App() {
   return (
     <BrowserRouter>
-      <AppBase />
+      <UserProvider>
+        <AppBase />
+      </UserProvider>
     </BrowserRouter>
   );
 }
