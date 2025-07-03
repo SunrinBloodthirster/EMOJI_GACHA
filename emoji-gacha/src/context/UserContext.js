@@ -13,7 +13,7 @@ export const useUser = () => useContext(UserContext);
 export const UserProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [collectedEmojis, setCollectedEmojis] = useState([]);
-    const [allEmojis, setAllEmojis] = useState([]); // 전체 이모지 목록 상태
+    const [allEmojis, setAllEmojis] = useState(null); // 전체 이모지 목록 상태
     const [isLoading, setIsLoading] = useState(true);
     const [authIsReady, setAuthIsReady] = useState(false); // 이 라인을 추가하세요
     const [error, setError] = useState(null); // 에러 상태 추가

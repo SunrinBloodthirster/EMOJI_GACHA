@@ -8,7 +8,11 @@ import './GachaScreen.css'; // GachaScreen 전용 CSS 파일
 import { useUser } from './context/UserContext'; // useUser 훅 임포트
 
 const ProbabilityModal = ({ onClose }) => {
-  const { allEmojis } = useUser();
+  const { allEmojis, isLoading } = useUser();
+
+  if (isLoading || !allEmojis) {
+    return <div>확률 정보를 불러오는 중입니다...</div>;
+  }
 
   return (
     <div className="probability-modal-overlay" onClick={onClose}>
@@ -27,6 +31,7 @@ const ProbabilityModal = ({ onClose }) => {
 
 const GachaScreen = ({ setIsGachaMode }) => {
   const { user, userProfile, allEmojis, isLoading, authIsReady } = useUser(); // useUser 훅에서 user, userProfile, allEmojis, isLoading, authIsReady 가져오기
+
   const [showGachaModal, setShowGachaModal] = useState(false);
   const [pulledEmoji, setPulledEmoji] = useState(null);
   const [isFreePullAvailable, setIsFreePullAvailable] = useState(false);
@@ -37,36 +42,41 @@ const GachaScreen = ({ setIsGachaMode }) => {
   const functions = getFunctions();
   const drawEmojiFunction = httpsCallable(functions, 'drawEmoji');
 
+  // 무료 뽑기 가능 여부 확인 (useEffect로 이동)
   useEffect(() => {
-    const checkFreePullAndLastEmoji = async () => {
-      if (user) {
-        const userRef = doc(db, 'users', user.uid);
-        const userSnap = await getDoc(userRef);
-        if (userSnap.exists()) {
-          const userData = userSnap.data();
-          const lastPull = userData.lastPullTimestamp?.toDate();
-          const lastPulledEmojiId = userData.lastPulledEmojiId; // 마지막으로 뽑은 이모지 ID 가져오기
-
-          if (lastPulledEmojiId) {
-            const emoji = allEmojis.find(e => e.id === lastPulledEmojiId);
-            setLastPulmedEmoji(emoji);
-          }
-
-          const now = new Date();
-          if (!lastPull || lastPull.getDate() !== now.getDate() || lastPull.getMonth() !== now.getMonth() || lastPull.getFullYear() !== now.getFullYear()) {
-            setIsFreePullAvailable(true);
-          } else {
-            setIsFreePullAvailable(false);
-          }
+    if (user && userProfile) {
+      const lastPullTimestamp = userProfile.lastPullTimestamp?.toDate();
+      if (lastPullTimestamp) {
+        const now = new Date();
+        const oneDay = 24 * 60 * 60 * 1000; // 24시간
+        if (now.getTime() - lastPullTimestamp.getTime() >= oneDay) {
+          setIsFreePullAvailable(true);
         } else {
-          setIsFreePullAvailable(true); // New user, free pull available
+          setIsFreePullAvailable(false);
         }
+      } else {
+        setIsFreePullAvailable(true); // 첫 뽑기
       }
-    };
-    checkFreePullAndLastEmoji();
-  }, [user, allEmojis]);
+
+      // 마지막으로 뽑은 이모지 불러오기
+      if (userProfile.lastPulledEmojiId && allEmojis) {
+        const emoji = allEmojis.find(e => e.id === userProfile.lastPulledEmojiId);
+        setLastPulmedEmoji(emoji);
+      }
+    }
+  }, [user, userProfile, allEmojis]);
+
+  // ======== 여기부터 핵심 안전장치 ========
+  // 1. 전체 데이터 로딩이 끝나지 않았거나,
+  // 2. allEmojis 데이터가 아직 null이라면,
+  // 로딩 화면을 보여주고 아래 코드는 실행하지 않습니다.
+  if (isLoading || !allEmojis) {
+    return <div>게임 데이터를 불러오는 중입니다...</div>;
+  }
+  // =====================================
 
   const handleGachaPull = async (isAdPull = false) => {
+    console.log("handleGachaPull called. user:", user, "authIsReady:", authIsReady);
     if (!authIsReady || !user) {
       alert('사용자 정보를 불러오는 중입니다. 잠시 후 다시 시도해주세요.');
       return;
@@ -84,7 +94,7 @@ const GachaScreen = ({ setIsGachaMode }) => {
       const result = await drawEmojiFunction();
       const newEmoji = result.data; // 서버가 반환한 이모지 객체
       setPulledEmoji(newEmoji); // GachaModal에 이모지 객체 전체 전달
-      console.log("Pulled Emoji:", newEmoji); // 디버깅을 위한 로그 추가
+      
       setShowGachaModal(true);
 
       // 무료 뽑기인 경우에만 클라이언트에서 lastPullTimestamp 업데이트

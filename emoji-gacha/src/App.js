@@ -20,7 +20,7 @@ function AppBase() {
   const [isGachaMode, setIsGachaMode] = useState(false);
 
   useEffect(() => {
-    console.log("isGachaMode:", isGachaMode); // 디버깅 로그
+    
     initGA();
   }, [isGachaMode]);
 

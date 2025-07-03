@@ -10,6 +10,7 @@ const EMOJIS_PER_PAGE_MOBILE = 9; // 모바일 한 페이지에 표시할 이모
 
 const EmojiDex = () => {
   const { user, userProfile, collectedEmojis, isLoading, allEmojis } = useUser();
+
   const [selectedFeaturedEmojis, setSelectedFeaturedEmojis] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedEmoji, setSelectedEmoji] = useState(null);
@@ -76,6 +77,10 @@ const EmojiDex = () => {
     });
     setRarityPages(initialPages);
   }, [groupedEmojisByRarity]);
+
+  if (isLoading || !allEmojis) {
+    return <div>이모지 데이터를 불러오는 중입니다...</div>;
+  }
 
   // Event Handlers and other functions
   const handleFilterTabClick = (rarity) => {

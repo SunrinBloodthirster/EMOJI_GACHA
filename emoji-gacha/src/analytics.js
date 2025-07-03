@@ -13,7 +13,6 @@ export const initGA = () => {
     window.gtag = gtag;
     gtag('js', new Date());
     gtag('config', GA_MEASUREMENT_ID);
-    console.log('Google Analytics initialized.');
   } else {
     console.warn('Google Analytics Measurement ID not found. GA will not be initialized.');
   }
@@ -24,6 +23,5 @@ export const logPageView = (path) => {
     window.gtag('config', GA_MEASUREMENT_ID, {
       'page_path': path
     });
-    console.log('Logged page view:', path);
   }
 };

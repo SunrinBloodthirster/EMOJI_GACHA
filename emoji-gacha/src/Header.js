@@ -64,7 +64,6 @@ const Header = () => {
 
   const toggleDropdown = () => {
     setIsDropdownOpen(prev => {
-      console.log("Dropdown toggled. New state:", !prev); // 디버깅 로그
       return !prev;
     });
   };

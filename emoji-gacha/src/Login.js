@@ -10,7 +10,7 @@ const Login = () => {
         // This gives you a Google Access Token. You can use it to access the Google API.
         // The signed-in user info.
         const user = result.user;
-        console.log('User logged in:', user);
+        
         // ...
       }).catch((error) => {
         // Handle Errors here.
