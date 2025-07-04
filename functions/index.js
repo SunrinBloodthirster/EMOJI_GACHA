@@ -1,85 +1,42 @@
 const functions = require("firebase-functions");
-const { initializeApp } = require("firebase-admin/app");
-const { getFirestore, FieldValue } = require("firebase-admin/firestore");
-const logger = require("firebase-functions/logger");
+const admin = require("firebase-admin");
+const cors = require("cors")({ origin: true });
 
-// Initialize Firebase Admin SDK
-initializeApp();
-const db = getFirestore();
+admin.initializeApp();
 
-// Load emoji data from local JSON
-const emojiData = require("./emojiData.json");
-
-// Force redeployment by adding a comment
-exports.drawEmoji = functions.https.onCall(async (data, context) => {
-  // Log the invocation with authentication context
-  logger.info("drawEmoji function called", { auth: context.auth });
-
-  // Security: Ensure the user is authenticated
-  if (!context.auth) {
-    throw new functions.https.HttpsError(
-      "unauthenticated",
-      "The function must be called while authenticated."
-    );
-  }
-
-  const { uid } = context.auth;
-  const userRef = db.collection("users").doc(uid);
-
-  // Emoji drawing logic based on rarity probabilities
-  const rand = Math.random();
-  let cumulativeProbability = 0;
-  let drawnEmoji = null;
-
-  for (const rarity in emojiData.rarityProbabilities) {
-    if (Object.prototype.hasOwnProperty.call(emojiData.rarityProbabilities, rarity)) {
-      cumulativeProbability += emojiData.rarityProbabilities[rarity];
-      if (rand < cumulativeProbability) {
-        const emojisOfRarity = emojiData.emojis.filter((e) => e.rarity === rarity);
-        if (emojisOfRarity.length > 0) {
-          drawnEmoji = emojisOfRarity[Math.floor(Math.random() * emojisOfRarity.length)];
-          break;
-        }
+// 'drawEmoji' 함수를 v1 SDK 방식으로 export 합니다.
+exports.drawEmoji = functions
+  .region("us-central1")
+  .https.onRequest((request, response) => {
+    // cors 핸들러가 요청과 응답을 먼저 처리하도록 합니다.
+    cors(request, response, async () => {
+      // 인증 헤더 확인
+      if (
+        !request.headers.authorization ||
+        !request.headers.authorization.startsWith("Bearer ")
+      ) {
+        console.error(
+          "No Firebase ID token was passed as a Bearer token in the Authorization header."
+        );
+        response.status(401).send("Unauthorized");
+        return;
       }
-    }
-  }
 
-  // Fallback if no emoji is drawn
-  if (!drawnEmoji) {
-    if (emojiData.emojis.length > 0) {
-      drawnEmoji = emojiData.emojis[Math.floor(Math.random() * emojiData.emojis.length)];
-    } else {
-      throw new functions.https.HttpsError("not-found", "No emoji could be drawn.");
-    }
-  }
+      // 토큰 추출 및 검증
+      const idToken = request.headers.authorization.split("Bearer ")[1];
+      try {
+        const decodedToken = await admin.auth().verifyIdToken(idToken);
+        console.log("✅ 인증 성공! 사용자:", decodedToken.uid);
 
-  // Atomically update user data in Firestore
-  try {
-    await userRef.update({
-      collectedEmojis: FieldValue.arrayUnion(drawnEmoji),
-      totalPulls: FieldValue.increment(1),
-      lastPullTimestamp: FieldValue.serverTimestamp(),
-      lastPulledEmojiId: drawnEmoji.id,
+        // 게임 로직
+        const emojis = ["😀", "😍", "🥳", "🚀", "💎", "💯", "🔥"];
+        const randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
+
+        // 성공 응답 전송
+        response.status(200).json({ emoji: randomEmoji });
+      } catch (error) {
+        console.error("❌ 인증 토큰 검증 실패:", error);
+        response.status(401).send("Unauthorized");
+      }
     });
-  } catch (error) {
-    // If the user document does not exist, create it
-    if (error.code === 5) { // 5 = NOT_FOUND
-      await userRef.set({
-        collectedEmojis: [drawnEmoji],
-        totalPulls: 1,
-        lastPullTimestamp: FieldValue.serverTimestamp(),
-        lastPulledEmojiId: drawnEmoji.id,
-      }, { merge: true });
-    } else {
-      logger.error("Error updating user document for user:", uid, error);
-      throw new functions.https.HttpsError(
-        "internal",
-        "Failed to update user data.",
-        error.message
-      );
-    }
-  }
-
-  // Return the drawn emoji to the client
-  return drawnEmoji;
-});
+  });

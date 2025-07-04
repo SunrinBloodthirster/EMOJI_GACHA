@@ -38,6 +38,8 @@ const GachaScreen = ({ setIsGachaMode }) => {
     const [lastPulledEmoji, setLastPulledEmoji] = useState(null);
     const [showProbabilityModal, setShowProbabilityModal] = useState(false);
     const [isProcessing, setIsProcessing] = useState(false);
+    const [error, setError] = useState(null);
+    const [result, setResult] = useState(null);
 
     // 무료 뽑기 가능 여부 확인 (useEffect로 이동)
     useEffect(() => {
@@ -67,39 +69,67 @@ const GachaScreen = ({ setIsGachaMode }) => {
         
 
     const handleGachaPull = async (isAdPull = false) => {
-  // 2. '철벽 가드' 로직: 인증 안됐거나, 유저 없거나, 처리 중이면 절대 실행 안 함
-  if (!authIsReady || !user) {
-    alert('사용자 정보가 확인되지 않았습니다. 잠시 후 다시 시도해 주세요.');
-    return;
-  }
-  if (isProcessing) return;
+    setIsProcessing(true);
+    setError(null);
+    let response; // response 변수를 try 블록 밖에서 선언합니다.
 
-  setIsProcessing(true);
+    try {
+        console.log("1️⃣ 뽑기 프로세스 시작");
 
-  try {
-    const functions = getFunctions();
-    const drawEmojiFunction = httpsCallable(functions, 'drawEmoji');
+        const auth = getAuth();
+        const user = auth.currentUser;
 
-    // httpsCallable는 자동으로 인증 토큰을 처리하고,
-    // { data: { ... } } 형식으로 데이터를 보냅니다.
-    // 백엔드에서 isAdPull을 data.isAdPull로 접근할 수 있습니다.
-    const result = await drawEmojiFunction({ isAdPull });
+        if (!user) {
+            throw new Error("로그인이 필요합니다.");
+        }
+        console.log("2️⃣ 사용자 확인 완료:", user.uid);
 
-    // Set the pulled emoji and open the modal
-    setPulledEmoji(result.data); // result.data에 실제 뽑기 결과가 있을 것으로 예상
-    setIsGachaModalOpen(true);
+        const idToken = await user.getIdToken();
+        console.log("3️⃣ ID 토큰 가져오기 성공");
 
-    // If the pull was not ad-based, update free pull availability
-    if (!isAdPull) {
-      setIsFreePullAvailable(false);
+        response = await fetch('http://localhost:5001/emoji-gacha/us-central1/drawEmoji', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${idToken}`
+            },
+            body: JSON.stringify({ data: {} })
+        });
+        console.log("4️⃣ Fetch API 호출 성공");
+
+        const responseText = await response.text();
+        console.log("5️⃣ 서버로부터 응답 받기 성공. 내용은:", responseText);
+
+        if (!response.ok) {
+            throw new Error(responseText || `서버 오류: ${response.status}`);
+        }
+
+        if (responseText) {
+            const result = JSON.parse(responseText);
+            setPulledEmoji(result.emoji); 
+            setIsGachaModalOpen(true);
+            console.log("6️⃣ 최종 결과 처리 성공! 뽑힌 이모지:", result.emoji);
+        } else {
+            throw new Error("서버로부터 비어있는 응답을 받았습니다.");
+        }
+
+        // If the pull was not ad-based, update free pull availability
+        if (!isAdPull) {
+          setIsFreePullAvailable(false);
+        }
+
+    } catch (err) {
+        // 에러 객체의 모든 속성을 자세히 보기 위해 JSON.stringify를 사용합니다.
+        console.error("-".repeat(30));
+        console.error(" 뽑기 오류 발생! 전체 에러 객체:", JSON.stringify(err, Object.getOwnPropertyNames(err), 2));
+        if (response) {
+            console.error(" 오류 발생 시점의 응답 객체:", response);
+        }
+        console.error("-".repeat(30));
+        alert(err.message || "알 수 없는 오류가 발생했습니다.");
+    } finally {
+        setIsProcessing(false);
     }
-
-  } catch (error) {
-    console.error("뽑기 오류:", error);
-    alert(`뽑기 실패: ${error.message}`);
-  } finally {
-    setIsProcessing(false);
-  }
 };
 
     const handleCloseModal = () => {
