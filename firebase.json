@@ -30,12 +30,32 @@
     ],
     "headers": [
       {
-        "source" : "**",
-        "headers" : [ {
-          "key" : "Cross-Origin-Opener-Policy",
-          "value" : "same-origin-allow-popups"
-        } ]
+        "source": "**",
+        "headers": [
+          {
+            "key": "Cross-Origin-Opener-Policy",
+            "value": "same-origin-allow-popups"
+          }
+        ]
       }
     ]
+  },
+  "emulators": {
+    "functions": {
+      "port": 5001
+    },
+    "firestore": {
+      "port": 8080
+    },
+    "auth": {
+      "port": 9099
+    },
+    "hosting": {
+      "port": 5000
+    },
+    "ui": {
+      "enabled": true
+    },
+    "singleProjectMode": true
   }
 }

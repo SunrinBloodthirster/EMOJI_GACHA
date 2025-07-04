@@ -63,36 +63,44 @@ const GachaScreen = ({ setIsGachaMode }) => {
       }
     }, [user, userProfile, allEmojis]);
 
+    
+        
+
     const handleGachaPull = async (isAdPull = false) => {
-        // 2. '철벽 가드' 로직: 인증 안됐거나, 유저 없거나, 처리 중이면 절대 실행 안 함
-        if (!authIsReady || !user) {
-            alert('사용자 정보가 확인되지 않았습니다. 잠시 후 다시 시도해 주세요.');
-            return;
-        }
-        if (isProcessing) return;
+  // 2. '철벽 가드' 로직: 인증 안됐거나, 유저 없거나, 처리 중이면 절대 실행 안 함
+  if (!authIsReady || !user) {
+    alert('사용자 정보가 확인되지 않았습니다. 잠시 후 다시 시도해 주세요.');
+    return;
+  }
+  if (isProcessing) return;
 
-        setIsProcessing(true);
+  setIsProcessing(true);
 
-        try {
-            const functions = getFunctions();
-            const drawEmojiFunction = httpsCallable(functions, 'drawEmoji');
-            const result = await drawEmojiFunction({ isAdPull });
+  try {
+    const functions = getFunctions();
+    const drawEmojiFunction = httpsCallable(functions, 'drawEmoji');
 
-            // Set the pulled emoji and open the modal
-            setPulledEmoji(result.data);
-            setIsGachaModalOpen(true);
+    // httpsCallable는 자동으로 인증 토큰을 처리하고,
+    // { data: { ... } } 형식으로 데이터를 보냅니다.
+    // 백엔드에서 isAdPull을 data.isAdPull로 접근할 수 있습니다.
+    const result = await drawEmojiFunction({ isAdPull });
 
-            // If the pull was not ad-based, update free pull availability
-            if (!isAdPull) {
-              setIsFreePullAvailable(false);
-            }
+    // Set the pulled emoji and open the modal
+    setPulledEmoji(result.data); // result.data에 실제 뽑기 결과가 있을 것으로 예상
+    setIsGachaModalOpen(true);
 
-        } catch (error) {
-            alert(`뽑기 실패: ${error.message}`);
-        } finally {
-            setIsProcessing(false);
-        }
-    };
+    // If the pull was not ad-based, update free pull availability
+    if (!isAdPull) {
+      setIsFreePullAvailable(false);
+    }
+
+  } catch (error) {
+    console.error("뽑기 오류:", error);
+    alert(`뽑기 실패: ${error.message}`);
+  } finally {
+    setIsProcessing(false);
+  }
+};
 
     const handleCloseModal = () => {
         setIsGachaModalOpen(false);

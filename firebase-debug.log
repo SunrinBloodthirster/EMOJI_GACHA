@@ -1,54 +1,53 @@
-[debug] [2025-07-04T11:08:30.293Z] ----------------------------------------------------------------------
-[debug] [2025-07-04T11:08:30.295Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\txoch\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
-[debug] [2025-07-04T11:08:30.296Z] CLI Version:   14.9.0
-[debug] [2025-07-04T11:08:30.296Z] Platform:      win32
-[debug] [2025-07-04T11:08:30.296Z] Node Version:  v22.17.0
-[debug] [2025-07-04T11:08:30.296Z] Time:          Fri Jul 04 2025 20:08:30 GMT+0900 (대한민국 표준시)
-[debug] [2025-07-04T11:08:30.296Z] ----------------------------------------------------------------------
+[debug] [2025-07-04T11:31:29.941Z] ----------------------------------------------------------------------
+[debug] [2025-07-04T11:31:29.943Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\txoch\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
+[debug] [2025-07-04T11:31:29.944Z] CLI Version:   14.9.0
+[debug] [2025-07-04T11:31:29.944Z] Platform:      win32
+[debug] [2025-07-04T11:31:29.944Z] Node Version:  v22.17.0
+[debug] [2025-07-04T11:31:29.944Z] Time:          Fri Jul 04 2025 20:31:29 GMT+0900 (대한민국 표준시)
+[debug] [2025-07-04T11:31:29.944Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2025-07-04T11:08:30.479Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2025-07-04T11:08:30.480Z] > authorizing via signed-in user (8lackraisond3tre@gmail.com)
-[debug] [2025-07-04T11:08:30.597Z] openjdk version "17.0.15" 2025-04-15 LTS
-OpenJDK Runtime Environment Corretto-17.0.15.6.1 (build 17.0.15+6-LTS)
+[debug] [2025-07-04T11:31:30.135Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-07-04T11:31:30.136Z] > authorizing via signed-in user (8lackraisond3tre@gmail.com)
+[debug] [2025-07-04T11:31:30.251Z] openjdk version "17.0.15" 2025-04-15 LTS
 
-[debug] [2025-07-04T11:08:30.598Z] OpenJDK 64-Bit Server VM Corretto-17.0.15.6.1 (build 17.0.15+6-LTS, mixed mode, sharing)
+[debug] [2025-07-04T11:31:30.252Z] OpenJDK Runtime Environment Corretto-17.0.15.6.1 (build 17.0.15+6-LTS)
+OpenJDK 64-Bit Server VM Corretto-17.0.15.6.1 (build 17.0.15+6-LTS, mixed mode, sharing)
 
-[debug] [2025-07-04T11:08:30.638Z] Parsed Java major version: 17
+[debug] [2025-07-04T11:31:30.262Z] Parsed Java major version: 17
 [info] i  emulators: Starting emulators: functions, firestore, hosting, extensions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions, firestore, hosting, extensions"}}
-[debug] [2025-07-04T11:08:30.641Z] Checked if tokens are valid: true, expires at: 1751628647685
-[debug] [2025-07-04T11:08:30.641Z] Checked if tokens are valid: true, expires at: 1751628647685
-[debug] [2025-07-04T11:08:30.643Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/emoji-gacha [none]
-[debug] [2025-07-04T11:08:31.108Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/emoji-gacha 200
-[debug] [2025-07-04T11:08:31.108Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/emoji-gacha {"projectNumber":"659001732182","projectId":"emoji-gacha","lifecycleState":"ACTIVE","name":"emoji-gacha","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2025-07-02T12:12:22.320505Z"}
-[debug] [2025-07-04T11:08:31.120Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2025-07-04T11:08:31.120Z] [firestore] Firestore Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2025-07-04T11:08:31.120Z] [firestore.websocket] websocket server for firestore only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2025-07-04T11:08:31.120Z] [hosting] Hosting Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2025-07-04T11:08:31.120Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}]},"metadata":{"message":"assigned listening specs for emulators"}}
-[warn] !  emulators: It seems that you are running multiple instances of the emulator suite for project emoji-gacha. This may result in unexpected behavior. 
-[debug] [2025-07-04T11:08:31.127Z] [hub] writing locator at C:\Users\txoch\AppData\Local\Temp\hub-emoji-gacha.json
-[debug] [2025-07-04T11:08:31.133Z] [Extensions] Started Extensions emulator, this is a noop.
-[debug] [2025-07-04T11:08:31.138Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2025-07-04T11:08:31.138Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2025-07-04T11:08:31.138Z] [tasks] Cloud Tasks Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2025-07-04T11:08:31.138Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}],"tasks":[{"address":"127.0.0.1","family":"IPv4","port":9499}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[debug] [2025-07-04T11:31:30.264Z] Checked if tokens are valid: true, expires at: 1751631928853
+[debug] [2025-07-04T11:31:30.264Z] Checked if tokens are valid: true, expires at: 1751631928853
+[debug] [2025-07-04T11:31:30.265Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/emoji-gacha [none]
+[debug] [2025-07-04T11:31:30.654Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/emoji-gacha 200
+[debug] [2025-07-04T11:31:30.655Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/emoji-gacha {"projectNumber":"659001732182","projectId":"emoji-gacha","lifecycleState":"ACTIVE","name":"emoji-gacha","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2025-07-02T12:12:22.320505Z"}
+[debug] [2025-07-04T11:31:30.684Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-07-04T11:31:30.684Z] [firestore] Firestore Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-07-04T11:31:30.684Z] [firestore.websocket] websocket server for firestore only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-07-04T11:31:30.684Z] [hosting] Hosting Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-07-04T11:31:30.684Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2025-07-04T11:31:30.692Z] [hub] writing locator at C:\Users\txoch\AppData\Local\Temp\hub-emoji-gacha.json
+[debug] [2025-07-04T11:31:30.702Z] [Extensions] Started Extensions emulator, this is a noop.
+[debug] [2025-07-04T11:31:30.708Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-07-04T11:31:30.708Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-07-04T11:31:30.708Z] [tasks] Cloud Tasks Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-07-04T11:31:30.708Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}],"tasks":[{"address":"127.0.0.1","family":"IPv4","port":9499}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
 [warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: apphosting, auth, database, pubsub, storage, dataconnect {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mapphosting, auth, database, pubsub, storage, dataconnect\u001b[22m"}}
-[debug] [2025-07-04T11:08:31.170Z] defaultcredentials: writing to file C:\Users\txoch\AppData\Roaming\firebase\8lackraisond3tre_gmail_com_application_default_credentials.json
-[debug] [2025-07-04T11:08:31.172Z] Setting GAC to C:\Users\txoch\AppData\Roaming\firebase\8lackraisond3tre_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\txoch\\AppData\\Roaming\\firebase\\8lackraisond3tre_gmail_com_application_default_credentials.json"}}
-[debug] [2025-07-04T11:08:31.172Z] Checked if tokens are valid: true, expires at: 1751628647685
-[debug] [2025-07-04T11:08:31.172Z] Checked if tokens are valid: true, expires at: 1751628647685
-[debug] [2025-07-04T11:08:31.172Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/emoji-gacha/adminSdkConfig [none]
-[debug] [2025-07-04T11:08:31.647Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/emoji-gacha/adminSdkConfig 200
-[debug] [2025-07-04T11:08:31.647Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/emoji-gacha/adminSdkConfig {"projectId":"emoji-gacha","storageBucket":"emoji-gacha.firebasestorage.app"}
-[debug] [2025-07-04T11:08:31.660Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
-[debug] [2025-07-04T11:08:31.660Z] Ignoring unsupported arg: single_project_mode_error {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: single_project_mode_error"}}
-[debug] [2025-07-04T11:08:31.660Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","C:\\Users\\txoch\\.cache\\firebase\\emulators\\cloud-firestore-emulator-v1.19.8.jar","--host","127.0.0.1","--port",8080,"--websocket_port",9150,"--project_id","emoji-gacha","--rules","C:\\Users\\txoch\\Documents\\emoji-gacha\\firestore.rules","--single_project_mode",true,"--functions_emulator","127.0.0.1:5001"],"optionalArgs":["port","webchannel_port","host","rules","websocket_port","functions_emulator","seed_from_export","project_id","single_project_mode"],"joinArgs":false,"shell":false,"port":8080} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"C:\\\\Users\\\\txoch\\\\.cache\\\\firebase\\\\emulators\\\\cloud-firestore-emulator-v1.19.8.jar\",\"--host\",\"127.0.0.1\",\"--port\",8080,\"--websocket_port\",9150,\"--project_id\",\"emoji-gacha\",\"--rules\",\"C:\\\\Users\\\\txoch\\\\Documents\\\\emoji-gacha\\\\firestore.rules\",\"--single_project_mode\",true,\"--functions_emulator\",\"127.0.0.1:5001\"],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"websocket_port\",\"functions_emulator\",\"seed_from_export\",\"project_id\",\"single_project_mode\"],\"joinArgs\":false,\"shell\":false,\"port\":8080}"}}
+[debug] [2025-07-04T11:31:30.737Z] defaultcredentials: writing to file C:\Users\txoch\AppData\Roaming\firebase\8lackraisond3tre_gmail_com_application_default_credentials.json
+[debug] [2025-07-04T11:31:30.740Z] Setting GAC to C:\Users\txoch\AppData\Roaming\firebase\8lackraisond3tre_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\txoch\\AppData\\Roaming\\firebase\\8lackraisond3tre_gmail_com_application_default_credentials.json"}}
+[debug] [2025-07-04T11:31:30.740Z] Checked if tokens are valid: true, expires at: 1751631928853
+[debug] [2025-07-04T11:31:30.740Z] Checked if tokens are valid: true, expires at: 1751631928853
+[debug] [2025-07-04T11:31:30.740Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/emoji-gacha/adminSdkConfig [none]
+[debug] [2025-07-04T11:31:31.250Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/emoji-gacha/adminSdkConfig 200
+[debug] [2025-07-04T11:31:31.250Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/emoji-gacha/adminSdkConfig {"projectId":"emoji-gacha","storageBucket":"emoji-gacha.firebasestorage.app"}
+[debug] [2025-07-04T11:31:31.284Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2025-07-04T11:31:31.284Z] Ignoring unsupported arg: single_project_mode_error {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: single_project_mode_error"}}
+[debug] [2025-07-04T11:31:31.285Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","C:\\Users\\txoch\\.cache\\firebase\\emulators\\cloud-firestore-emulator-v1.19.8.jar","--host","127.0.0.1","--port",8080,"--websocket_port",9150,"--project_id","emoji-gacha","--rules","C:\\Users\\txoch\\Documents\\emoji-gacha\\firestore.rules","--single_project_mode",true,"--functions_emulator","127.0.0.1:5001"],"optionalArgs":["port","webchannel_port","host","rules","websocket_port","functions_emulator","seed_from_export","project_id","single_project_mode"],"joinArgs":false,"shell":false,"port":8080} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"C:\\\\Users\\\\txoch\\\\.cache\\\\firebase\\\\emulators\\\\cloud-firestore-emulator-v1.19.8.jar\",\"--host\",\"127.0.0.1\",\"--port\",8080,\"--websocket_port\",9150,\"--project_id\",\"emoji-gacha\",\"--rules\",\"C:\\\\Users\\\\txoch\\\\Documents\\\\emoji-gacha\\\\firestore.rules\",\"--single_project_mode\",true,\"--functions_emulator\",\"127.0.0.1:5001\"],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"websocket_port\",\"functions_emulator\",\"seed_from_export\",\"project_id\",\"single_project_mode\"],\"joinArgs\":false,\"shell\":false,\"port\":8080}"}}
 [info] i  firestore: Firestore Emulator logging to firestore-debug.log {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator logging to \u001b[1mfirestore-debug.log\u001b[22m"}}
-[debug] [2025-07-04T11:08:34.194Z] Jul 04, 2025 8:08:34 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start
+[debug] [2025-07-04T11:31:33.113Z] Jul 04, 2025 8:31:33 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start
 INFO: Started WebSocket server on ws://127.0.0.1:9150
- {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 04, 2025 8:08:34 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start\r\nINFO: Started WebSocket server on ws://127.0.0.1:9150\r\n"}}
-[debug] [2025-07-04T11:08:34.273Z] API endpoint: http:// {"metadata":{"emulator":{"name":"firestore"},"message":"API endpoint: http://"}}
-[debug] [2025-07-04T11:08:34.274Z] 127.0.0.1:8080
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 04, 2025 8:31:33 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start\r\nINFO: Started WebSocket server on ws://127.0.0.1:9150\r\n"}}
+[debug] [2025-07-04T11:31:33.183Z] API endpoint: http:// {"metadata":{"emulator":{"name":"firestore"},"message":"API endpoint: http://"}}
+[debug] [2025-07-04T11:31:33.184Z] 127.0.0.1:8080
 If you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:
 
    export FIRESTORE_EMULATOR_HOST=127.0.0.1:8080
@@ -62,27 +61,27 @@ Dev App Server is now running.
 
  {"metadata":{"emulator":{"name":"firestore"},"message":"127.0.0.1:8080\nIf you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:\r\n\n   export FIRESTORE_EMULATOR_HOST=127.0.0.1:8080\n\nIf you are running a Firestore in Datastore Mode project, run:\r\n\n   export DATASTORE_EMULATOR_HOST=127.0.0.1:8080\n\nNote: Support for Datastore Mode is in preview. If you encounter any bugs please file at https://github.com/firebase/firebase-tools/issues.\r\nDev App Server is now running.\n\r\n"}}
 [info] +  firestore: Firestore Emulator UI websocket is running on 9150. {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator UI websocket is running on 9150."}}
-[debug] [2025-07-04T11:08:34.413Z] Checked if tokens are valid: true, expires at: 1751628647685
-[debug] [2025-07-04T11:08:34.413Z] Checked if tokens are valid: true, expires at: 1751628647685
-[debug] [2025-07-04T11:08:34.414Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/emoji-gacha/sites 
-[debug] [2025-07-04T11:08:35.331Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/emoji-gacha/sites 200
-[debug] [2025-07-04T11:08:35.331Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/emoji-gacha/sites {"sites":[{"name":"projects/emoji-gacha/sites/emoji-gacha","defaultUrl":"https://emoji-gacha.web.app","appId":"1:659001732182:web:a569377323b8c136f2dff7","type":"DEFAULT_SITE"}]}
-[debug] [2025-07-04T11:08:35.332Z] Checked if tokens are valid: true, expires at: 1751628647685
-[debug] [2025-07-04T11:08:35.332Z] Checked if tokens are valid: true, expires at: 1751628647685
-[debug] [2025-07-04T11:08:35.332Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/emoji-gacha/webApps/1:659001732182:web:a569377323b8c136f2dff7/config [none]
-[debug] [2025-07-04T11:08:36.139Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/emoji-gacha/webApps/1:659001732182:web:a569377323b8c136f2dff7/config 200
-[debug] [2025-07-04T11:08:36.139Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/emoji-gacha/webApps/1:659001732182:web:a569377323b8c136f2dff7/config {"projectId":"emoji-gacha","appId":"1:659001732182:web:a569377323b8c136f2dff7","storageBucket":"emoji-gacha.firebasestorage.app","apiKey":"AIzaSyDzDGBO8w353hn74iZNW_uB9D1nZlf5mh0","authDomain":"emoji-gacha.firebaseapp.com","messagingSenderId":"659001732182","measurementId":"G-ZRHMD8PVSB"}
-[debug] [2025-07-04T11:08:36.143Z] Checked if tokens are valid: true, expires at: 1751628647685
-[debug] [2025-07-04T11:08:36.143Z] Checked if tokens are valid: true, expires at: 1751628647685
-[debug] [2025-07-04T11:08:36.143Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/emoji-gacha [none]
-[debug] [2025-07-04T11:08:36.491Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/emoji-gacha 200
-[debug] [2025-07-04T11:08:36.491Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/emoji-gacha {"projectId":"emoji-gacha","projectNumber":"659001732182","displayName":"emoji-gacha","name":"projects/emoji-gacha","resources":{"hostingSite":"emoji-gacha"},"state":"ACTIVE","etag":"1_5c4a98eb-f25f-4524-bc89-ec58a55f7a92"}
+[debug] [2025-07-04T11:31:33.212Z] Checked if tokens are valid: true, expires at: 1751631928853
+[debug] [2025-07-04T11:31:33.212Z] Checked if tokens are valid: true, expires at: 1751631928853
+[debug] [2025-07-04T11:31:33.212Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/emoji-gacha/sites 
+[debug] [2025-07-04T11:31:34.055Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/emoji-gacha/sites 200
+[debug] [2025-07-04T11:31:34.056Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/emoji-gacha/sites {"sites":[{"name":"projects/emoji-gacha/sites/emoji-gacha","defaultUrl":"https://emoji-gacha.web.app","appId":"1:659001732182:web:a569377323b8c136f2dff7","type":"DEFAULT_SITE"}]}
+[debug] [2025-07-04T11:31:34.056Z] Checked if tokens are valid: true, expires at: 1751631928853
+[debug] [2025-07-04T11:31:34.056Z] Checked if tokens are valid: true, expires at: 1751631928853
+[debug] [2025-07-04T11:31:34.056Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/emoji-gacha/webApps/1:659001732182:web:a569377323b8c136f2dff7/config [none]
+[debug] [2025-07-04T11:31:34.845Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/emoji-gacha/webApps/1:659001732182:web:a569377323b8c136f2dff7/config 200
+[debug] [2025-07-04T11:31:34.845Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/emoji-gacha/webApps/1:659001732182:web:a569377323b8c136f2dff7/config {"projectId":"emoji-gacha","appId":"1:659001732182:web:a569377323b8c136f2dff7","storageBucket":"emoji-gacha.firebasestorage.app","apiKey":"AIzaSyDzDGBO8w353hn74iZNW_uB9D1nZlf5mh0","authDomain":"emoji-gacha.firebaseapp.com","messagingSenderId":"659001732182","measurementId":"G-ZRHMD8PVSB"}
+[debug] [2025-07-04T11:31:34.849Z] Checked if tokens are valid: true, expires at: 1751631928853
+[debug] [2025-07-04T11:31:34.849Z] Checked if tokens are valid: true, expires at: 1751631928853
+[debug] [2025-07-04T11:31:34.850Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/emoji-gacha [none]
+[debug] [2025-07-04T11:31:35.180Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/emoji-gacha 200
+[debug] [2025-07-04T11:31:35.180Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/emoji-gacha {"projectId":"emoji-gacha","projectNumber":"659001732182","displayName":"emoji-gacha","name":"projects/emoji-gacha","resources":{"hostingSite":"emoji-gacha"},"state":"ACTIVE","etag":"1_5c4a98eb-f25f-4524-bc89-ec58a55f7a92"}
 [info] i  hosting[emoji-gacha]: Serving hosting files from: emoji-gacha/build {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1memoji-gacha/build\u001b[22m"}}
 [info] +  hosting[emoji-gacha]: Local server: http://127.0.0.1:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://127.0.0.1:5000\u001b[22m\u001b[24m"}}
-[debug] [2025-07-04T11:08:36.510Z] [Extensions] Connecting Extensions emulator, this is a noop.
+[debug] [2025-07-04T11:31:35.232Z] [Extensions] Connecting Extensions emulator, this is a noop.
 [info] i  functions: Watching "C:\Users\txoch\Documents\emoji-gacha\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\Users\\txoch\\Documents\\emoji-gacha\\functions\" for Cloud Functions..."}}
-[debug] [2025-07-04T11:08:36.516Z] Validating nodejs source
-[debug] [2025-07-04T11:08:37.217Z] > [functions] package.json contents: {
+[debug] [2025-07-04T11:31:35.242Z] Validating nodejs source
+[debug] [2025-07-04T11:31:36.068Z] > [functions] package.json contents: {
   "name": "functions",
   "description": "Cloud Functions for Firebase",
   "scripts": {
@@ -108,19 +107,19 @@ Dev App Server is now running.
   },
   "private": true
 }
-[debug] [2025-07-04T11:08:37.218Z] Building nodejs source
-[debug] [2025-07-04T11:08:37.218Z] Failed to find version of module node: reached end of search path C:\Users\txoch\Documents\emoji-gacha\functions\node_modules
+[debug] [2025-07-04T11:31:36.068Z] Building nodejs source
+[debug] [2025-07-04T11:31:36.068Z] Failed to find version of module node: reached end of search path C:\Users\txoch\Documents\emoji-gacha\functions\node_modules
 [info] +  functions: Using node@22 from host. 
-[debug] [2025-07-04T11:08:37.220Z] Could not find functions.yaml. Must use http discovery
-[debug] [2025-07-04T11:08:37.224Z] Found firebase-functions binary at 'C:\Users\txoch\Documents\emoji-gacha\functions\node_modules\.bin\firebase-functions'
-[info] Serving at port 8908
+[debug] [2025-07-04T11:31:36.071Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-07-04T11:31:36.077Z] Found firebase-functions binary at 'C:\Users\txoch\Documents\emoji-gacha\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8432
 
-[debug] [2025-07-04T11:08:37.840Z] Got response from /__/functions.yaml {"endpoints":{"drawEmoji":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"drawEmoji"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
-[debug] [2025-07-04T11:08:41.905Z] defaultcredentials: writing to file C:\Users\txoch\AppData\Roaming\firebase\8lackraisond3tre_gmail_com_application_default_credentials.json
-[debug] [2025-07-04T11:08:41.908Z] Setting GAC to C:\Users\txoch\AppData\Roaming\firebase\8lackraisond3tre_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\txoch\\AppData\\Roaming\\firebase\\8lackraisond3tre_gmail_com_application_default_credentials.json"}}
+[debug] [2025-07-04T11:31:36.498Z] Got response from /__/functions.yaml {"endpoints":{"drawEmoji":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"drawEmoji"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2025-07-04T11:31:40.536Z] defaultcredentials: writing to file C:\Users\txoch\AppData\Roaming\firebase\8lackraisond3tre_gmail_com_application_default_credentials.json
+[debug] [2025-07-04T11:31:40.536Z] Setting GAC to C:\Users\txoch\AppData\Roaming\firebase\8lackraisond3tre_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\txoch\\AppData\\Roaming\\firebase\\8lackraisond3tre_gmail_com_application_default_credentials.json"}}
 [info] +  functions: Loaded functions definitions from source: drawEmoji. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: drawEmoji."}}
 [info] +  functions[us-central1-drawEmoji]: http function initialized (http://127.0.0.1:5001/emoji-gacha/us-central1/drawEmoji). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/emoji-gacha/us-central1/drawEmoji)."}}
-[debug] [2025-07-04T11:08:41.913Z] Could not find VSCode notification endpoint: FetchError: request to http://localhost:40001/vscode/notify failed, reason: . If you are not running the Firebase Data Connect VSCode extension, this is expected and not an issue.
+[debug] [2025-07-04T11:31:40.543Z] Could not find VSCode notification endpoint: FetchError: request to http://localhost:40001/vscode/notify failed, reason: . If you are not running the Firebase Data Connect VSCode extension, this is expected and not an issue.
 [info] 
 ┌─────────────────────────────────────────────────────────────┐
 │ ✔  All emulators ready! It is now safe to connect your app. │
@@ -145,3 +144,231 @@ Dev App Server is now running.
 └─────────────────────────┴───────────────┴─────────────────────┘
 Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
  
+[debug] [2025-07-04T11:31:51.826Z] Jul 04, 2025 8:31:51 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 04, 2025 8:31:51 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
+[debug] [2025-07-04T11:31:53.411Z] Jul 04, 2025 8:31:53 PM com.google.cloud.datastore.emulator.impl.context.EmulatorAuthorization warnAboutSecuredJwt
+WARNING: expected an unsecured JWT, the emulator does not validate JWTs and IS NOT SECURE
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 04, 2025 8:31:53 PM com.google.cloud.datastore.emulator.impl.context.EmulatorAuthorization warnAboutSecuredJwt\r\nWARNING: expected an unsecured JWT, the emulator does not validate JWTs and IS NOT SECURE\r\n"}}
+[debug] [2025-07-04T11:31:54.215Z] Jul 04, 2025 8:31:54 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 04, 2025 8:31:54 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
+[debug] [2025-07-04T11:32:11.492Z] Jul 04, 2025 8:32:11 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 04, 2025 8:32:11 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\r\nINFO: Connected to new websocket client\r\n"}}
+[debug] [2025-07-04T11:32:54.620Z] Jul 04, 2025 8:32:54 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 04, 2025 8:32:54 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
+[debug] [2025-07-04T11:32:58.768Z] Jul 04, 2025 8:32:58 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 04, 2025 8:32:58 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\r\nINFO: Connected to new websocket client\r\n"}}
+[debug] [2025-07-04T11:32:58.769Z] Jul 04, 2025 8:32:58 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 04, 2025 8:32:58 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\r\nINFO: Websocket client disconnected\r\n"}}
+[debug] [2025-07-04T11:33:54.692Z] Jul 04, 2025 8:33:54 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 04, 2025 8:33:54 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
+[debug] [2025-07-04T11:34:55.095Z] Jul 04, 2025 8:34:55 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 04, 2025 8:34:55 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
+[debug] [2025-07-04T11:35:55.202Z] Jul 04, 2025 8:35:55 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 04, 2025 8:35:55 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
+[debug] [2025-07-04T11:36:50.742Z] Received signal SIGHUP 1
+[info]  
+[info] i  emulators: Received SIGHUP for the first time. Starting a clean shutdown. 
+[info] i  emulators: Please wait for a clean shutdown or send the SIGHUP signal again to stop right now. 
+[info] i  emulators: Shutting down emulators. {"metadata":{"emulator":{"name":"hub"},"message":"Shutting down emulators."}}
+[info] i  ui: Stopping Emulator UI {"metadata":{"emulator":{"name":"ui"},"message":"Stopping Emulator UI"}}
+[info] i  extensions: Stopping Extensions Emulator {"metadata":{"emulator":{"name":"extensions"},"message":"Stopping Extensions Emulator"}}
+[debug] [2025-07-04T11:36:50.747Z] [Extensions] Stopping Extensions emulator, this is a noop.
+[info] i  functions: Stopping Functions Emulator {"metadata":{"emulator":{"name":"functions"},"message":"Stopping Functions Emulator"}}
+[info] i  hosting: Stopping Hosting Emulator {"metadata":{"emulator":{"name":"hosting"},"message":"Stopping Hosting Emulator"}}
+[info] i  firestore: Stopping Firestore Emulator {"metadata":{"emulator":{"name":"firestore"},"message":"Stopping Firestore Emulator"}}
+[warn] !  Firestore Emulator has exited upon receiving signal: SIGINT 
+[info] i  eventarc: Stopping Eventarc Emulator {"metadata":{"emulator":{"name":"eventarc"},"message":"Stopping Eventarc Emulator"}}
+[info] i  tasks: Stopping Cloud Tasks Emulator {"metadata":{"emulator":{"name":"tasks"},"message":"Stopping Cloud Tasks Emulator"}}
+[info] i  hub: Stopping emulator hub {"metadata":{"emulator":{"name":"hub"},"message":"Stopping emulator hub"}}
+[info] i  logging: Stopping Logging Emulator {"metadata":{"emulator":{"name":"logging"},"message":"Stopping Logging Emulator"}}
+[debug] [2025-07-04T11:36:50.790Z] Could not find VSCode notification endpoint: FetchError: request to http://localhost:40001/vscode/notify failed, reason: . If you are not running the Firebase Data Connect VSCode extension, this is expected and not an issue.
+[debug] [2025-07-04T11:36:56.508Z] ----------------------------------------------------------------------
+[debug] [2025-07-04T11:36:56.511Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\txoch\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
+[debug] [2025-07-04T11:36:56.512Z] CLI Version:   14.9.0
+[debug] [2025-07-04T11:36:56.512Z] Platform:      win32
+[debug] [2025-07-04T11:36:56.512Z] Node Version:  v22.17.0
+[debug] [2025-07-04T11:36:56.513Z] Time:          Fri Jul 04 2025 20:36:56 GMT+0900 (대한민국 표준시)
+[debug] [2025-07-04T11:36:56.513Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-07-04T11:36:56.682Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-07-04T11:36:56.683Z] > authorizing via signed-in user (8lackraisond3tre@gmail.com)
+[debug] [2025-07-04T11:36:56.802Z] openjdk version "17.0.15" 2025-04-15 LTS
+OpenJDK Runtime Environment Corretto-17.0.15.6.1 (build 17.0.15+6-LTS)
+
+[debug] [2025-07-04T11:36:56.803Z] OpenJDK 64-Bit Server VM Corretto-17.0.15.6.1 (build 17.0.15+6-LTS, mixed mode, sharing)
+
+[debug] [2025-07-04T11:36:56.832Z] Parsed Java major version: 17
+[info] i  emulators: Starting emulators: functions, firestore, hosting, extensions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions, firestore, hosting, extensions"}}
+[debug] [2025-07-04T11:36:56.834Z] Checked if tokens are valid: true, expires at: 1751631928853
+[debug] [2025-07-04T11:36:56.834Z] Checked if tokens are valid: true, expires at: 1751631928853
+[debug] [2025-07-04T11:36:56.835Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/emoji-gacha [none]
+[debug] [2025-07-04T11:36:57.456Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/emoji-gacha 200
+[debug] [2025-07-04T11:36:57.457Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/emoji-gacha {"projectNumber":"659001732182","projectId":"emoji-gacha","lifecycleState":"ACTIVE","name":"emoji-gacha","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2025-07-02T12:12:22.320505Z"}
+[debug] [2025-07-04T11:36:57.486Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-07-04T11:36:57.486Z] [firestore] Firestore Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-07-04T11:36:57.487Z] [firestore.websocket] websocket server for firestore only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-07-04T11:36:57.487Z] [hosting] Hosting Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-07-04T11:36:57.487Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2025-07-04T11:36:57.495Z] [hub] writing locator at C:\Users\txoch\AppData\Local\Temp\hub-emoji-gacha.json
+[debug] [2025-07-04T11:36:57.505Z] [Extensions] Started Extensions emulator, this is a noop.
+[debug] [2025-07-04T11:36:57.510Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-07-04T11:36:57.510Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-07-04T11:36:57.510Z] [tasks] Cloud Tasks Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-07-04T11:36:57.510Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}],"tasks":[{"address":"127.0.0.1","family":"IPv4","port":9499}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: apphosting, auth, database, pubsub, storage, dataconnect {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mapphosting, auth, database, pubsub, storage, dataconnect\u001b[22m"}}
+[debug] [2025-07-04T11:36:57.541Z] defaultcredentials: writing to file C:\Users\txoch\AppData\Roaming\firebase\8lackraisond3tre_gmail_com_application_default_credentials.json
+[debug] [2025-07-04T11:36:57.542Z] Setting GAC to C:\Users\txoch\AppData\Roaming\firebase\8lackraisond3tre_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\txoch\\AppData\\Roaming\\firebase\\8lackraisond3tre_gmail_com_application_default_credentials.json"}}
+[debug] [2025-07-04T11:36:57.543Z] Checked if tokens are valid: true, expires at: 1751631928853
+[debug] [2025-07-04T11:36:57.543Z] Checked if tokens are valid: true, expires at: 1751631928853
+[debug] [2025-07-04T11:36:57.543Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/emoji-gacha/adminSdkConfig [none]
+[debug] [2025-07-04T11:36:58.018Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/emoji-gacha/adminSdkConfig 200
+[debug] [2025-07-04T11:36:58.019Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/emoji-gacha/adminSdkConfig {"projectId":"emoji-gacha","storageBucket":"emoji-gacha.firebasestorage.app"}
+[debug] [2025-07-04T11:36:58.072Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2025-07-04T11:36:58.073Z] Ignoring unsupported arg: single_project_mode_error {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: single_project_mode_error"}}
+[debug] [2025-07-04T11:36:58.073Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","C:\\Users\\txoch\\.cache\\firebase\\emulators\\cloud-firestore-emulator-v1.19.8.jar","--host","127.0.0.1","--port",8080,"--websocket_port",9150,"--project_id","emoji-gacha","--rules","C:\\Users\\txoch\\Documents\\emoji-gacha\\firestore.rules","--single_project_mode",true,"--functions_emulator","127.0.0.1:5001"],"optionalArgs":["port","webchannel_port","host","rules","websocket_port","functions_emulator","seed_from_export","project_id","single_project_mode"],"joinArgs":false,"shell":false,"port":8080} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"C:\\\\Users\\\\txoch\\\\.cache\\\\firebase\\\\emulators\\\\cloud-firestore-emulator-v1.19.8.jar\",\"--host\",\"127.0.0.1\",\"--port\",8080,\"--websocket_port\",9150,\"--project_id\",\"emoji-gacha\",\"--rules\",\"C:\\\\Users\\\\txoch\\\\Documents\\\\emoji-gacha\\\\firestore.rules\",\"--single_project_mode\",true,\"--functions_emulator\",\"127.0.0.1:5001\"],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"websocket_port\",\"functions_emulator\",\"seed_from_export\",\"project_id\",\"single_project_mode\"],\"joinArgs\":false,\"shell\":false,\"port\":8080}"}}
+[info] i  firestore: Firestore Emulator logging to firestore-debug.log {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator logging to \u001b[1mfirestore-debug.log\u001b[22m"}}
+[debug] [2025-07-04T11:37:00.033Z] Jul 04, 2025 8:36:59 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start
+INFO: Started WebSocket server on ws://127.0.0.1:9150
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 04, 2025 8:36:59 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start\r\nINFO: Started WebSocket server on ws://127.0.0.1:9150\r\n"}}
+[debug] [2025-07-04T11:37:00.087Z] API endpoint: http://127.0.0.1:8080 {"metadata":{"emulator":{"name":"firestore"},"message":"API endpoint: http://127.0.0.1:8080"}}
+[debug] [2025-07-04T11:37:00.087Z] 
+If you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:
+
+   export FIRESTORE_EMULATOR_HOST=127.0.0.1:8080
+
+If you are running a Firestore in Datastore Mode project, run:
+
+   export DATASTORE_EMULATOR_HOST=127.0.0.1:8080
+
+Note: Support for Datastore Mode is in preview. If you encounter any bugs please file at https://github.com/firebase/firebase-tools/issues.
+Dev App Server is now running.
+
+ {"metadata":{"emulator":{"name":"firestore"},"message":"\nIf you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:\r\n\n   export FIRESTORE_EMULATOR_HOST=127.0.0.1:8080\n\nIf you are running a Firestore in Datastore Mode project, run:\r\n\n   export DATASTORE_EMULATOR_HOST=127.0.0.1:8080\n\nNote: Support for Datastore Mode is in preview. If you encounter any bugs please file at https://github.com/firebase/firebase-tools/issues.\r\nDev App Server is now running.\n\r\n"}}
+[info] +  firestore: Firestore Emulator UI websocket is running on 9150. {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator UI websocket is running on 9150."}}
+[debug] [2025-07-04T11:37:00.210Z] Checked if tokens are valid: true, expires at: 1751631928853
+[debug] [2025-07-04T11:37:00.210Z] Checked if tokens are valid: true, expires at: 1751631928853
+[debug] [2025-07-04T11:37:00.211Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/emoji-gacha/sites 
+[debug] [2025-07-04T11:37:00.322Z] Jul 04, 2025 8:37:00 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 04, 2025 8:37:00 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
+[debug] [2025-07-04T11:37:00.456Z] Jul 04, 2025 8:37:00 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 04, 2025 8:37:00 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\r\nINFO: Connected to new websocket client\r\n"}}
+[debug] [2025-07-04T11:37:00.536Z] Jul 04, 2025 8:37:00 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 04, 2025 8:37:00 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
+[debug] [2025-07-04T11:37:01.000Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/emoji-gacha/sites 200
+[debug] [2025-07-04T11:37:01.000Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/emoji-gacha/sites {"sites":[{"name":"projects/emoji-gacha/sites/emoji-gacha","defaultUrl":"https://emoji-gacha.web.app","appId":"1:659001732182:web:a569377323b8c136f2dff7","type":"DEFAULT_SITE"}]}
+[debug] [2025-07-04T11:37:01.000Z] Checked if tokens are valid: true, expires at: 1751631928853
+[debug] [2025-07-04T11:37:01.000Z] Checked if tokens are valid: true, expires at: 1751631928853
+[debug] [2025-07-04T11:37:01.000Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/emoji-gacha/webApps/1:659001732182:web:a569377323b8c136f2dff7/config [none]
+[debug] [2025-07-04T11:37:01.255Z] Jul 04, 2025 8:37:01 PM com.google.cloud.datastore.emulator.impl.context.EmulatorAuthorization warnAboutSecuredJwt
+WARNING: expected an unsecured JWT, the emulator does not validate JWTs and IS NOT SECURE
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 04, 2025 8:37:01 PM com.google.cloud.datastore.emulator.impl.context.EmulatorAuthorization warnAboutSecuredJwt\r\nWARNING: expected an unsecured JWT, the emulator does not validate JWTs and IS NOT SECURE\r\n"}}
+[debug] [2025-07-04T11:37:01.694Z] Jul 04, 2025 8:37:01 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 04, 2025 8:37:01 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
+[debug] [2025-07-04T11:37:01.971Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/emoji-gacha/webApps/1:659001732182:web:a569377323b8c136f2dff7/config 200
+[debug] [2025-07-04T11:37:01.971Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/emoji-gacha/webApps/1:659001732182:web:a569377323b8c136f2dff7/config {"projectId":"emoji-gacha","appId":"1:659001732182:web:a569377323b8c136f2dff7","storageBucket":"emoji-gacha.firebasestorage.app","apiKey":"AIzaSyDzDGBO8w353hn74iZNW_uB9D1nZlf5mh0","authDomain":"emoji-gacha.firebaseapp.com","messagingSenderId":"659001732182","measurementId":"G-ZRHMD8PVSB"}
+[debug] [2025-07-04T11:37:01.988Z] Checked if tokens are valid: true, expires at: 1751631928853
+[debug] [2025-07-04T11:37:01.988Z] Checked if tokens are valid: true, expires at: 1751631928853
+[debug] [2025-07-04T11:37:01.988Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/emoji-gacha [none]
+[debug] [2025-07-04T11:37:02.317Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/emoji-gacha 200
+[debug] [2025-07-04T11:37:02.317Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/emoji-gacha {"projectId":"emoji-gacha","projectNumber":"659001732182","displayName":"emoji-gacha","name":"projects/emoji-gacha","resources":{"hostingSite":"emoji-gacha"},"state":"ACTIVE","etag":"1_5c4a98eb-f25f-4524-bc89-ec58a55f7a92"}
+[info] i  hosting[emoji-gacha]: Serving hosting files from: emoji-gacha/build {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1memoji-gacha/build\u001b[22m"}}
+[info] +  hosting[emoji-gacha]: Local server: http://127.0.0.1:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://127.0.0.1:5000\u001b[22m\u001b[24m"}}
+[debug] [2025-07-04T11:37:02.340Z] [Extensions] Connecting Extensions emulator, this is a noop.
+[info] i  functions: Watching "C:\Users\txoch\Documents\emoji-gacha\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\Users\\txoch\\Documents\\emoji-gacha\\functions\" for Cloud Functions..."}}
+[debug] [2025-07-04T11:37:02.347Z] Validating nodejs source
+[debug] [2025-07-04T11:37:03.258Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-07-04T11:37:03.258Z] Building nodejs source
+[debug] [2025-07-04T11:37:03.259Z] Failed to find version of module node: reached end of search path C:\Users\txoch\Documents\emoji-gacha\functions\node_modules
+[info] +  functions: Using node@22 from host. 
+[debug] [2025-07-04T11:37:03.262Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-07-04T11:37:03.268Z] Found firebase-functions binary at 'C:\Users\txoch\Documents\emoji-gacha\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8271
+
+[debug] [2025-07-04T11:37:03.701Z] Got response from /__/functions.yaml {"endpoints":{"drawEmoji":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"drawEmoji"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2025-07-04T11:37:07.757Z] defaultcredentials: writing to file C:\Users\txoch\AppData\Roaming\firebase\8lackraisond3tre_gmail_com_application_default_credentials.json
+[debug] [2025-07-04T11:37:07.758Z] Setting GAC to C:\Users\txoch\AppData\Roaming\firebase\8lackraisond3tre_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\txoch\\AppData\\Roaming\\firebase\\8lackraisond3tre_gmail_com_application_default_credentials.json"}}
+[info] +  functions: Loaded functions definitions from source: drawEmoji. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: drawEmoji."}}
+[info] +  functions[us-central1-drawEmoji]: http function initialized (http://127.0.0.1:5001/emoji-gacha/us-central1/drawEmoji). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/emoji-gacha/us-central1/drawEmoji)."}}
+[debug] [2025-07-04T11:37:07.765Z] Could not find VSCode notification endpoint: FetchError: request to http://localhost:40001/vscode/notify failed, reason: . If you are not running the Firebase Data Connect VSCode extension, this is expected and not an issue.
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌────────────┬────────────────┬──────────────────────────────────┐
+│ Emulator   │ Host:Port      │ View in Emulator UI              │
+├────────────┼────────────────┼──────────────────────────────────┤
+│ Functions  │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions  │
+├────────────┼────────────────┼──────────────────────────────────┤
+│ Firestore  │ 127.0.0.1:8080 │ http://127.0.0.1:4000/firestore  │
+├────────────┼────────────────┼──────────────────────────────────┤
+│ Hosting    │ 127.0.0.1:5000 │ n/a                              │
+├────────────┼────────────────┼──────────────────────────────────┤
+│ Extensions │ 127.0.0.1:5001 │ http://127.0.0.1:4000/extensions │
+└────────────┴────────────────┴──────────────────────────────────┘
+  Emulator Hub host: 127.0.0.1 port: 4400
+  Other reserved ports: 4500, 9150
+┌─────────────────────────┬───────────────┬─────────────────────┐
+│ Extension Instance Name │ Extension Ref │ View in Emulator UI │
+└─────────────────────────┴───────────────┴─────────────────────┘
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2025-07-04T11:38:02.083Z] Jul 04, 2025 8:38:02 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 04, 2025 8:38:02 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
+[debug] [2025-07-04T11:38:34.104Z] Received signal SIGHUP 1
+[info]  
+[info] i  emulators: Received SIGHUP for the first time. Starting a clean shutdown. 
+[info] i  emulators: Please wait for a clean shutdown or send the SIGHUP signal again to stop right now. 
+[info] i  emulators: Shutting down emulators. {"metadata":{"emulator":{"name":"hub"},"message":"Shutting down emulators."}}
+[info] i  ui: Stopping Emulator UI {"metadata":{"emulator":{"name":"ui"},"message":"Stopping Emulator UI"}}
+[info] i  extensions: Stopping Extensions Emulator {"metadata":{"emulator":{"name":"extensions"},"message":"Stopping Extensions Emulator"}}
+[debug] [2025-07-04T11:38:34.114Z] [Extensions] Stopping Extensions emulator, this is a noop.
+[info] i  functions: Stopping Functions Emulator {"metadata":{"emulator":{"name":"functions"},"message":"Stopping Functions Emulator"}}
+[info] i  hosting: Stopping Hosting Emulator {"metadata":{"emulator":{"name":"hosting"},"message":"Stopping Hosting Emulator"}}
+[info] i  firestore: Stopping Firestore Emulator {"metadata":{"emulator":{"name":"firestore"},"message":"Stopping Firestore Emulator"}}
+[warn] !  Firestore Emulator has exited upon receiving signal: SIGINT 
+[info] i  eventarc: Stopping Eventarc Emulator {"metadata":{"emulator":{"name":"eventarc"},"message":"Stopping Eventarc Emulator"}}
+[info] i  tasks: Stopping Cloud Tasks Emulator {"metadata":{"emulator":{"name":"tasks"},"message":"Stopping Cloud Tasks Emulator"}}
+[info] i  hub: Stopping emulator hub {"metadata":{"emulator":{"name":"hub"},"message":"Stopping emulator hub"}}
+[info] i  logging: Stopping Logging Emulator {"metadata":{"emulator":{"name":"logging"},"message":"Stopping Logging Emulator"}}
+[debug] [2025-07-04T11:38:34.158Z] Could not find VSCode notification endpoint: FetchError: request to http://localhost:40001/vscode/notify failed, reason: . If you are not running the Firebase Data Connect VSCode extension, this is expected and not an issue.

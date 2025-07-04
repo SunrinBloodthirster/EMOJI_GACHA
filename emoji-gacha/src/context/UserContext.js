@@ -20,6 +20,8 @@ export const UserProvider = ({ children }) => {
         const db = getFirestore();
         setAllEmojis(allEmojisData); // 전체 이모지 데이터는 동기적으로 먼저 로드
 
+        let unsubscribeSnapshot = null; // Declare unsubscribeSnapshot here
+
         // 인증 상태가 바뀌는 것을 감지하는 리스너 설정
         const unsubscribeAuth = onAuthStateChanged(auth, (authUser) => {
             if (authUser) {
@@ -28,15 +30,13 @@ export const UserProvider = ({ children }) => {
                 const userDocRef = doc(db, 'users', authUser.uid);
 
                 // 유저의 데이터를 실시간으로 감지
-                const unsubscribeSnapshot = onSnapshot(userDocRef, (docSnap) => {
+                unsubscribeSnapshot = onSnapshot(userDocRef, (docSnap) => {
                     if (docSnap.exists()) {
                         setCollectedEmojis(docSnap.data().collectedEmojis || []);
                     }
-                    setIsLoading(false); // 유저 데이터까지 받아오면 로딩 완료
+                    setIsLoading(false); // 유저 데이터까지 받아오면 로드 완료
                     setAuthIsReady(true); // 인증 및 데이터 로드 모두 준비 완료
                 });
-                
-                return () => unsubscribeSnapshot(); // 클린업
 
             } else {
                 // 로그아웃 상태일 때
@@ -44,10 +44,18 @@ export const UserProvider = ({ children }) => {
                 setCollectedEmojis([]);
                 setIsLoading(false);
                 setAuthIsReady(true); // 로그아웃 상태도 '준비 완료'
+                if (unsubscribeSnapshot) {
+                    unsubscribeSnapshot(); // Clean up Firestore listener on logout
+                }
             }
         });
 
-        return () => unsubscribeAuth(); // 클린업
+        return () => {
+            unsubscribeAuth(); // Clean up auth listener
+            if (unsubscribeSnapshot) {
+                unsubscribeSnapshot(); // Clean up Firestore listener when component unmounts
+            }
+        };
     }, []);
 
     const value = {
