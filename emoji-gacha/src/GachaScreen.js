@@ -3,195 +3,164 @@ import { doc, getDoc, setDoc } from 'firebase/firestore';
 import { db } from './firebase';
 import { getFunctions, httpsCallable } from 'firebase/functions';
 import GachaModal from './GachaModal';
-import './GachaScreen.css'; // GachaScreen 전용 CSS 파일
+import './GachaScreen.css';
 
-import { useUser } from './context/UserContext'; // useUser 훅 임포트
+import { useUser } from './context/UserContext';
 
+// ProbabilityModal은 변경 사항이 거의 없습니다.
 const ProbabilityModal = ({ onClose }) => {
-  const { allEmojis, isLoading } = useUser();
-
-  if (isLoading || !allEmojis) {
-    return <div>확률 정보를 불러오는 중입니다...</div>;
-  }
-
-  return (
-    <div className="probability-modal-overlay" onClick={onClose}>
-      <div className="probability-modal-content" onClick={(e) => e.stopPropagation()}>
-        <h3>뽑기 확률 정보</h3>
-        <ul>
-          {Object.entries(allEmojis.rarityProbabilities).map(([rarity, prob]) => (
-            <li key={rarity}>{rarity}: {(prob * 100).toFixed(2)}%</li>
-          ))}
-        </ul>
-        <button onClick={onClose}>닫기</button>
-      </div>
-    </div>
-  );
+    const { allEmojis } = useUser();
+    // 데이터가 없을 경우를 대비한 안전장치
+    const probabilities = allEmojis ? allEmojis.rarityProbabilities : {};
+    return (
+        <div className="probability-modal-overlay" onClick={onClose}>
+            <div className="probability-modal-content" onClick={(e) => e.stopPropagation()}>
+                <h3>뽑기 확률 정보</h3>
+                <ul>
+                {Object.entries(probabilities).map(([rarity, prob]) => (
+                    <li key={rarity}>{rarity}: {(prob * 100).toFixed(2)}%</li>
+                ))}
+                </ul>
+                <button onClick={onClose}>닫기</button>
+            </div>
+        </div>
+    );
 };
 
+
 const GachaScreen = ({ setIsGachaMode }) => {
-  const { user, userProfile, allEmojis, isLoading, authIsReady } = useUser(); // useUser 훅에서 user, userProfile, allEmojis, isLoading, authIsReady 가져오기
+    // 1. Context에서 필요한 모든 상태를 한 번에 가져옵니다.
+    const { user, userProfile, allEmojis, isLoading, authIsReady } = useUser();
+    const [isGachaModalOpen, setIsGachaModalOpen] = useState(false);
+    const [pulledEmoji, setPulledEmoji] = useState(null);
+    const [isFreePullAvailable, setIsFreePullAvailable] = useState(false);
+    const [lastPulledEmoji, setLastPulledEmoji] = useState(null);
+    const [showProbabilityModal, setShowProbabilityModal] = useState(false);
+    const [isProcessing, setIsProcessing] = useState(false);
 
-  const [showGachaModal, setShowGachaModal] = useState(false);
-  const [pulledEmoji, setPulledEmoji] = useState(null);
-  const [isFreePullAvailable, setIsFreePullAvailable] = useState(false);
-  const [lastPulledEmoji, setLastPulmedEmoji] = useState(null); // 최근 뽑은 이모지 상태
-  const [showProbabilityModal, setShowProbabilityModal] = useState(false); // 확률 모달 상태
-  const [isDrawing, setIsDrawing] = useState(false); // 뽑기 로딩 상태
-
-  const functions = getFunctions();
-  const drawEmojiFunction = httpsCallable(functions, 'drawEmoji');
-
-  // 무료 뽑기 가능 여부 확인 (useEffect로 이동)
-  useEffect(() => {
-    if (user && userProfile) {
-      const lastPullTimestamp = userProfile.lastPullTimestamp?.toDate();
-      if (lastPullTimestamp) {
-        const now = new Date();
-        const oneDay = 24 * 60 * 60 * 1000; // 24시간
-        if (now.getTime() - lastPullTimestamp.getTime() >= oneDay) {
-          setIsFreePullAvailable(true);
-        } else {
-          setIsFreePullAvailable(false);
-        }
-      } else {
-        setIsFreePullAvailable(true); // 첫 뽑기
-      }
-
-      // 마지막으로 뽑은 이모지 불러오기
-      if (userProfile.lastPulledEmojiId && allEmojis) {
-        const emoji = allEmojis.find(e => e.id === userProfile.lastPulledEmojiId);
-        setLastPulmedEmoji(emoji);
-      }
-    }
-  }, [user, userProfile, allEmojis]);
-
-  // ======== 여기부터 핵심 안전장치 ========
-  // 1. 전체 데이터 로딩이 끝나지 않았거나,
-  // 2. allEmojis 데이터가 아직 null이라면,
-  // 로딩 화면을 보여주고 아래 코드는 실행하지 않습니다.
-  if (isLoading || !allEmojis) {
-    return <div>게임 데이터를 불러오는 중입니다...</div>;
-  }
-  // =====================================
-
-  const handleGachaPull = async (isAdPull = false) => {
-    console.log("handleGachaPull called. user:", user, "authIsReady:", authIsReady);
-    if (!authIsReady || !user) {
-      alert('사용자 정보를 불러오는 중입니다. 잠시 후 다시 시도해주세요.');
-      return;
-    }
-
-    if (!isAdPull && !isFreePullAvailable) {
-      alert('오늘은 이미 무료 뽑기를 완료했습니다. 광고를 보고 한 번 더 뽑을 수 있습니다.');
-      return;
-    }
-
-    setIsGachaMode(true); // 뽑기 모드 활성화
-    setIsDrawing(true); // 뽑기 시작 시 로딩 상태 활성화
-
-    try {
-      const result = await drawEmojiFunction();
-      const newEmoji = result.data; // 서버가 반환한 이모지 객체
-      setPulledEmoji(newEmoji); // GachaModal에 이모지 객체 전체 전달
-      
-      setShowGachaModal(true);
-
-      // 무료 뽑기인 경우에만 클라이언트에서 lastPullTimestamp 업데이트
-      if (!isAdPull) {
-        const userRef = doc(db, 'users', user.uid);
-        await setDoc(userRef, {
-          lastPullTimestamp: new Date(),
-          lastPulledEmojiId: newEmoji.id // 마지막으로 뽑은 이모지 ID 저장
-        }, { merge: true }); // 문서가 없으면 생성, 있으면 병합
-        setIsFreePullAvailable(false);
-      }
-
-    } catch (error) {
-      console.error("Error calling drawEmoji function:", error);
-      alert(`뽑기 실패: ${error.message}`);
-      setIsGachaMode(false); // 에러 발생 시 뽑기 모드 비활성화
-    } finally {
-      setIsDrawing(false); // 뽑기 완료 시 로딩 상태 비활성화
-    }
-  };
-
-  const handleCloseModal = () => {
-    setShowGachaModal(false);
-    setPulledEmoji(null);
-    setIsGachaMode(false); // 뽑기 모드 비활성화
-    // 모달 닫을 때 최근 뽑은 이모지 업데이트 (Firebase에서 다시 불러오도록 트리거)
-    if (user) {
-      const userRef = doc(db, 'users', user.uid);
-      getDoc(userRef).then(userSnap => {
-        if (userSnap.exists()) {
-          const userData = userSnap.data();
-          const lastPulledEmojiId = userData.lastPulledEmojiId;
-          if (lastPulledEmojiId) {
-            const emoji = allEmojis.find(e => e.id === lastPulledEmojiId);
-            setLastPulmedEmoji(emoji);
+    // 무료 뽑기 가능 여부 확인 (useEffect로 이동)
+    useEffect(() => {
+      if (user && userProfile) {
+        const lastPullTimestamp = userProfile.lastPullTimestamp?.toDate();
+        if (lastPullTimestamp) {
+          const now = new Date();
+          const oneDay = 24 * 60 * 60 * 1000; // 24시간
+          if (now.getTime() - lastPullTimestamp.getTime() >= oneDay) {
+            setIsFreePullAvailable(true);
+          } else {
+            setIsFreePullAvailable(false);
           }
+        } else {
+          setIsFreePullAvailable(true); // 첫 뽑기
         }
-      });
+  
+        // 마지막으로 뽑은 이모지 불러오기
+        if (userProfile.lastPulledEmojiId && allEmojis) {
+          const emoji = allEmojis.emojis.find(e => e.id === userProfile.lastPulledEmojiId); // allEmojis.emojis로 수정
+          setLastPulledEmoji(emoji);
+        }
+      }
+    }, [user, userProfile, allEmojis]);
+
+    const handleGachaPull = async (isAdPull = false) => {
+        // 2. '철벽 가드' 로직: 인증 안됐거나, 유저 없거나, 처리 중이면 절대 실행 안 함
+        if (!authIsReady || !user) {
+            alert('사용자 정보가 확인되지 않았습니다. 잠시 후 다시 시도해 주세요.');
+            return;
+        }
+        if (isProcessing) return;
+
+        setIsProcessing(true);
+
+        try {
+            const functions = getFunctions();
+            const drawEmojiFunction = httpsCallable(functions, 'drawEmoji');
+            const result = await drawEmojiFunction({ isAdPull });
+            
+            setPulledEmoji(result.data);
+            setIsGachaModalOpen(true);
+
+            // 무료 뽑기인 경우에만 클라이언트에서 lastPullTimestamp 업데이트
+            if (!isAdPull) {
+              const userRef = doc(db, 'users', user.uid);
+              await setDoc(userRef, {
+                lastPullTimestamp: new Date(),
+                lastPulledEmojiId: result.data.id // 마지막으로 뽑은 이모지 ID 저장
+              }, { merge: true }); // 문서가 없으면 생성, 있으면 병합
+              setIsFreePullAvailable(false);
+            }
+
+        } catch (error) {
+            console.error("뽑기 실패:", error);
+            alert(`뽑기 실패: ${error.message}`);
+        } finally {
+            setIsProcessing(false);
+        }
+    };
+
+    const handleCloseModal = () => {
+        setIsGachaModalOpen(false);
+        setPulledEmoji(null);
+        setIsGachaMode(false);
+    };
+    
+    // 3. 로딩 UI: authIsReady가 false면, 인증 절차가 끝나지 않았다는 의미.
+    if (!authIsReady) {
+        return <div className="loading-spinner"></div>; // 또는 '사용자 정보 확인 중...'
     }
-  };
 
-  if (isLoading || !authIsReady) {
-    return <div>사용자 정보 확인 중...</div>;
-  }
-
-  return (
-    <div className={`gacha-screen-container ${showGachaModal ? 'gacha-screen-fullscreen' : ''}`}>
-      {!showGachaModal && (
-        <div className="gacha-main-buttons">
-          {user ? (
-            isFreePullAvailable ? (
-              <button className="gacha-button" onClick={() => handleGachaPull(false)} disabled={isDrawing}>
-                <span>{isDrawing ? '뽑는 중...' : '오늘의 이모지 뽑기'}</span>
+    return (
+        <div className={`gacha-screen-container ${isGachaModalOpen ? 'gacha-screen-fullscreen' : ''}`}>
+          {!isGachaModalOpen && (
+            <div className="gacha-main-buttons">
+              {user ? (
+                isFreePullAvailable ? (
+                  <button className="gacha-button" onClick={() => handleGachaPull(false)} disabled={isProcessing}>
+                    <span>{isProcessing ? '뽑는 중...' : '오늘의 이모지 뽑기'}</span>
+                  </button>
+                ) : (
+                  <button className="gacha-button ad-button" onClick={() => handleGachaPull(true)} disabled={isProcessing}>
+                    <span>{isProcessing ? '뽑는 중...' : '광고 보고 한 번 더 뽑기'}</span>
+                  </button>
+                )
+              ) : (
+                <p className="gacha-login-message">로그인하여 이모지 뽑기를 시작하세요!</p>
+              )}
+    
+              {/* 뽑기 확률 정보 버튼 */}
+              <button className="probability-info-button" onClick={() => setShowProbabilityModal(true)} disabled={isProcessing}>
+                뽑기 확률 정보
               </button>
-            ) : (
-              <button className="gacha-button ad-button" onClick={() => handleGachaPull(true)} disabled={isDrawing}>
-                <span>{isDrawing ? '뽑는 중...' : '광고 보고 한 번 더 뽑기'}</span>
-              </button>
-            )
-          ) : (
-            <p className="gacha-login-message">로그인하여 이모지 뽑기를 시작하세요!</p>
+    
+              {/* 총 뽑기 횟수 표시 */}
+              <div className="total-pulls-display">
+                  <span className="material-icons">casino</span>
+                  <span className="total-pulls-text">총 뽑기: {userProfile?.totalPulls || 0}회</span>
+                </div>
+    
+              {lastPulledEmoji && (
+                <div className="last-gacha-section">
+                  <p className="last-gacha-title">Last Gacha:</p>
+                  <div className="last-gacha-emoji-display">
+                    {lastPulledEmoji.emoji}
+                  </div>
+                </div>
+              )}
+            </div>
           )}
-
-          {/* 뽑기 확률 정보 버튼 */}
-          <button className="probability-info-button" onClick={() => setShowProbabilityModal(true)} disabled={isDrawing}>
-            뽑기 확률 정보
-          </button>
-
-          {/* 총 뽑기 횟수 표시 */}
-          <div className="total-pulls-display">
-              <span className="material-icons">casino</span>
-              <span className="total-pulls-text">총 뽑기: {userProfile?.totalPulls || 0}회</span>
-            </div>
-
-          {lastPulledEmoji && (
-            <div className="last-gacha-section">
-              <p className="last-gacha-title">Last Gacha:</p>
-              <div className="last-gacha-emoji-display">
-                {lastPulledEmoji.emoji}
-              </div>
-            </div>
+    
+          {isGachaModalOpen && (
+            <GachaModal
+              pulledEmoji={pulledEmoji}
+              onClose={handleCloseModal}
+            />
+          )}
+    
+          {showProbabilityModal && (
+            <ProbabilityModal onClose={() => setShowProbabilityModal(false)} />
           )}
         </div>
-      )}
-
-      {showGachaModal && (
-        <GachaModal
-          pulledEmoji={pulledEmoji}
-          onClose={handleCloseModal}
-        />
-      )}
-
-      {showProbabilityModal && (
-        <ProbabilityModal onClose={() => setShowProbabilityModal(false)} />
-      )}
-    </div>
-  );
+      );
 };
 
 export default GachaScreen;

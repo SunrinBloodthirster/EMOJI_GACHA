@@ -1,56 +1,31 @@
-import './App.css';
+// src/App.js
+import React, { useState } from 'react';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { UserProvider } from './context/UserContext';
+import Header from './Header';
+import GachaScreen from './GachaScreen';
 import EmojiDex from './EmojiDex';
 import ProfilePage from './ProfilePage';
-import Header from './Header';
-import Footer from './Footer';
-import TermsOfService from './TermsOfService';
-import PrivacyPolicy from './PrivacyPolicy';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
-import { initGA, logPageView } from './analytics';
-import { useEffect, useState } from 'react';
-import GachaScreen from './GachaScreen';
-import BottomNavBar from './BottomNavBar'; // BottomNavBar 임포트
-import { UserProvider, useUser } from './context/UserContext'; // UserProvider 임포트
-import LoadingSpinner from './components/LoadingSpinner'; // LoadingSpinner 임포트
-import ErrorMessage from './components/ErrorMessage'; // ErrorMessage 임포트
+import BottomNavBar from './BottomNavBar';
+import './App.css';
 
-function AppBase() {
-  const location = useLocation();
-  const { user, isLoading, error } = useUser(); // useUser 훅에서 user, isLoading, error 가져오기
+function AppContent() {
   const [isGachaMode, setIsGachaMode] = useState(false);
-
-  useEffect(() => {
-    
-    initGA();
-  }, [isGachaMode]);
-
-  useEffect(() => {
-    logPageView(location.pathname);
-  }, [location]);
-
-  if (isLoading) {
-    return <LoadingSpinner />; // 로딩 중일 때 LoadingSpinner 표시
-  }
-
-  if (error) {
-    return <ErrorMessage message={error.message} />; // 에러 발생 시 ErrorMessage 표시
-  }
+  const location = useLocation();
 
   return (
     <div className="App-container">
+      {/* Gacha 모드가 아닐 때만 헤더를 보여줍니다. */}
       {!isGachaMode && <Header />}
       <main className={`main-content ${location.pathname === '/dex' ? 'scrollable' : ''}`}>
-        <div className="content-body">
-          <Routes>
-            <Route path="/" element={<GachaScreen setIsGachaMode={setIsGachaMode} />} />
-            <Route path="/dex" element={<EmojiDex />} />
-            <Route path="/profile/:userId" element={<ProfilePage />} />
-            <Route path="/terms" element={<TermsOfService />} />
-            <Route path="/privacy" element={<PrivacyPolicy />} />
-          </Routes>
-        </div>
-        {location.pathname !== '/' && !isGachaMode && <Footer />}
+        <Routes>
+          {/* GachaScreen에는 더 이상 user prop을 넘겨주지 않습니다. */}
+          <Route path="/" element={<GachaScreen setIsGachaMode={setIsGachaMode} />} />
+          <Route path="/dex" element={<EmojiDex />} />
+          <Route path="/profile/:userId" element={<ProfilePage />} />
+        </Routes>
       </main>
+      {/* Gacha 모드가 아닐 때만 하단 네비게이션을 보여줍니다. */}
       {!isGachaMode && <BottomNavBar />}
     </div>
   );
@@ -58,11 +33,12 @@ function AppBase() {
 
 function App() {
   return (
-    <BrowserRouter>
-      <UserProvider>
-        <AppBase />
-      </UserProvider>
-    </BrowserRouter>
+    // UserProvider가 모든 것을 감싸고, 데이터 관리를 책임집니다.
+    <UserProvider>
+      <BrowserRouter>
+        <AppContent />
+      </BrowserRouter>
+    </UserProvider>
   );
 }
 

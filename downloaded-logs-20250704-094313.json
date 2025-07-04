@@ -1,0 +1,2105 @@
+[
+  {
+    "textPayload": "Provided module can't be loaded.",
+    "insertId": "686714bc00074f5df1ab016a",
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "service_name": "drawemoji",
+        "configuration_name": "drawemoji",
+        "project_id": "emoji-gacha",
+        "location": "us-central1",
+        "revision_name": "drawemoji-00002-qer"
+      }
+    },
+    "timestamp": "2025-07-03T23:39:40.479069Z",
+    "labels": {
+      "firebase-functions-hash": "1975c3298d99d20c12949bd4d19664ff7775b343",
+      "run.googleapis.com/base_image_versions": "us-docker.pkg.dev/serverless-runtimes/google-22-full/runtimes/nodejs22:nodejs22_20250615_22_16_0_RC00",
+      "goog-managed-by": "cloudfunctions",
+      "goog-drz-cloudfunctions-id": "drawemoji",
+      "goog-drz-cloudfunctions-location": "us-central1",
+      "deployment-callable": "true",
+      "instanceId": "0069c7a9881651e055dc5e12d02dc1c5d240b506626eee40903861052c1d95842d5972931f01de7a50a9c5d402defdb9e75dd01b8abcc3c89974999bfed8255ff9f1783248f2d7e62d6f90e21b6ba1"
+    },
+    "logName": "projects/emoji-gacha/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-07-03T23:39:40.482540085Z"
+  },
+  {
+    "textPayload": "Did you list all required modules in the package.json dependencies?",
+    "insertId": "686714bc00074f75be5bedf2",
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "location": "us-central1",
+        "service_name": "drawemoji",
+        "configuration_name": "drawemoji",
+        "revision_name": "drawemoji-00002-qer",
+        "project_id": "emoji-gacha"
+      }
+    },
+    "timestamp": "2025-07-03T23:39:40.479093Z",
+    "labels": {
+      "goog-managed-by": "cloudfunctions",
+      "goog-drz-cloudfunctions-id": "drawemoji",
+      "deployment-callable": "true",
+      "instanceId": "0069c7a9881651e055dc5e12d02dc1c5d240b506626eee40903861052c1d95842d5972931f01de7a50a9c5d402defdb9e75dd01b8abcc3c89974999bfed8255ff9f1783248f2d7e62d6f90e21b6ba1",
+      "run.googleapis.com/base_image_versions": "us-docker.pkg.dev/serverless-runtimes/google-22-full/runtimes/nodejs22:nodejs22_20250615_22_16_0_RC00",
+      "firebase-functions-hash": "1975c3298d99d20c12949bd4d19664ff7775b343",
+      "goog-drz-cloudfunctions-location": "us-central1"
+    },
+    "logName": "projects/emoji-gacha/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-07-03T23:39:40.482540085Z"
+  },
+  {
+    "textPayload": "Detailed stack trace: Error: Cannot find module '../emoji-gacha/src/data/emojiData.json'",
+    "insertId": "686714bc00074f87252d757b",
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "service_name": "drawemoji",
+        "revision_name": "drawemoji-00002-qer",
+        "location": "us-central1",
+        "project_id": "emoji-gacha",
+        "configuration_name": "drawemoji"
+      }
+    },
+    "timestamp": "2025-07-03T23:39:40.479111Z",
+    "labels": {
+      "deployment-callable": "true",
+      "goog-drz-cloudfunctions-id": "drawemoji",
+      "instanceId": "0069c7a9881651e055dc5e12d02dc1c5d240b506626eee40903861052c1d95842d5972931f01de7a50a9c5d402defdb9e75dd01b8abcc3c89974999bfed8255ff9f1783248f2d7e62d6f90e21b6ba1",
+      "firebase-functions-hash": "1975c3298d99d20c12949bd4d19664ff7775b343",
+      "run.googleapis.com/base_image_versions": "us-docker.pkg.dev/serverless-runtimes/google-22-full/runtimes/nodejs22:nodejs22_20250615_22_16_0_RC00",
+      "goog-managed-by": "cloudfunctions",
+      "goog-drz-cloudfunctions-location": "us-central1"
+    },
+    "logName": "projects/emoji-gacha/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-07-03T23:39:40.482540085Z"
+  },
+  {
+    "textPayload": "Require stack:",
+    "insertId": "686714bc00074f8d63a4a5f9",
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "configuration_name": "drawemoji",
+        "service_name": "drawemoji",
+        "revision_name": "drawemoji-00002-qer",
+        "project_id": "emoji-gacha",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2025-07-03T23:39:40.479117Z",
+    "labels": {
+      "goog-managed-by": "cloudfunctions",
+      "goog-drz-cloudfunctions-id": "drawemoji",
+      "firebase-functions-hash": "1975c3298d99d20c12949bd4d19664ff7775b343",
+      "goog-drz-cloudfunctions-location": "us-central1",
+      "run.googleapis.com/base_image_versions": "us-docker.pkg.dev/serverless-runtimes/google-22-full/runtimes/nodejs22:nodejs22_20250615_22_16_0_RC00",
+      "deployment-callable": "true",
+      "instanceId": "0069c7a9881651e055dc5e12d02dc1c5d240b506626eee40903861052c1d95842d5972931f01de7a50a9c5d402defdb9e75dd01b8abcc3c89974999bfed8255ff9f1783248f2d7e62d6f90e21b6ba1"
+    },
+    "logName": "projects/emoji-gacha/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-07-03T23:39:40.482540085Z"
+  },
+  {
+    "textPayload": "- /workspace/index.js",
+    "insertId": "686714bc00074f92b9430926",
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "project_id": "emoji-gacha",
+        "revision_name": "drawemoji-00002-qer",
+        "configuration_name": "drawemoji",
+        "location": "us-central1",
+        "service_name": "drawemoji"
+      }
+    },
+    "timestamp": "2025-07-03T23:39:40.479122Z",
+    "labels": {
+      "deployment-callable": "true",
+      "run.googleapis.com/base_image_versions": "us-docker.pkg.dev/serverless-runtimes/google-22-full/runtimes/nodejs22:nodejs22_20250615_22_16_0_RC00",
+      "firebase-functions-hash": "1975c3298d99d20c12949bd4d19664ff7775b343",
+      "goog-drz-cloudfunctions-location": "us-central1",
+      "instanceId": "0069c7a9881651e055dc5e12d02dc1c5d240b506626eee40903861052c1d95842d5972931f01de7a50a9c5d402defdb9e75dd01b8abcc3c89974999bfed8255ff9f1783248f2d7e62d6f90e21b6ba1",
+      "goog-drz-cloudfunctions-id": "drawemoji",
+      "goog-managed-by": "cloudfunctions"
+    },
+    "logName": "projects/emoji-gacha/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-07-03T23:39:40.482540085Z"
+  },
+  {
+    "textPayload": "- /layers/google.nodejs.functions-framework/functions-framework/node_modules/@google-cloud/functions-framework/build/src/loader.js",
+    "insertId": "686714bc00074f97e1e1859f",
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "service_name": "drawemoji",
+        "revision_name": "drawemoji-00002-qer",
+        "location": "us-central1",
+        "configuration_name": "drawemoji",
+        "project_id": "emoji-gacha"
+      }
+    },
+    "timestamp": "2025-07-03T23:39:40.479127Z",
+    "labels": {
+      "goog-drz-cloudfunctions-id": "drawemoji",
+      "deployment-callable": "true",
+      "run.googleapis.com/base_image_versions": "us-docker.pkg.dev/serverless-runtimes/google-22-full/runtimes/nodejs22:nodejs22_20250615_22_16_0_RC00",
+      "goog-managed-by": "cloudfunctions",
+      "goog-drz-cloudfunctions-location": "us-central1",
+      "instanceId": "0069c7a9881651e055dc5e12d02dc1c5d240b506626eee40903861052c1d95842d5972931f01de7a50a9c5d402defdb9e75dd01b8abcc3c89974999bfed8255ff9f1783248f2d7e62d6f90e21b6ba1",
+      "firebase-functions-hash": "1975c3298d99d20c12949bd4d19664ff7775b343"
+    },
+    "logName": "projects/emoji-gacha/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-07-03T23:39:40.482540085Z"
+  },
+  {
+    "textPayload": "- /layers/google.nodejs.functions-framework/functions-framework/node_modules/@google-cloud/functions-framework/build/src/main.js",
+    "insertId": "686714bc00074f9c192534f0",
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "location": "us-central1",
+        "project_id": "emoji-gacha",
+        "revision_name": "drawemoji-00002-qer",
+        "configuration_name": "drawemoji",
+        "service_name": "drawemoji"
+      }
+    },
+    "timestamp": "2025-07-03T23:39:40.479132Z",
+    "labels": {
+      "goog-drz-cloudfunctions-id": "drawemoji",
+      "goog-drz-cloudfunctions-location": "us-central1",
+      "instanceId": "0069c7a9881651e055dc5e12d02dc1c5d240b506626eee40903861052c1d95842d5972931f01de7a50a9c5d402defdb9e75dd01b8abcc3c89974999bfed8255ff9f1783248f2d7e62d6f90e21b6ba1",
+      "run.googleapis.com/base_image_versions": "us-docker.pkg.dev/serverless-runtimes/google-22-full/runtimes/nodejs22:nodejs22_20250615_22_16_0_RC00",
+      "deployment-callable": "true",
+      "goog-managed-by": "cloudfunctions",
+      "firebase-functions-hash": "1975c3298d99d20c12949bd4d19664ff7775b343"
+    },
+    "logName": "projects/emoji-gacha/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-07-03T23:39:40.482540085Z"
+  },
+  {
+    "textPayload": "    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)",
+    "insertId": "686714bc00074fa33ceca42b",
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "configuration_name": "drawemoji",
+        "project_id": "emoji-gacha",
+        "revision_name": "drawemoji-00002-qer",
+        "service_name": "drawemoji",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2025-07-03T23:39:40.479139Z",
+    "labels": {
+      "instanceId": "0069c7a9881651e055dc5e12d02dc1c5d240b506626eee40903861052c1d95842d5972931f01de7a50a9c5d402defdb9e75dd01b8abcc3c89974999bfed8255ff9f1783248f2d7e62d6f90e21b6ba1",
+      "deployment-callable": "true",
+      "run.googleapis.com/base_image_versions": "us-docker.pkg.dev/serverless-runtimes/google-22-full/runtimes/nodejs22:nodejs22_20250615_22_16_0_RC00",
+      "goog-managed-by": "cloudfunctions",
+      "goog-drz-cloudfunctions-id": "drawemoji",
+      "firebase-functions-hash": "1975c3298d99d20c12949bd4d19664ff7775b343",
+      "goog-drz-cloudfunctions-location": "us-central1"
+    },
+    "logName": "projects/emoji-gacha/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-07-03T23:39:40.819175725Z"
+  },
+  {
+    "textPayload": "    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)",
+    "insertId": "686714bc00074fa9387b4e59",
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "revision_name": "drawemoji-00002-qer",
+        "location": "us-central1",
+        "project_id": "emoji-gacha",
+        "service_name": "drawemoji",
+        "configuration_name": "drawemoji"
+      }
+    },
+    "timestamp": "2025-07-03T23:39:40.479145Z",
+    "labels": {
+      "goog-drz-cloudfunctions-location": "us-central1",
+      "firebase-functions-hash": "1975c3298d99d20c12949bd4d19664ff7775b343",
+      "run.googleapis.com/base_image_versions": "us-docker.pkg.dev/serverless-runtimes/google-22-full/runtimes/nodejs22:nodejs22_20250615_22_16_0_RC00",
+      "goog-managed-by": "cloudfunctions",
+      "instanceId": "0069c7a9881651e055dc5e12d02dc1c5d240b506626eee40903861052c1d95842d5972931f01de7a50a9c5d402defdb9e75dd01b8abcc3c89974999bfed8255ff9f1783248f2d7e62d6f90e21b6ba1",
+      "deployment-callable": "true",
+      "goog-drz-cloudfunctions-id": "drawemoji"
+    },
+    "logName": "projects/emoji-gacha/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-07-03T23:39:40.819175725Z"
+  },
+  {
+    "textPayload": "    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)",
+    "insertId": "686714bc00074fafc594f43b",
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "service_name": "drawemoji",
+        "revision_name": "drawemoji-00002-qer",
+        "configuration_name": "drawemoji",
+        "project_id": "emoji-gacha",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2025-07-03T23:39:40.479151Z",
+    "labels": {
+      "run.googleapis.com/base_image_versions": "us-docker.pkg.dev/serverless-runtimes/google-22-full/runtimes/nodejs22:nodejs22_20250615_22_16_0_RC00",
+      "instanceId": "0069c7a9881651e055dc5e12d02dc1c5d240b506626eee40903861052c1d95842d5972931f01de7a50a9c5d402defdb9e75dd01b8abcc3c89974999bfed8255ff9f1783248f2d7e62d6f90e21b6ba1",
+      "goog-managed-by": "cloudfunctions",
+      "deployment-callable": "true",
+      "goog-drz-cloudfunctions-location": "us-central1",
+      "firebase-functions-hash": "1975c3298d99d20c12949bd4d19664ff7775b343",
+      "goog-drz-cloudfunctions-id": "drawemoji"
+    },
+    "logName": "projects/emoji-gacha/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-07-03T23:39:40.819175725Z"
+  },
+  {
+    "textPayload": "    at Function._load (node:internal/modules/cjs/loader:1211:37)",
+    "insertId": "686714bc00074fb490b6d0fc",
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "service_name": "drawemoji",
+        "location": "us-central1",
+        "revision_name": "drawemoji-00002-qer",
+        "configuration_name": "drawemoji",
+        "project_id": "emoji-gacha"
+      }
+    },
+    "timestamp": "2025-07-03T23:39:40.479156Z",
+    "labels": {
+      "instanceId": "0069c7a9881651e055dc5e12d02dc1c5d240b506626eee40903861052c1d95842d5972931f01de7a50a9c5d402defdb9e75dd01b8abcc3c89974999bfed8255ff9f1783248f2d7e62d6f90e21b6ba1",
+      "goog-managed-by": "cloudfunctions",
+      "goog-drz-cloudfunctions-id": "drawemoji",
+      "deployment-callable": "true",
+      "firebase-functions-hash": "1975c3298d99d20c12949bd4d19664ff7775b343",
+      "goog-drz-cloudfunctions-location": "us-central1",
+      "run.googleapis.com/base_image_versions": "us-docker.pkg.dev/serverless-runtimes/google-22-full/runtimes/nodejs22:nodejs22_20250615_22_16_0_RC00"
+    },
+    "logName": "projects/emoji-gacha/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-07-03T23:39:40.819175725Z"
+  },
+  {
+    "textPayload": "    at TracingChannel.traceSync (node:diagnostics_channel:322:14)",
+    "insertId": "686714bc00074fbb93483a47",
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "project_id": "emoji-gacha",
+        "location": "us-central1",
+        "revision_name": "drawemoji-00002-qer",
+        "configuration_name": "drawemoji",
+        "service_name": "drawemoji"
+      }
+    },
+    "timestamp": "2025-07-03T23:39:40.479163Z",
+    "labels": {
+      "goog-managed-by": "cloudfunctions",
+      "goog-drz-cloudfunctions-location": "us-central1",
+      "firebase-functions-hash": "1975c3298d99d20c12949bd4d19664ff7775b343",
+      "instanceId": "0069c7a9881651e055dc5e12d02dc1c5d240b506626eee40903861052c1d95842d5972931f01de7a50a9c5d402defdb9e75dd01b8abcc3c89974999bfed8255ff9f1783248f2d7e62d6f90e21b6ba1",
+      "goog-drz-cloudfunctions-id": "drawemoji",
+      "run.googleapis.com/base_image_versions": "us-docker.pkg.dev/serverless-runtimes/google-22-full/runtimes/nodejs22:nodejs22_20250615_22_16_0_RC00",
+      "deployment-callable": "true"
+    },
+    "logName": "projects/emoji-gacha/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-07-03T23:39:40.819175725Z"
+  },
+  {
+    "textPayload": "    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)",
+    "insertId": "686714bc00074fc0e6dd0795",
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "service_name": "drawemoji",
+        "location": "us-central1",
+        "revision_name": "drawemoji-00002-qer",
+        "project_id": "emoji-gacha",
+        "configuration_name": "drawemoji"
+      }
+    },
+    "timestamp": "2025-07-03T23:39:40.479168Z",
+    "labels": {
+      "instanceId": "0069c7a9881651e055dc5e12d02dc1c5d240b506626eee40903861052c1d95842d5972931f01de7a50a9c5d402defdb9e75dd01b8abcc3c89974999bfed8255ff9f1783248f2d7e62d6f90e21b6ba1",
+      "goog-drz-cloudfunctions-id": "drawemoji",
+      "run.googleapis.com/base_image_versions": "us-docker.pkg.dev/serverless-runtimes/google-22-full/runtimes/nodejs22:nodejs22_20250615_22_16_0_RC00",
+      "deployment-callable": "true",
+      "firebase-functions-hash": "1975c3298d99d20c12949bd4d19664ff7775b343",
+      "goog-drz-cloudfunctions-location": "us-central1",
+      "goog-managed-by": "cloudfunctions"
+    },
+    "logName": "projects/emoji-gacha/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-07-03T23:39:40.819175725Z"
+  },
+  {
+    "textPayload": "    at Module.require (node:internal/modules/cjs/loader:1487:12)",
+    "insertId": "686714bc00074fc5b1d9897c",
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "configuration_name": "drawemoji",
+        "revision_name": "drawemoji-00002-qer",
+        "project_id": "emoji-gacha",
+        "location": "us-central1",
+        "service_name": "drawemoji"
+      }
+    },
+    "timestamp": "2025-07-03T23:39:40.479173Z",
+    "labels": {
+      "firebase-functions-hash": "1975c3298d99d20c12949bd4d19664ff7775b343",
+      "goog-drz-cloudfunctions-id": "drawemoji",
+      "goog-drz-cloudfunctions-location": "us-central1",
+      "instanceId": "0069c7a9881651e055dc5e12d02dc1c5d240b506626eee40903861052c1d95842d5972931f01de7a50a9c5d402defdb9e75dd01b8abcc3c89974999bfed8255ff9f1783248f2d7e62d6f90e21b6ba1",
+      "deployment-callable": "true",
+      "goog-managed-by": "cloudfunctions",
+      "run.googleapis.com/base_image_versions": "us-docker.pkg.dev/serverless-runtimes/google-22-full/runtimes/nodejs22:nodejs22_20250615_22_16_0_RC00"
+    },
+    "logName": "projects/emoji-gacha/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-07-03T23:39:40.819175725Z"
+  },
+  {
+    "textPayload": "    at require (node:internal/modules/helpers:135:16)",
+    "insertId": "686714bc00074fcacdd44e86",
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "location": "us-central1",
+        "configuration_name": "drawemoji",
+        "revision_name": "drawemoji-00002-qer",
+        "project_id": "emoji-gacha",
+        "service_name": "drawemoji"
+      }
+    },
+    "timestamp": "2025-07-03T23:39:40.479178Z",
+    "labels": {
+      "goog-drz-cloudfunctions-location": "us-central1",
+      "instanceId": "0069c7a9881651e055dc5e12d02dc1c5d240b506626eee40903861052c1d95842d5972931f01de7a50a9c5d402defdb9e75dd01b8abcc3c89974999bfed8255ff9f1783248f2d7e62d6f90e21b6ba1",
+      "run.googleapis.com/base_image_versions": "us-docker.pkg.dev/serverless-runtimes/google-22-full/runtimes/nodejs22:nodejs22_20250615_22_16_0_RC00",
+      "goog-managed-by": "cloudfunctions",
+      "deployment-callable": "true",
+      "goog-drz-cloudfunctions-id": "drawemoji",
+      "firebase-functions-hash": "1975c3298d99d20c12949bd4d19664ff7775b343"
+    },
+    "logName": "projects/emoji-gacha/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-07-03T23:39:40.819175725Z"
+  },
+  {
+    "textPayload": "    at Object.<anonymous> (/workspace/index.js:6:19)",
+    "insertId": "686714bc00074fcf48cdf5ce",
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "location": "us-central1",
+        "project_id": "emoji-gacha",
+        "service_name": "drawemoji",
+        "configuration_name": "drawemoji",
+        "revision_name": "drawemoji-00002-qer"
+      }
+    },
+    "timestamp": "2025-07-03T23:39:40.479183Z",
+    "labels": {
+      "goog-drz-cloudfunctions-id": "drawemoji",
+      "goog-drz-cloudfunctions-location": "us-central1",
+      "goog-managed-by": "cloudfunctions",
+      "instanceId": "0069c7a9881651e055dc5e12d02dc1c5d240b506626eee40903861052c1d95842d5972931f01de7a50a9c5d402defdb9e75dd01b8abcc3c89974999bfed8255ff9f1783248f2d7e62d6f90e21b6ba1",
+      "run.googleapis.com/base_image_versions": "us-docker.pkg.dev/serverless-runtimes/google-22-full/runtimes/nodejs22:nodejs22_20250615_22_16_0_RC00",
+      "deployment-callable": "true",
+      "firebase-functions-hash": "1975c3298d99d20c12949bd4d19664ff7775b343"
+    },
+    "logName": "projects/emoji-gacha/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-07-03T23:39:40.819175725Z"
+  },
+  {
+    "textPayload": "    at Module._compile (node:internal/modules/cjs/loader:1730:14)",
+    "insertId": "686714bc00074fd4ba56b6a9",
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "location": "us-central1",
+        "service_name": "drawemoji",
+        "revision_name": "drawemoji-00002-qer",
+        "project_id": "emoji-gacha",
+        "configuration_name": "drawemoji"
+      }
+    },
+    "timestamp": "2025-07-03T23:39:40.479188Z",
+    "labels": {
+      "firebase-functions-hash": "1975c3298d99d20c12949bd4d19664ff7775b343",
+      "goog-drz-cloudfunctions-id": "drawemoji",
+      "goog-managed-by": "cloudfunctions",
+      "instanceId": "0069c7a9881651e055dc5e12d02dc1c5d240b506626eee40903861052c1d95842d5972931f01de7a50a9c5d402defdb9e75dd01b8abcc3c89974999bfed8255ff9f1783248f2d7e62d6f90e21b6ba1",
+      "goog-drz-cloudfunctions-location": "us-central1",
+      "run.googleapis.com/base_image_versions": "us-docker.pkg.dev/serverless-runtimes/google-22-full/runtimes/nodejs22:nodejs22_20250615_22_16_0_RC00",
+      "deployment-callable": "true"
+    },
+    "logName": "projects/emoji-gacha/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-07-03T23:39:40.819175725Z"
+  },
+  {
+    "textPayload": "Could not load the function, shutting down.",
+    "insertId": "686714bc0007509d523a9bf8",
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "location": "us-central1",
+        "project_id": "emoji-gacha",
+        "revision_name": "drawemoji-00002-qer",
+        "service_name": "drawemoji",
+        "configuration_name": "drawemoji"
+      }
+    },
+    "timestamp": "2025-07-03T23:39:40.479389Z",
+    "labels": {
+      "firebase-functions-hash": "1975c3298d99d20c12949bd4d19664ff7775b343",
+      "goog-drz-cloudfunctions-id": "drawemoji",
+      "run.googleapis.com/base_image_versions": "us-docker.pkg.dev/serverless-runtimes/google-22-full/runtimes/nodejs22:nodejs22_20250615_22_16_0_RC00",
+      "goog-managed-by": "cloudfunctions",
+      "goog-drz-cloudfunctions-location": "us-central1",
+      "instanceId": "0069c7a9881651e055dc5e12d02dc1c5d240b506626eee40903861052c1d95842d5972931f01de7a50a9c5d402defdb9e75dd01b8abcc3c89974999bfed8255ff9f1783248f2d7e62d6f90e21b6ba1",
+      "deployment-callable": "true"
+    },
+    "logName": "projects/emoji-gacha/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-07-03T23:39:40.819175725Z"
+  },
+  {
+    "textPayload": "Container called exit(1).",
+    "insertId": "686714bc000cc9736ece6fa0",
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "location": "us-central1",
+        "configuration_name": "drawemoji",
+        "service_name": "drawemoji",
+        "revision_name": "drawemoji-00002-qer",
+        "project_id": "emoji-gacha"
+      }
+    },
+    "timestamp": "2025-07-03T23:39:40.837898754Z",
+    "severity": "WARNING",
+    "labels": {
+      "deployment-callable": "true",
+      "instanceId": "0069c7a9881651e055dc5e12d02dc1c5d240b506626eee40903861052c1d95842d5972931f01de7a50a9c5d402defdb9e75dd01b8abcc3c89974999bfed8255ff9f1783248f2d7e62d6f90e21b6ba1",
+      "firebase-functions-hash": "1975c3298d99d20c12949bd4d19664ff7775b343",
+      "goog-drz-cloudfunctions-location": "us-central1",
+      "container_name": "worker",
+      "run.googleapis.com/base_image_versions": "us-docker.pkg.dev/serverless-runtimes/google-22-full/runtimes/nodejs22:nodejs22_20250615_22_16_0_RC00",
+      "goog-managed-by": "cloudfunctions",
+      "goog-drz-cloudfunctions-id": "drawemoji"
+    },
+    "logName": "projects/emoji-gacha/logs/run.googleapis.com%2Fvarlog%2Fsystem",
+    "receiveTimestamp": "2025-07-03T23:39:40.842798184Z"
+  },
+  {
+    "textPayload": "Default STARTUP TCP probe failed 1 time consecutively for container \"worker\" on port 8080. The instance was not started.\nConnection failed with status CANCELLED.",
+    "insertId": "686714bc000e39f823edec8b",
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "configuration_name": "drawemoji",
+        "location": "us-central1",
+        "project_id": "emoji-gacha",
+        "revision_name": "drawemoji-00002-qer",
+        "service_name": "drawemoji"
+      }
+    },
+    "timestamp": "2025-07-03T23:39:40.932344Z",
+    "severity": "ERROR",
+    "labels": {
+      "run.googleapis.com/base_image_versions": "us-docker.pkg.dev/serverless-runtimes/google-22-full/runtimes/nodejs22:nodejs22_20250615_22_16_0_RC00",
+      "goog-drz-cloudfunctions-location": "us-central1",
+      "goog-drz-cloudfunctions-id": "drawemoji",
+      "goog-managed-by": "cloudfunctions",
+      "firebase-functions-hash": "1975c3298d99d20c12949bd4d19664ff7775b343",
+      "instanceId": "0069c7a9881651e055dc5e12d02dc1c5d240b506626eee40903861052c1d95842d5972931f01de7a50a9c5d402defdb9e75dd01b8abcc3c89974999bfed8255ff9f1783248f2d7e62d6f90e21b6ba1",
+      "deployment-callable": "true"
+    },
+    "logName": "projects/emoji-gacha/logs/run.googleapis.com%2Fvarlog%2Fsystem",
+    "receiveTimestamp": "2025-07-03T23:39:41.173717731Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {
+        "code": 9,
+        "message": "Ready condition status changed to False for Revision drawemoji-00002-qer with message: The user-provided container failed to start and listen on the port defined provided by the PORT=8080 environment variable within the allocated timeout. This can happen when the container port is misconfigured or if the timeout is too short. The health check timeout can be extended. Logs for this revision might contain more information.\n\nLogs URL: https://console.cloud.google.com/logs/viewer?project=emoji-gacha&resource=cloud_run_revision/service_name/drawemoji/revision_name/drawemoji-00002-qer&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22drawemoji%22%0Aresource.labels.revision_name%3D%22drawemoji-00002-qer%22 \nFor more troubleshooting guidance, see https://cloud.google.com/run/docs/troubleshooting#container-failed-to-start"
+      },
+      "serviceName": "run.googleapis.com",
+      "methodName": "/InternalServices.ReplaceInternalService",
+      "resourceName": "namespaces/emoji-gacha/revisions/drawemoji-00002-qer",
+      "response": {
+        "metadata": {
+          "name": "drawemoji-00002-qer",
+          "namespace": "659001732182",
+          "selfLink": "/apis/serving.knative.dev/v1/namespaces/659001732182/revisions/drawemoji-00002-qer",
+          "uid": "f0250f05-82fd-495c-a72d-614d35f79e19",
+          "resourceVersion": "AAY5DuQv3jo",
+          "generation": 1,
+          "creationTimestamp": "2025-07-03T23:39:31.474756Z",
+          "labels": {
+            "goog-drz-cloudfunctions-location": "us-central1",
+            "firebase-functions-hash": "1975c3298d99d20c12949bd4d19664ff7775b343",
+            "goog-drz-cloudfunctions-id": "drawemoji",
+            "deployment-callable": "true",
+            "serving.knative.dev/configuration": "drawemoji",
+            "serving.knative.dev/configurationGeneration": "2",
+            "serving.knative.dev/service": "drawemoji",
+            "serving.knative.dev/serviceUid": "f6473642-235b-449c-b9e0-b9b655ff93c2",
+            "goog-managed-by": "cloudfunctions",
+            "goog-cloudfunctions-runtime": "nodejs22",
+            "cloud.googleapis.com/location": "us-central1",
+            "serving.knative.dev/route": "drawemoji",
+            "run.googleapis.com/startupProbeType": "Default"
+          },
+          "annotations": {
+            "run.googleapis.com/client-name": "cli-firebase",
+            "cloudfunctions.googleapis.com/trigger-type": "HTTP_TRIGGER",
+            "autoscaling.knative.dev/maxScale": "20",
+            "serving.knative.dev/creator": "service-659001732182@gcf-admin-robot.iam.gserviceaccount.com",
+            "run.googleapis.com/build-source-location": "{\"worker\":\"gs://gcf-v2-sources-659001732182-us-central1/drawEmoji/function-source.zip#1751585934060254\"}",
+            "run.googleapis.com/build-id": "{\"worker\":\"814cb94a-7d90-4f2e-b636-72a9a6f4c027\"}",
+            "run.googleapis.com/build-function-target": "{\"worker\":\"drawEmoji\"}",
+            "run.googleapis.com/operation-id": "d7eb4859-cc6d-4932-9366-f9eb1ae89497",
+            "run.googleapis.com/startup-cpu-boost": "true",
+            "run.googleapis.com/base-images": "{\"worker\":\"us-central1-docker.pkg.dev/serverless-runtimes/google-22-full/runtimes/nodejs22\"}"
+          },
+          "ownerReferences": [
+            {
+              "kind": "Configuration",
+              "name": "drawemoji",
+              "uid": "692a4d7a-4118-40d4-9f73-0d12e82f0768",
+              "apiVersion": "serving.knative.dev/v1",
+              "controller": true,
+              "blockOwnerDeletion": true
+            }
+          ]
+        },
+        "apiVersion": "serving.knative.dev/v1",
+        "kind": "Revision",
+        "spec": {
+          "containerConcurrency": 80,
+          "timeoutSeconds": 60,
+          "serviceAccountName": "659001732182-compute@developer.gserviceaccount.com",
+          "containers": [
+            {
+              "name": "worker",
+              "image": "us-central1-docker.pkg.dev/emoji-gacha/gcf-artifacts/emoji--gacha__us--central1__draw_emoji@sha256:47c91edf63191a970b9c0fa787b89f20e2efa9e050f4e21beeb323b3b93fa43c",
+              "ports": [
+                {
+                  "name": "http1",
+                  "containerPort": 8080
+                }
+              ],
+              "env": [
+                {
+                  "name": "FIREBASE_CONFIG",
+                  "value": "{\"projectId\":\"emoji-gacha\",\"storageBucket\":\"emoji-gacha.firebasestorage.app\"}"
+                },
+                {
+                  "name": "GCLOUD_PROJECT",
+                  "value": "emoji-gacha"
+                },
+                {
+                  "name": "EVENTARC_CLOUD_EVENT_SOURCE",
+                  "value": "projects/emoji-gacha/locations/us-central1/services/drawEmoji"
+                },
+                {
+                  "name": "FUNCTION_TARGET",
+                  "value": "drawEmoji"
+                },
+                {
+                  "name": "LOG_EXECUTION_ID",
+                  "value": "true"
+                }
+              ],
+              "resources": {
+                "limits": {
+                  "cpu": "1",
+                  "memory": "256Mi"
+                }
+              },
+              "startupProbe": {
+                "timeoutSeconds": 240,
+                "periodSeconds": 240,
+                "failureThreshold": 1,
+                "tcpSocket": {
+                  "port": 8080
+                }
+              }
+            }
+          ],
+          "runtimeClassName": "run.googleapis.com/linux-base-image-update"
+        },
+        "status": {
+          "observedGeneration": 1,
+          "conditions": [
+            {
+              "type": "Ready",
+              "status": "False",
+              "reason": "HealthCheckContainerError",
+              "message": "The user-provided container failed to start and listen on the port defined provided by the PORT=8080 environment variable within the allocated timeout. This can happen when the container port is misconfigured or if the timeout is too short. The health check timeout can be extended. Logs for this revision might contain more information.\n\nLogs URL: https://console.cloud.google.com/logs/viewer?project=emoji-gacha&resource=cloud_run_revision/service_name/drawemoji/revision_name/drawemoji-00002-qer&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22drawemoji%22%0Aresource.labels.revision_name%3D%22drawemoji-00002-qer%22 \nFor more troubleshooting guidance, see https://cloud.google.com/run/docs/troubleshooting#container-failed-to-start",
+              "lastTransitionTime": "2025-07-03T23:39:40.931642Z"
+            },
+            {
+              "type": "ContainerHealthy",
+              "status": "False",
+              "reason": "HealthCheckContainerError",
+              "message": "The user-provided container failed to start and listen on the port defined provided by the PORT=8080 environment variable within the allocated timeout. This can happen when the container port is misconfigured or if the timeout is too short. The health check timeout can be extended. Logs for this revision might contain more information.\n\nLogs URL: https://console.cloud.google.com/logs/viewer?project=emoji-gacha&resource=cloud_run_revision/service_name/drawemoji/revision_name/drawemoji-00002-qer&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22drawemoji%22%0Aresource.labels.revision_name%3D%22drawemoji-00002-qer%22 \nFor more troubleshooting guidance, see https://cloud.google.com/run/docs/troubleshooting#container-failed-to-start",
+              "lastTransitionTime": "2025-07-03T23:39:40.931642Z"
+            },
+            {
+              "type": "ContainerReady",
+              "status": "True",
+              "message": "Container image import completed in 1.27s.",
+              "lastTransitionTime": "2025-07-03T23:39:33.503428Z"
+            },
+            {
+              "type": "ResourcesAvailable",
+              "status": "True",
+              "message": "Provisioning imported containers completed in 4.97s. Checking container health. This will wait for up to 4m for the configured startup probe, including an initial delay of 0s.",
+              "lastTransitionTime": "2025-07-03T23:39:38.471111Z"
+            },
+            {
+              "type": "Retry",
+              "status": "True",
+              "reason": "ImmediateRetry",
+              "message": "System will retry after 0:00:00 from lastTransitionTime for attempt 0.",
+              "lastTransitionTime": "2025-07-03T23:39:38.471111Z",
+              "severity": "Info"
+            }
+          ],
+          "logUrl": "https://console.cloud.google.com/logs/viewer?project=emoji-gacha&resource=cloud_run_revision/service_name/drawemoji/revision_name/drawemoji-00002-qer&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22drawemoji%22%0Aresource.labels.revision_name%3D%22drawemoji-00002-qer%22",
+          "imageDigest": "us-central1-docker.pkg.dev/emoji-gacha/gcf-artifacts/emoji--gacha__us--central1__draw_emoji@sha256:47c91edf63191a970b9c0fa787b89f20e2efa9e050f4e21beeb323b3b93fa43c",
+          "containerStatuses": [
+            {
+              "name": "worker",
+              "imageDigest": "us-central1-docker.pkg.dev/emoji-gacha/gcf-artifacts/emoji--gacha__us--central1__draw_emoji@sha256:47c91edf63191a970b9c0fa787b89f20e2efa9e050f4e21beeb323b3b93fa43c"
+            }
+          ]
+        },
+        "@type": "type.googleapis.com/google.cloud.run.v1.Revision"
+      }
+    },
+    "insertId": "-6bv8qkdltrm",
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "location": "us-central1",
+        "project_id": "emoji-gacha",
+        "configuration_name": "drawemoji",
+        "revision_name": "drawemoji-00002-qer",
+        "service_name": "drawemoji"
+      }
+    },
+    "timestamp": "2025-07-03T23:39:40.943440Z",
+    "severity": "ERROR",
+    "logName": "projects/emoji-gacha/logs/cloudaudit.googleapis.com%2Fsystem_event",
+    "receiveTimestamp": "2025-07-03T23:39:41.228003090Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {
+        "code": 9,
+        "message": "Ready condition status changed to False for Service drawemoji with message: Revision 'drawemoji-00002-qer' is not ready and cannot serve traffic. The user-provided container failed to start and listen on the port defined provided by the PORT=8080 environment variable within the allocated timeout. This can happen when the container port is misconfigured or if the timeout is too short. The health check timeout can be extended. Logs for this revision might contain more information.\n\nLogs URL: https://console.cloud.google.com/logs/viewer?project=emoji-gacha&resource=cloud_run_revision/service_name/drawemoji/revision_name/drawemoji-00002-qer&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22drawemoji%22%0Aresource.labels.revision_name%3D%22drawemoji-00002-qer%22 \nFor more troubleshooting guidance, see https://cloud.google.com/run/docs/troubleshooting#container-failed-to-start"
+      },
+      "serviceName": "run.googleapis.com",
+      "methodName": "/InternalServices.ReplaceInternalService",
+      "resourceName": "namespaces/emoji-gacha/services/drawemoji",
+      "response": {
+        "metadata": {
+          "name": "drawemoji",
+          "namespace": "659001732182",
+          "selfLink": "/apis/serving.knative.dev/v1/namespaces/659001732182/services/drawemoji",
+          "uid": "f6473642-235b-449c-b9e0-b9b655ff93c2",
+          "resourceVersion": "AAY5DuQyDWE",
+          "generation": 2,
+          "creationTimestamp": "2025-07-03T21:43:46.434037Z",
+          "labels": {
+            "goog-drz-cloudfunctions-location": "us-central1",
+            "firebase-functions-hash": "1975c3298d99d20c12949bd4d19664ff7775b343",
+            "goog-managed-by": "cloudfunctions",
+            "goog-cloudfunctions-runtime": "nodejs22",
+            "cloud.googleapis.com/location": "us-central1",
+            "goog-drz-cloudfunctions-id": "drawemoji",
+            "deployment-callable": "true"
+          },
+          "annotations": {
+            "serving.knative.dev/creator": "service-659001732182@gcf-admin-robot.iam.gserviceaccount.com",
+            "serving.knative.dev/lastModifier": "service-659001732182@gcf-admin-robot.iam.gserviceaccount.com",
+            "run.googleapis.com/custom-audiences": "[\"https://us-central1-emoji-gacha.cloudfunctions.net/drawEmoji\"]",
+            "run.googleapis.com/client-name": "cli-firebase",
+            "cloudfunctions.googleapis.com/function-id": "drawEmoji",
+            "run.googleapis.com/build-source-location": "gs://gcf-v2-sources-659001732182-us-central1/drawEmoji/function-source.zip#1751585934060254",
+            "run.googleapis.com/build-environment-variables": "{\"GOOGLE_NODE_RUN_SCRIPTS\":\"\"}",
+            "run.googleapis.com/build-function-target": "drawEmoji",
+            "run.googleapis.com/build-service-account": "projects/emoji-gacha/serviceAccounts/659001732182-compute@developer.gserviceaccount.com",
+            "run.googleapis.com/build-enable-automatic-updates": "true",
+            "run.googleapis.com/build-base-image": "us-central1-docker.pkg.dev/serverless-runtimes/google-22-full/runtimes/nodejs22",
+            "run.googleapis.com/build-image-uri": "us-central1-docker.pkg.dev/emoji-gacha/gcf-artifacts/emoji--gacha__us--central1__draw_emoji:version_1",
+            "run.googleapis.com/build-name": "projects/659001732182/locations/us-central1/builds/814cb94a-7d90-4f2e-b636-72a9a6f4c027",
+            "run.googleapis.com/operation-id": "d7eb4859-cc6d-4932-9366-f9eb1ae89497",
+            "run.googleapis.com/ingress": "all",
+            "run.googleapis.com/ingress-status": "all",
+            "run.googleapis.com/urls": "[\"https://drawemoji-659001732182.us-central1.run.app\",\"https://us-central1-emoji-gacha.cloudfunctions.net/drawEmoji\",\"https://drawemoji-7ldugt5pqq-uc.a.run.app\"]"
+          }
+        },
+        "apiVersion": "serving.knative.dev/v1",
+        "kind": "Service",
+        "spec": {
+          "template": {
+            "metadata": {
+              "name": "drawemoji-00002-qer",
+              "labels": {
+                "goog-drz-cloudfunctions-location": "us-central1",
+                "firebase-functions-hash": "1975c3298d99d20c12949bd4d19664ff7775b343",
+                "goog-drz-cloudfunctions-id": "drawemoji",
+                "deployment-callable": "true",
+                "run.googleapis.com/startupProbeType": "Default"
+              },
+              "annotations": {
+                "run.googleapis.com/client-name": "cli-firebase",
+                "cloudfunctions.googleapis.com/trigger-type": "HTTP_TRIGGER",
+                "autoscaling.knative.dev/maxScale": "20",
+                "run.googleapis.com/base-images": "{\"worker\":\"us-central1-docker.pkg.dev/serverless-runtimes/google-22-full/runtimes/nodejs22\"}",
+                "run.googleapis.com/startup-cpu-boost": "true"
+              }
+            },
+            "spec": {
+              "containerConcurrency": 80,
+              "timeoutSeconds": 60,
+              "serviceAccountName": "659001732182-compute@developer.gserviceaccount.com",
+              "containers": [
+                {
+                  "name": "worker",
+                  "image": "us-central1-docker.pkg.dev/emoji-gacha/gcf-artifacts/emoji--gacha__us--central1__draw_emoji:version_1",
+                  "ports": [
+                    {
+                      "name": "http1",
+                      "containerPort": 8080
+                    }
+                  ],
+                  "env": [
+                    {
+                      "name": "FIREBASE_CONFIG",
+                      "value": "{\"projectId\":\"emoji-gacha\",\"storageBucket\":\"emoji-gacha.firebasestorage.app\"}"
+                    },
+                    {
+                      "name": "GCLOUD_PROJECT",
+                      "value": "emoji-gacha"
+                    },
+                    {
+                      "name": "EVENTARC_CLOUD_EVENT_SOURCE",
+                      "value": "projects/emoji-gacha/locations/us-central1/services/drawEmoji"
+                    },
+                    {
+                      "name": "FUNCTION_TARGET",
+                      "value": "drawEmoji"
+                    },
+                    {
+                      "name": "LOG_EXECUTION_ID",
+                      "value": "true"
+                    }
+                  ],
+                  "resources": {
+                    "limits": {
+                      "cpu": "1",
+                      "memory": "256Mi"
+                    }
+                  },
+                  "startupProbe": {
+                    "timeoutSeconds": 240,
+                    "periodSeconds": 240,
+                    "failureThreshold": 1,
+                    "tcpSocket": {
+                      "port": 8080
+                    }
+                  }
+                }
+              ],
+              "runtimeClassName": "run.googleapis.com/linux-base-image-update"
+            }
+          },
+          "traffic": [
+            {
+              "percent": 100,
+              "latestRevision": true
+            }
+          ]
+        },
+        "status": {
+          "observedGeneration": 2,
+          "conditions": [
+            {
+              "type": "Ready",
+              "status": "False",
+              "reason": "HealthCheckContainerError",
+              "message": "Revision 'drawemoji-00002-qer' is not ready and cannot serve traffic. The user-provided container failed to start and listen on the port defined provided by the PORT=8080 environment variable within the allocated timeout. This can happen when the container port is misconfigured or if the timeout is too short. The health check timeout can be extended. Logs for this revision might contain more information.\n\nLogs URL: https://console.cloud.google.com/logs/viewer?project=emoji-gacha&resource=cloud_run_revision/service_name/drawemoji/revision_name/drawemoji-00002-qer&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22drawemoji%22%0Aresource.labels.revision_name%3D%22drawemoji-00002-qer%22 \nFor more troubleshooting guidance, see https://cloud.google.com/run/docs/troubleshooting#container-failed-to-start",
+              "lastTransitionTime": "2025-07-03T23:39:40.976445Z"
+            },
+            {
+              "type": "ConfigurationsReady",
+              "status": "True",
+              "message": "The user-provided container failed to start and listen on the port defined provided by the PORT=8080 environment variable within the allocated timeout. This can happen when the container port is misconfigured or if the timeout is too short. The health check timeout can be extended. Logs for this revision might contain more information.\n\nLogs URL: https://console.cloud.google.com/logs/viewer?project=emoji-gacha&resource=cloud_run_revision/service_name/drawemoji/revision_name/drawemoji-00002-qer&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22drawemoji%22%0Aresource.labels.revision_name%3D%22drawemoji-00002-qer%22 \nFor more troubleshooting guidance, see https://cloud.google.com/run/docs/troubleshooting#container-failed-to-start",
+              "lastTransitionTime": "2025-07-03T23:39:40.971306Z"
+            },
+            {
+              "type": "RoutesReady",
+              "status": "False",
+              "reason": "HealthCheckContainerError",
+              "message": "Revision 'drawemoji-00002-qer' is not ready and cannot serve traffic. The user-provided container failed to start and listen on the port defined provided by the PORT=8080 environment variable within the allocated timeout. This can happen when the container port is misconfigured or if the timeout is too short. The health check timeout can be extended. Logs for this revision might contain more information.\n\nLogs URL: https://console.cloud.google.com/logs/viewer?project=emoji-gacha&resource=cloud_run_revision/service_name/drawemoji/revision_name/drawemoji-00002-qer&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22drawemoji%22%0Aresource.labels.revision_name%3D%22drawemoji-00002-qer%22 \nFor more troubleshooting guidance, see https://cloud.google.com/run/docs/troubleshooting#container-failed-to-start",
+              "lastTransitionTime": "2025-07-03T23:39:40.976445Z"
+            }
+          ],
+          "latestReadyRevisionName": "drawemoji-00001-jep",
+          "latestCreatedRevisionName": "drawemoji-00002-qer",
+          "traffic": [
+            {
+              "revisionName": "drawemoji-00001-jep",
+              "percent": 100,
+              "latestRevision": true
+            }
+          ],
+          "url": "https://drawemoji-7ldugt5pqq-uc.a.run.app",
+          "address": {
+            "url": "https://drawemoji-7ldugt5pqq-uc.a.run.app"
+          }
+        },
+        "@type": "type.googleapis.com/google.cloud.run.v1.Service"
+      }
+    },
+    "insertId": "-h6p5dnds08o",
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "service_name": "drawemoji",
+        "configuration_name": "",
+        "revision_name": "",
+        "location": "us-central1",
+        "project_id": "emoji-gacha"
+      }
+    },
+    "timestamp": "2025-07-03T23:39:41.092756Z",
+    "severity": "ERROR",
+    "logName": "projects/emoji-gacha/logs/cloudaudit.googleapis.com%2Fsystem_event",
+    "receiveTimestamp": "2025-07-03T23:39:41.276490960Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {
+        "code": 3,
+        "message": "Could not create or update Cloud Run service drawemoji, Container Healthcheck failed. Revision 'drawemoji-00002-qer' is not ready and cannot serve traffic. The user-provided container failed to start and listen on the port defined provided by the PORT=8080 environment variable within the allocated timeout. This can happen when the container port is misconfigured or if the timeout is too short. The health check timeout can be extended. Logs for this revision might contain more information.\n\nLogs URL: https://console.cloud.google.com/logs/viewer?project=emoji-gacha&resource=cloud_run_revision/service_name/drawemoji/revision_name/drawemoji-00002-qer&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22drawemoji%22%0Aresource.labels.revision_name%3D%22drawemoji-00002-qer%22 \nFor more troubleshooting guidance, see https://cloud.google.com/run/docs/troubleshooting#container-failed-to-start"
+      },
+      "authenticationInfo": {
+        "principalEmail": "8lackraisond3tre@gmail.com",
+        "principalSubject": "user:8lackraisond3tre@gmail.com"
+      },
+      "requestMetadata": {
+        "requestAttributes": {},
+        "destinationAttributes": {}
+      },
+      "serviceName": "cloudfunctions.googleapis.com",
+      "methodName": "google.cloud.functions.v2.FunctionService.UpdateFunction",
+      "resourceName": "projects/emoji-gacha/locations/us-central1/functions/drawEmoji",
+      "resourceLocation": {
+        "currentLocations": [
+          "us-central1"
+        ]
+      }
+    },
+    "insertId": "oh4dwid7yj7",
+    "resource": {
+      "type": "cloud_function",
+      "labels": {
+        "region": "us-central1",
+        "function_name": "drawEmoji",
+        "project_id": "emoji-gacha"
+      }
+    },
+    "timestamp": "2025-07-03T23:39:41.351072468Z",
+    "severity": "ERROR",
+    "logName": "projects/emoji-gacha/logs/cloudaudit.googleapis.com%2Factivity",
+    "operation": {
+      "id": "projects/emoji-gacha/locations/us-central1/operations/operation-1751585933343-6390ee159ba1c-f3ee33eb-1ee7fbaa",
+      "producer": "cloudfunctions.googleapis.com",
+      "last": true
+    },
+    "receiveTimestamp": "2025-07-03T23:39:42.168821144Z"
+  },
+  {
+    "insertId": "6867180c0009785b7b10c21b",
+    "httpRequest": {
+      "requestMethod": "OPTIONS",
+      "requestUrl": "https://us-central1-emoji-gacha.cloudfunctions.net/drawEmoji",
+      "requestSize": "729",
+      "status": 204,
+      "responseSize": "258",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+      "remoteIp": "59.6.188.48",
+      "referer": "http://localhost:3000/",
+      "serverIp": "216.239.36.54",
+      "latency": "1.032516870s",
+      "protocol": "HTTP/1.1"
+    },
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "service_name": "drawemoji",
+        "project_id": "emoji-gacha",
+        "configuration_name": "drawemoji",
+        "revision_name": "drawemoji-00001-jep",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2025-07-03T23:53:47.387300Z",
+    "severity": "INFO",
+    "labels": {
+      "firebase-functions-hash": "15d599b17bc84431f2ceeba38bbd89548d15c75f",
+      "deployment-callable": "true",
+      "goog-managed-by": "cloudfunctions",
+      "instanceId": "0069c7a9884f827aa13c4f503639e19827b11105e233fb3e9c1b4191f68ae24ab6e98bd29ca56d082a8bc13dc0ae794d87d7565181aa5e011a23aa9ac178bf1864f6c11905a80f0aad5b57c6c05e5b"
+    },
+    "logName": "projects/emoji-gacha/logs/run.googleapis.com%2Frequests",
+    "trace": "projects/emoji-gacha/traces/becf102653eb2e8a9332e9f887a8c8aa",
+    "receiveTimestamp": "2025-07-03T23:53:48.626536084Z",
+    "spanId": "1ce3d4377412f6db",
+    "traceSampled": true
+  },
+  {
+    "textPayload": "Default STARTUP TCP probe succeeded after 1 attempt for container \"worker\" on port 8080.",
+    "insertId": "6867180c00090a77f7b9bc1e",
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "project_id": "emoji-gacha",
+        "service_name": "drawemoji",
+        "location": "us-central1",
+        "revision_name": "drawemoji-00001-jep",
+        "configuration_name": "drawemoji"
+      }
+    },
+    "timestamp": "2025-07-03T23:53:48.592503Z",
+    "severity": "INFO",
+    "labels": {
+      "run.googleapis.com/base_image_versions": "us-docker.pkg.dev/serverless-runtimes/google-22-full/runtimes/nodejs22:nodejs22_20250615_22_16_0_RC00",
+      "firebase-functions-hash": "15d599b17bc84431f2ceeba38bbd89548d15c75f",
+      "goog-managed-by": "cloudfunctions",
+      "instanceId": "0069c7a9884f827aa13c4f503639e19827b11105e233fb3e9c1b4191f68ae24ab6e98bd29ca56d082a8bc13dc0ae794d87d7565181aa5e011a23aa9ac178bf1864f6c11905a80f0aad5b57c6c05e5b",
+      "deployment-callable": "true"
+    },
+    "logName": "projects/emoji-gacha/logs/run.googleapis.com%2Fvarlog%2Fsystem",
+    "receiveTimestamp": "2025-07-03T23:53:48.600964991Z"
+  },
+  {
+    "insertId": "6867180c000e83cbb907d143",
+    "httpRequest": {
+      "requestMethod": "POST",
+      "requestUrl": "https://us-central1-emoji-gacha.cloudfunctions.net/drawEmoji",
+      "requestSize": "2035",
+      "status": 401,
+      "responseSize": "298",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+      "remoteIp": "59.6.188.48",
+      "referer": "http://localhost:3000/",
+      "serverIp": "216.239.36.54",
+      "latency": "0.118413034s",
+      "protocol": "HTTP/1.1"
+    },
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "location": "us-central1",
+        "service_name": "drawemoji",
+        "revision_name": "drawemoji-00001-jep",
+        "project_id": "emoji-gacha",
+        "configuration_name": "drawemoji"
+      }
+    },
+    "timestamp": "2025-07-03T23:53:48.831311Z",
+    "severity": "WARNING",
+    "labels": {
+      "firebase-functions-hash": "15d599b17bc84431f2ceeba38bbd89548d15c75f",
+      "instanceId": "0069c7a9884f827aa13c4f503639e19827b11105e233fb3e9c1b4191f68ae24ab6e98bd29ca56d082a8bc13dc0ae794d87d7565181aa5e011a23aa9ac178bf1864f6c11905a80f0aad5b57c6c05e5b",
+      "deployment-callable": "true",
+      "goog-managed-by": "cloudfunctions"
+    },
+    "logName": "projects/emoji-gacha/logs/run.googleapis.com%2Frequests",
+    "trace": "projects/emoji-gacha/traces/19ee46a43dadd92b9332e9f887a8cfbe",
+    "receiveTimestamp": "2025-07-03T23:53:48.958397515Z",
+    "spanId": "93327b5b3080429b"
+  },
+  {
+    "insertId": "6867180c000e775d28b89307",
+    "jsonPayload": {
+      "message": "Callable request verification passed",
+      "verifications": {
+        "app": "MISSING",
+        "auth": "VALID"
+      }
+    },
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "project_id": "emoji-gacha",
+        "revision_name": "drawemoji-00001-jep",
+        "service_name": "drawemoji",
+        "configuration_name": "drawemoji",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2025-07-03T23:53:48.948061Z",
+    "severity": "DEBUG",
+    "labels": {
+      "instanceId": "0069c7a9884f827aa13c4f503639e19827b11105e233fb3e9c1b4191f68ae24ab6e98bd29ca56d082a8bc13dc0ae794d87d7565181aa5e011a23aa9ac178bf1864f6c11905a80f0aad5b57c6c05e5b",
+      "execution_id": "o1kmydgqmynf",
+      "run.googleapis.com/base_image_versions": "us-docker.pkg.dev/serverless-runtimes/google-22-full/runtimes/nodejs22:nodejs22_20250615_22_16_0_RC00",
+      "goog-managed-by": "cloudfunctions",
+      "firebase-functions-hash": "15d599b17bc84431f2ceeba38bbd89548d15c75f",
+      "deployment-callable": "true",
+      "firebase-log-type": "callable-request-verification"
+    },
+    "logName": "projects/emoji-gacha/logs/run.googleapis.com%2Fstdout",
+    "trace": "projects/emoji-gacha/traces/19ee46a43dadd92b9332e9f887a8cfbe",
+    "receiveTimestamp": "2025-07-03T23:53:48.953830200Z",
+    "spanId": "10606675703996891803"
+  },
+  {
+    "insertId": "686718770002a256de9a6a65",
+    "httpRequest": {
+      "requestMethod": "OPTIONS",
+      "requestUrl": "https://us-central1-emoji-gacha.cloudfunctions.net/drawEmoji",
+      "requestSize": "714",
+      "status": 204,
+      "responseSize": "258",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+      "remoteIp": "59.6.188.48",
+      "referer": "http://localhost:3000/",
+      "serverIp": "216.239.36.54",
+      "latency": "0.004039617s",
+      "protocol": "HTTP/1.1"
+    },
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "service_name": "drawemoji",
+        "configuration_name": "drawemoji",
+        "project_id": "emoji-gacha",
+        "revision_name": "drawemoji-00001-jep",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2025-07-03T23:55:35.155117Z",
+    "severity": "INFO",
+    "labels": {
+      "firebase-functions-hash": "15d599b17bc84431f2ceeba38bbd89548d15c75f",
+      "deployment-callable": "true",
+      "instanceId": "0069c7a9884f827aa13c4f503639e19827b11105e233fb3e9c1b4191f68ae24ab6e98bd29ca56d082a8bc13dc0ae794d87d7565181aa5e011a23aa9ac178bf1864f6c11905a80f0aad5b57c6c05e5b",
+      "goog-managed-by": "cloudfunctions"
+    },
+    "logName": "projects/emoji-gacha/logs/run.googleapis.com%2Frequests",
+    "trace": "projects/emoji-gacha/traces/59e4425e30b096d7d033fc9409305398",
+    "receiveTimestamp": "2025-07-03T23:55:35.177784388Z",
+    "spanId": "a3d51b523589ae27",
+    "traceSampled": true
+  },
+  {
+    "insertId": "68671877000601f6c47d1a70",
+    "httpRequest": {
+      "requestMethod": "POST",
+      "requestUrl": "https://us-central1-emoji-gacha.cloudfunctions.net/drawEmoji",
+      "requestSize": "2036",
+      "status": 401,
+      "responseSize": "298",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+      "remoteIp": "59.6.188.48",
+      "referer": "http://localhost:3000/",
+      "serverIp": "216.239.36.54",
+      "latency": "0.011945809s",
+      "protocol": "HTTP/1.1"
+    },
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "revision_name": "drawemoji-00001-jep",
+        "configuration_name": "drawemoji",
+        "project_id": "emoji-gacha",
+        "location": "us-central1",
+        "service_name": "drawemoji"
+      }
+    },
+    "timestamp": "2025-07-03T23:55:35.379796Z",
+    "severity": "WARNING",
+    "labels": {
+      "goog-managed-by": "cloudfunctions",
+      "firebase-functions-hash": "15d599b17bc84431f2ceeba38bbd89548d15c75f",
+      "instanceId": "0069c7a9884f827aa13c4f503639e19827b11105e233fb3e9c1b4191f68ae24ab6e98bd29ca56d082a8bc13dc0ae794d87d7565181aa5e011a23aa9ac178bf1864f6c11905a80f0aad5b57c6c05e5b",
+      "deployment-callable": "true"
+    },
+    "logName": "projects/emoji-gacha/logs/run.googleapis.com%2Frequests",
+    "trace": "projects/emoji-gacha/traces/d54a96ace8deddb9d033fc9409305c91",
+    "receiveTimestamp": "2025-07-03T23:55:35.511672878Z",
+    "spanId": "71d8ad3179bf8e45"
+  },
+  {
+    "insertId": "686718770005f259c7168f8e",
+    "jsonPayload": {
+      "message": "Callable request verification passed",
+      "verifications": {
+        "app": "MISSING",
+        "auth": "VALID"
+      }
+    },
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "revision_name": "drawemoji-00001-jep",
+        "location": "us-central1",
+        "project_id": "emoji-gacha",
+        "service_name": "drawemoji",
+        "configuration_name": "drawemoji"
+      }
+    },
+    "timestamp": "2025-07-03T23:55:35.389721Z",
+    "severity": "DEBUG",
+    "labels": {
+      "run.googleapis.com/base_image_versions": "us-docker.pkg.dev/serverless-runtimes/google-22-full/runtimes/nodejs22:nodejs22_20250615_22_16_0_RC00",
+      "deployment-callable": "true",
+      "firebase-functions-hash": "15d599b17bc84431f2ceeba38bbd89548d15c75f",
+      "execution_id": "o1mx5ngcirv3",
+      "instanceId": "0069c7a9884f827aa13c4f503639e19827b11105e233fb3e9c1b4191f68ae24ab6e98bd29ca56d082a8bc13dc0ae794d87d7565181aa5e011a23aa9ac178bf1864f6c11905a80f0aad5b57c6c05e5b",
+      "firebase-log-type": "callable-request-verification",
+      "goog-managed-by": "cloudfunctions"
+    },
+    "logName": "projects/emoji-gacha/logs/run.googleapis.com%2Fstdout",
+    "trace": "projects/emoji-gacha/traces/d54a96ace8deddb9d033fc9409305c91",
+    "receiveTimestamp": "2025-07-03T23:55:35.393739627Z",
+    "spanId": "8203497149262958149"
+  },
+  {
+    "insertId": "6867191a0003b8ccbbccf87f",
+    "httpRequest": {
+      "requestMethod": "OPTIONS",
+      "requestUrl": "https://us-central1-emoji-gacha.cloudfunctions.net/drawEmoji",
+      "requestSize": "716",
+      "status": 204,
+      "responseSize": "258",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+      "remoteIp": "59.6.188.48",
+      "referer": "http://localhost:3000/",
+      "serverIp": "216.239.36.54",
+      "latency": "0.002987048s",
+      "protocol": "HTTP/1.1"
+    },
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "revision_name": "drawemoji-00001-jep",
+        "location": "us-central1",
+        "project_id": "emoji-gacha",
+        "service_name": "drawemoji",
+        "configuration_name": "drawemoji"
+      }
+    },
+    "timestamp": "2025-07-03T23:58:18.233356Z",
+    "severity": "INFO",
+    "labels": {
+      "deployment-callable": "true",
+      "goog-managed-by": "cloudfunctions",
+      "instanceId": "0069c7a9884f827aa13c4f503639e19827b11105e233fb3e9c1b4191f68ae24ab6e98bd29ca56d082a8bc13dc0ae794d87d7565181aa5e011a23aa9ac178bf1864f6c11905a80f0aad5b57c6c05e5b",
+      "firebase-functions-hash": "15d599b17bc84431f2ceeba38bbd89548d15c75f"
+    },
+    "logName": "projects/emoji-gacha/logs/run.googleapis.com%2Frequests",
+    "trace": "projects/emoji-gacha/traces/5fad5ffb9fb879206db54007f2df008f",
+    "receiveTimestamp": "2025-07-03T23:58:18.249169644Z",
+    "spanId": "25d244157918c36a",
+    "traceSampled": true
+  },
+  {
+    "insertId": "6867191a00071723c02df329",
+    "httpRequest": {
+      "requestMethod": "POST",
+      "requestUrl": "https://us-central1-emoji-gacha.cloudfunctions.net/drawEmoji",
+      "requestSize": "2048",
+      "status": 401,
+      "responseSize": "298",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+      "remoteIp": "59.6.188.48",
+      "referer": "http://localhost:3000/",
+      "serverIp": "216.239.36.54",
+      "latency": "0.005776598s",
+      "protocol": "HTTP/1.1"
+    },
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "location": "us-central1",
+        "service_name": "drawemoji",
+        "configuration_name": "drawemoji",
+        "project_id": "emoji-gacha",
+        "revision_name": "drawemoji-00001-jep"
+      }
+    },
+    "timestamp": "2025-07-03T23:58:18.457431Z",
+    "severity": "WARNING",
+    "labels": {
+      "firebase-functions-hash": "15d599b17bc84431f2ceeba38bbd89548d15c75f",
+      "deployment-callable": "true",
+      "goog-managed-by": "cloudfunctions",
+      "instanceId": "0069c7a9884f827aa13c4f503639e19827b11105e233fb3e9c1b4191f68ae24ab6e98bd29ca56d082a8bc13dc0ae794d87d7565181aa5e011a23aa9ac178bf1864f6c11905a80f0aad5b57c6c05e5b"
+    },
+    "logName": "projects/emoji-gacha/logs/run.googleapis.com%2Frequests",
+    "trace": "projects/emoji-gacha/traces/52cd84132d32ff8d6db54007f2df0a47",
+    "receiveTimestamp": "2025-07-03T23:58:18.584557464Z",
+    "spanId": "10f2118e218e6756"
+  },
+  {
+    "insertId": "6867191a00071287f93254df",
+    "jsonPayload": {
+      "message": "Callable request verification passed",
+      "verifications": {
+        "app": "MISSING",
+        "auth": "VALID"
+      }
+    },
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "configuration_name": "drawemoji",
+        "service_name": "drawemoji",
+        "revision_name": "drawemoji-00001-jep",
+        "location": "us-central1",
+        "project_id": "emoji-gacha"
+      }
+    },
+    "timestamp": "2025-07-03T23:58:18.463495Z",
+    "severity": "DEBUG",
+    "labels": {
+      "run.googleapis.com/base_image_versions": "us-docker.pkg.dev/serverless-runtimes/google-22-full/runtimes/nodejs22:nodejs22_20250615_22_16_0_RC00",
+      "firebase-functions-hash": "15d599b17bc84431f2ceeba38bbd89548d15c75f",
+      "deployment-callable": "true",
+      "goog-managed-by": "cloudfunctions",
+      "execution_id": "o1qezipoz71y",
+      "firebase-log-type": "callable-request-verification",
+      "instanceId": "0069c7a9884f827aa13c4f503639e19827b11105e233fb3e9c1b4191f68ae24ab6e98bd29ca56d082a8bc13dc0ae794d87d7565181aa5e011a23aa9ac178bf1864f6c11905a80f0aad5b57c6c05e5b"
+    },
+    "logName": "projects/emoji-gacha/logs/run.googleapis.com%2Fstdout",
+    "trace": "projects/emoji-gacha/traces/52cd84132d32ff8d6db54007f2df0a47",
+    "receiveTimestamp": "2025-07-03T23:58:18.469430493Z",
+    "spanId": "1221057751116834646"
+  },
+  {
+    "insertId": "686719380003b459cb027205",
+    "httpRequest": {
+      "requestMethod": "OPTIONS",
+      "requestUrl": "https://us-central1-emoji-gacha.cloudfunctions.net/drawEmoji",
+      "requestSize": "718",
+      "status": 204,
+      "responseSize": "258",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+      "remoteIp": "59.6.188.48",
+      "referer": "http://localhost:3000/",
+      "serverIp": "216.239.36.54",
+      "latency": "0.002605224s",
+      "protocol": "HTTP/1.1"
+    },
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "configuration_name": "drawemoji",
+        "revision_name": "drawemoji-00001-jep",
+        "project_id": "emoji-gacha",
+        "location": "us-central1",
+        "service_name": "drawemoji"
+      }
+    },
+    "timestamp": "2025-07-03T23:58:48.238525Z",
+    "severity": "INFO",
+    "labels": {
+      "instanceId": "0069c7a9884f827aa13c4f503639e19827b11105e233fb3e9c1b4191f68ae24ab6e98bd29ca56d082a8bc13dc0ae794d87d7565181aa5e011a23aa9ac178bf1864f6c11905a80f0aad5b57c6c05e5b",
+      "firebase-functions-hash": "15d599b17bc84431f2ceeba38bbd89548d15c75f",
+      "goog-managed-by": "cloudfunctions",
+      "deployment-callable": "true"
+    },
+    "logName": "projects/emoji-gacha/logs/run.googleapis.com%2Frequests",
+    "trace": "projects/emoji-gacha/traces/447201c045aeb52ea023a881d58ed914",
+    "receiveTimestamp": "2025-07-03T23:58:48.248781224Z",
+    "spanId": "ff9e6f1893553869",
+    "traceSampled": true
+  },
+  {
+    "insertId": "686719380006f8aed4fad02d",
+    "httpRequest": {
+      "requestMethod": "POST",
+      "requestUrl": "https://us-central1-emoji-gacha.cloudfunctions.net/drawEmoji",
+      "requestSize": "1988",
+      "status": 401,
+      "responseSize": "298",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+      "remoteIp": "59.6.188.48",
+      "referer": "http://localhost:3000/",
+      "serverIp": "216.239.36.54",
+      "latency": "0.005113844s",
+      "protocol": "HTTP/1.1"
+    },
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "revision_name": "drawemoji-00001-jep",
+        "service_name": "drawemoji",
+        "project_id": "emoji-gacha",
+        "configuration_name": "drawemoji",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2025-07-03T23:58:48.450381Z",
+    "severity": "WARNING",
+    "labels": {
+      "instanceId": "0069c7a9884f827aa13c4f503639e19827b11105e233fb3e9c1b4191f68ae24ab6e98bd29ca56d082a8bc13dc0ae794d87d7565181aa5e011a23aa9ac178bf1864f6c11905a80f0aad5b57c6c05e5b",
+      "deployment-callable": "true",
+      "firebase-functions-hash": "15d599b17bc84431f2ceeba38bbd89548d15c75f",
+      "goog-managed-by": "cloudfunctions"
+    },
+    "logName": "projects/emoji-gacha/logs/run.googleapis.com%2Frequests",
+    "trace": "projects/emoji-gacha/traces/0c66800cb79e1e73a023a881d58ed6f6",
+    "receiveTimestamp": "2025-07-03T23:58:48.582096905Z",
+    "spanId": "49cd5d1475ecf218"
+  },
+  {
+    "insertId": "686719380006f4edb2e01645",
+    "jsonPayload": {
+      "message": "Callable request verification passed",
+      "verifications": {
+        "app": "MISSING",
+        "auth": "VALID"
+      }
+    },
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "revision_name": "drawemoji-00001-jep",
+        "configuration_name": "drawemoji",
+        "location": "us-central1",
+        "project_id": "emoji-gacha",
+        "service_name": "drawemoji"
+      }
+    },
+    "timestamp": "2025-07-03T23:58:48.455917Z",
+    "severity": "DEBUG",
+    "labels": {
+      "firebase-log-type": "callable-request-verification",
+      "execution_id": "o1r24mpk4nk2",
+      "deployment-callable": "true",
+      "firebase-functions-hash": "15d599b17bc84431f2ceeba38bbd89548d15c75f",
+      "goog-managed-by": "cloudfunctions",
+      "instanceId": "0069c7a9884f827aa13c4f503639e19827b11105e233fb3e9c1b4191f68ae24ab6e98bd29ca56d082a8bc13dc0ae794d87d7565181aa5e011a23aa9ac178bf1864f6c11905a80f0aad5b57c6c05e5b",
+      "run.googleapis.com/base_image_versions": "us-docker.pkg.dev/serverless-runtimes/google-22-full/runtimes/nodejs22:nodejs22_20250615_22_16_0_RC00"
+    },
+    "logName": "projects/emoji-gacha/logs/run.googleapis.com%2Fstdout",
+    "trace": "projects/emoji-gacha/traces/0c66800cb79e1e73a023a881d58ed6f6",
+    "receiveTimestamp": "2025-07-03T23:58:48.463494522Z",
+    "spanId": "5318009077453615640"
+  },
+  {
+    "insertId": "68671977000b8f8de400d7d4",
+    "httpRequest": {
+      "requestMethod": "OPTIONS",
+      "requestUrl": "https://us-central1-emoji-gacha.cloudfunctions.net/drawEmoji",
+      "requestSize": "716",
+      "status": 204,
+      "responseSize": "258",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+      "remoteIp": "59.6.188.48",
+      "referer": "http://localhost:3000/",
+      "serverIp": "216.239.36.54",
+      "latency": "0.003654779s",
+      "protocol": "HTTP/1.1"
+    },
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "revision_name": "drawemoji-00001-jep",
+        "configuration_name": "drawemoji",
+        "location": "us-central1",
+        "service_name": "drawemoji",
+        "project_id": "emoji-gacha"
+      }
+    },
+    "timestamp": "2025-07-03T23:59:51.746120Z",
+    "severity": "INFO",
+    "labels": {
+      "firebase-functions-hash": "15d599b17bc84431f2ceeba38bbd89548d15c75f",
+      "deployment-callable": "true",
+      "goog-managed-by": "cloudfunctions",
+      "instanceId": "0069c7a9884f827aa13c4f503639e19827b11105e233fb3e9c1b4191f68ae24ab6e98bd29ca56d082a8bc13dc0ae794d87d7565181aa5e011a23aa9ac178bf1864f6c11905a80f0aad5b57c6c05e5b"
+    },
+    "logName": "projects/emoji-gacha/logs/run.googleapis.com%2Frequests",
+    "trace": "projects/emoji-gacha/traces/85f143e2ff8f3519386c553b0935e778",
+    "receiveTimestamp": "2025-07-03T23:59:51.765211916Z",
+    "spanId": "b02b179149d12a88",
+    "traceSampled": true
+  },
+  {
+    "insertId": "68671977000eda4d524673a8",
+    "httpRequest": {
+      "requestMethod": "POST",
+      "requestUrl": "https://us-central1-emoji-gacha.cloudfunctions.net/drawEmoji",
+      "requestSize": "2048",
+      "status": 401,
+      "responseSize": "298",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+      "remoteIp": "59.6.188.48",
+      "referer": "http://localhost:3000/",
+      "serverIp": "216.239.36.54",
+      "latency": "0.005559224s",
+      "protocol": "HTTP/1.1"
+    },
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "revision_name": "drawemoji-00001-jep",
+        "service_name": "drawemoji",
+        "configuration_name": "drawemoji",
+        "location": "us-central1",
+        "project_id": "emoji-gacha"
+      }
+    },
+    "timestamp": "2025-07-03T23:59:51.965905Z",
+    "severity": "WARNING",
+    "labels": {
+      "instanceId": "0069c7a9884f827aa13c4f503639e19827b11105e233fb3e9c1b4191f68ae24ab6e98bd29ca56d082a8bc13dc0ae794d87d7565181aa5e011a23aa9ac178bf1864f6c11905a80f0aad5b57c6c05e5b",
+      "deployment-callable": "true",
+      "goog-managed-by": "cloudfunctions",
+      "firebase-functions-hash": "15d599b17bc84431f2ceeba38bbd89548d15c75f"
+    },
+    "logName": "projects/emoji-gacha/logs/run.googleapis.com%2Frequests",
+    "trace": "projects/emoji-gacha/traces/eea7cc6a975c8208386c553b0935ea82",
+    "receiveTimestamp": "2025-07-03T23:59:52.095996040Z",
+    "spanId": "29d7203230ba2d5f"
+  },
+  {
+    "insertId": "68671977000ed6092d08ead1",
+    "jsonPayload": {
+      "verifications": {
+        "auth": "VALID",
+        "app": "MISSING"
+      },
+      "message": "Callable request verification passed"
+    },
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "service_name": "drawemoji",
+        "revision_name": "drawemoji-00001-jep",
+        "project_id": "emoji-gacha",
+        "configuration_name": "drawemoji",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2025-07-03T23:59:51.972297Z",
+    "severity": "DEBUG",
+    "labels": {
+      "run.googleapis.com/base_image_versions": "us-docker.pkg.dev/serverless-runtimes/google-22-full/runtimes/nodejs22:nodejs22_20250615_22_16_0_RC00",
+      "firebase-log-type": "callable-request-verification",
+      "deployment-callable": "true",
+      "instanceId": "0069c7a9884f827aa13c4f503639e19827b11105e233fb3e9c1b4191f68ae24ab6e98bd29ca56d082a8bc13dc0ae794d87d7565181aa5e011a23aa9ac178bf1864f6c11905a80f0aad5b57c6c05e5b",
+      "goog-managed-by": "cloudfunctions",
+      "execution_id": "o1sf4ydbmy3f",
+      "firebase-functions-hash": "15d599b17bc84431f2ceeba38bbd89548d15c75f"
+    },
+    "logName": "projects/emoji-gacha/logs/run.googleapis.com%2Fstdout",
+    "trace": "projects/emoji-gacha/traces/eea7cc6a975c8208386c553b0935ea82",
+    "receiveTimestamp": "2025-07-03T23:59:51.975336456Z",
+    "spanId": "3014913875485797727"
+  },
+  {
+    "insertId": "686720b5000b2903d7934af3",
+    "httpRequest": {
+      "requestMethod": "OPTIONS",
+      "requestUrl": "https://us-central1-emoji-gacha.cloudfunctions.net/drawEmoji",
+      "requestSize": "713",
+      "status": 204,
+      "responseSize": "258",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+      "remoteIp": "59.6.188.48",
+      "referer": "http://localhost:3000/",
+      "serverIp": "216.239.36.54",
+      "latency": "1.136564860s",
+      "protocol": "HTTP/1.1"
+    },
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "project_id": "emoji-gacha",
+        "location": "us-central1",
+        "service_name": "drawemoji",
+        "configuration_name": "drawemoji",
+        "revision_name": "drawemoji-00001-jep"
+      }
+    },
+    "timestamp": "2025-07-04T00:30:44.432146Z",
+    "severity": "INFO",
+    "labels": {
+      "goog-managed-by": "cloudfunctions",
+      "firebase-functions-hash": "15d599b17bc84431f2ceeba38bbd89548d15c75f",
+      "instanceId": "0069c7a988fed75d00f87ed720ae439d226a0986ac07463008bf085250e6546af02cc676cb0473a0babdfab47d386c90a6e15fbb7da46698798417e739e29ffbfdb8f1b710deb39aada2217f62121b",
+      "deployment-callable": "true"
+    },
+    "logName": "projects/emoji-gacha/logs/run.googleapis.com%2Frequests",
+    "trace": "projects/emoji-gacha/traces/539176477882c810646c7f9b0e4df815",
+    "receiveTimestamp": "2025-07-04T00:30:45.737689297Z",
+    "spanId": "608cd8e9dbf3a043",
+    "traceSampled": true
+  },
+  {
+    "textPayload": "Default STARTUP TCP probe succeeded after 1 attempt for container \"worker\" on port 8080.",
+    "insertId": "686720b5000a77ec2aed85b4",
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "project_id": "emoji-gacha",
+        "service_name": "drawemoji",
+        "location": "us-central1",
+        "revision_name": "drawemoji-00001-jep",
+        "configuration_name": "drawemoji"
+      }
+    },
+    "timestamp": "2025-07-04T00:30:45.686060Z",
+    "severity": "INFO",
+    "labels": {
+      "deployment-callable": "true",
+      "goog-managed-by": "cloudfunctions",
+      "run.googleapis.com/base_image_versions": "us-docker.pkg.dev/serverless-runtimes/google-22-full/runtimes/nodejs22:nodejs22_20250615_22_16_0_RC00",
+      "instanceId": "0069c7a988fed75d00f87ed720ae439d226a0986ac07463008bf085250e6546af02cc676cb0473a0babdfab47d386c90a6e15fbb7da46698798417e739e29ffbfdb8f1b710deb39aada2217f62121b",
+      "firebase-functions-hash": "15d599b17bc84431f2ceeba38bbd89548d15c75f"
+    },
+    "logName": "projects/emoji-gacha/logs/run.googleapis.com%2Fvarlog%2Fsystem",
+    "receiveTimestamp": "2025-07-04T00:30:45.691666513Z"
+  },
+  {
+    "insertId": "686720b6000134de00cbcb78",
+    "httpRequest": {
+      "requestMethod": "POST",
+      "requestUrl": "https://us-central1-emoji-gacha.cloudfunctions.net/drawEmoji",
+      "requestSize": "2048",
+      "status": 401,
+      "responseSize": "298",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+      "remoteIp": "59.6.188.48",
+      "referer": "http://localhost:3000/",
+      "serverIp": "216.239.36.54",
+      "latency": "0.108655166s",
+      "protocol": "HTTP/1.1"
+    },
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "service_name": "drawemoji",
+        "project_id": "emoji-gacha",
+        "configuration_name": "drawemoji",
+        "location": "us-central1",
+        "revision_name": "drawemoji-00001-jep"
+      }
+    },
+    "timestamp": "2025-07-04T00:30:45.968538Z",
+    "severity": "WARNING",
+    "labels": {
+      "goog-managed-by": "cloudfunctions",
+      "instanceId": "0069c7a988fed75d00f87ed720ae439d226a0986ac07463008bf085250e6546af02cc676cb0473a0babdfab47d386c90a6e15fbb7da46698798417e739e29ffbfdb8f1b710deb39aada2217f62121b",
+      "firebase-functions-hash": "15d599b17bc84431f2ceeba38bbd89548d15c75f",
+      "deployment-callable": "true"
+    },
+    "logName": "projects/emoji-gacha/logs/run.googleapis.com%2Frequests",
+    "trace": "projects/emoji-gacha/traces/e6fb262306e24fd9646c7f9b0e4df70a",
+    "receiveTimestamp": "2025-07-04T00:30:46.403012209Z",
+    "spanId": "601a606e2d639124"
+  },
+  {
+    "insertId": "686720b60001273bc4ca86ac",
+    "jsonPayload": {
+      "message": "Callable request verification passed",
+      "verifications": {
+        "auth": "VALID",
+        "app": "MISSING"
+      }
+    },
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "service_name": "drawemoji",
+        "location": "us-central1",
+        "configuration_name": "drawemoji",
+        "project_id": "emoji-gacha",
+        "revision_name": "drawemoji-00001-jep"
+      }
+    },
+    "timestamp": "2025-07-04T00:30:46.075579Z",
+    "severity": "DEBUG",
+    "labels": {
+      "deployment-callable": "true",
+      "goog-managed-by": "cloudfunctions",
+      "run.googleapis.com/base_image_versions": "us-docker.pkg.dev/serverless-runtimes/google-22-full/runtimes/nodejs22:nodejs22_20250615_22_16_0_RC00",
+      "firebase-log-type": "callable-request-verification",
+      "execution_id": "o2w5pgygagim",
+      "firebase-functions-hash": "15d599b17bc84431f2ceeba38bbd89548d15c75f",
+      "instanceId": "0069c7a988fed75d00f87ed720ae439d226a0986ac07463008bf085250e6546af02cc676cb0473a0babdfab47d386c90a6e15fbb7da46698798417e739e29ffbfdb8f1b710deb39aada2217f62121b"
+    },
+    "logName": "projects/emoji-gacha/logs/run.googleapis.com%2Fstdout",
+    "trace": "projects/emoji-gacha/traces/e6fb262306e24fd9646c7f9b0e4df70a",
+    "receiveTimestamp": "2025-07-04T00:30:46.082652057Z",
+    "spanId": "6924953403359727908"
+  },
+  {
+    "insertId": "6867217e00096ff0c76deee1",
+    "httpRequest": {
+      "requestMethod": "OPTIONS",
+      "requestUrl": "https://us-central1-emoji-gacha.cloudfunctions.net/drawEmoji",
+      "requestSize": "715",
+      "status": 204,
+      "responseSize": "258",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+      "remoteIp": "59.6.188.48",
+      "referer": "http://localhost:3000/",
+      "serverIp": "216.239.36.54",
+      "latency": "0.005090350s",
+      "protocol": "HTTP/1.1"
+    },
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "revision_name": "drawemoji-00001-jep",
+        "project_id": "emoji-gacha",
+        "configuration_name": "drawemoji",
+        "location": "us-central1",
+        "service_name": "drawemoji"
+      }
+    },
+    "timestamp": "2025-07-04T00:34:06.604457Z",
+    "severity": "INFO",
+    "labels": {
+      "deployment-callable": "true",
+      "instanceId": "0069c7a988fed75d00f87ed720ae439d226a0986ac07463008bf085250e6546af02cc676cb0473a0babdfab47d386c90a6e15fbb7da46698798417e739e29ffbfdb8f1b710deb39aada2217f62121b",
+      "firebase-functions-hash": "15d599b17bc84431f2ceeba38bbd89548d15c75f",
+      "goog-managed-by": "cloudfunctions"
+    },
+    "logName": "projects/emoji-gacha/logs/run.googleapis.com%2Frequests",
+    "trace": "projects/emoji-gacha/traces/45fd65cff2687b740033cd396558ba77",
+    "receiveTimestamp": "2025-07-04T00:34:06.623592002Z",
+    "spanId": "c65f2473647283a0",
+    "traceSampled": true
+  },
+  {
+    "insertId": "6867217e000cd00187fcd772",
+    "httpRequest": {
+      "requestMethod": "POST",
+      "requestUrl": "https://us-central1-emoji-gacha.cloudfunctions.net/drawEmoji",
+      "requestSize": "2049",
+      "status": 401,
+      "responseSize": "298",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+      "remoteIp": "59.6.188.48",
+      "referer": "http://localhost:3000/",
+      "serverIp": "216.239.36.54",
+      "latency": "0.007238164s",
+      "protocol": "HTTP/1.1"
+    },
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "configuration_name": "drawemoji",
+        "project_id": "emoji-gacha",
+        "location": "us-central1",
+        "revision_name": "drawemoji-00001-jep",
+        "service_name": "drawemoji"
+      }
+    },
+    "timestamp": "2025-07-04T00:34:06.830544Z",
+    "severity": "WARNING",
+    "labels": {
+      "instanceId": "0069c7a988fed75d00f87ed720ae439d226a0986ac07463008bf085250e6546af02cc676cb0473a0babdfab47d386c90a6e15fbb7da46698798417e739e29ffbfdb8f1b710deb39aada2217f62121b",
+      "firebase-functions-hash": "15d599b17bc84431f2ceeba38bbd89548d15c75f",
+      "goog-managed-by": "cloudfunctions",
+      "deployment-callable": "true"
+    },
+    "logName": "projects/emoji-gacha/logs/run.googleapis.com%2Frequests",
+    "trace": "projects/emoji-gacha/traces/cff3eeaba625e70a0033cd396558bca9",
+    "receiveTimestamp": "2025-07-04T00:34:06.961252934Z",
+    "spanId": "caffaa42671e2d01"
+  },
+  {
+    "insertId": "6867217e000cca7afa2966b0",
+    "jsonPayload": {
+      "verifications": {
+        "auth": "VALID",
+        "app": "MISSING"
+      },
+      "message": "Callable request verification passed"
+    },
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "configuration_name": "drawemoji",
+        "project_id": "emoji-gacha",
+        "service_name": "drawemoji",
+        "revision_name": "drawemoji-00001-jep",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2025-07-04T00:34:06.838266Z",
+    "severity": "DEBUG",
+    "labels": {
+      "firebase-functions-hash": "15d599b17bc84431f2ceeba38bbd89548d15c75f",
+      "firebase-log-type": "callable-request-verification",
+      "deployment-callable": "true",
+      "execution_id": "o30gojbw3cwb",
+      "goog-managed-by": "cloudfunctions",
+      "instanceId": "0069c7a988fed75d00f87ed720ae439d226a0986ac07463008bf085250e6546af02cc676cb0473a0babdfab47d386c90a6e15fbb7da46698798417e739e29ffbfdb8f1b710deb39aada2217f62121b",
+      "run.googleapis.com/base_image_versions": "us-docker.pkg.dev/serverless-runtimes/google-22-full/runtimes/nodejs22:nodejs22_20250615_22_16_0_RC00"
+    },
+    "logName": "projects/emoji-gacha/logs/run.googleapis.com%2Fstdout",
+    "trace": "projects/emoji-gacha/traces/cff3eeaba625e70a0033cd396558bca9",
+    "receiveTimestamp": "2025-07-04T00:34:06.842724652Z",
+    "spanId": "14627597316897254657"
+  },
+  {
+    "insertId": "68672190000ded83556278b2",
+    "httpRequest": {
+      "requestMethod": "OPTIONS",
+      "requestUrl": "https://us-central1-emoji-gacha.cloudfunctions.net/drawEmoji",
+      "requestSize": "715",
+      "status": 204,
+      "responseSize": "258",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+      "remoteIp": "59.6.188.48",
+      "referer": "http://localhost:3000/",
+      "serverIp": "216.239.36.54",
+      "latency": "0.003145328s",
+      "protocol": "HTTP/1.1"
+    },
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "location": "us-central1",
+        "revision_name": "drawemoji-00001-jep",
+        "project_id": "emoji-gacha",
+        "configuration_name": "drawemoji",
+        "service_name": "drawemoji"
+      }
+    },
+    "timestamp": "2025-07-04T00:34:24.908142Z",
+    "severity": "INFO",
+    "labels": {
+      "instanceId": "0069c7a988fed75d00f87ed720ae439d226a0986ac07463008bf085250e6546af02cc676cb0473a0babdfab47d386c90a6e15fbb7da46698798417e739e29ffbfdb8f1b710deb39aada2217f62121b",
+      "deployment-callable": "true",
+      "firebase-functions-hash": "15d599b17bc84431f2ceeba38bbd89548d15c75f",
+      "goog-managed-by": "cloudfunctions"
+    },
+    "logName": "projects/emoji-gacha/logs/run.googleapis.com%2Frequests",
+    "trace": "projects/emoji-gacha/traces/734ac34111061f0e53fa19f09e450770",
+    "receiveTimestamp": "2025-07-04T00:34:24.917959200Z",
+    "spanId": "40074ab137eaa4c8",
+    "traceSampled": true
+  },
+  {
+    "insertId": "686721910002007ab23c1996",
+    "httpRequest": {
+      "requestMethod": "POST",
+      "requestUrl": "https://us-central1-emoji-gacha.cloudfunctions.net/drawEmoji",
+      "requestSize": "2048",
+      "status": 401,
+      "responseSize": "298",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+      "remoteIp": "59.6.188.48",
+      "referer": "http://localhost:3000/",
+      "serverIp": "216.239.36.54",
+      "latency": "0.006631716s",
+      "protocol": "HTTP/1.1"
+    },
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "configuration_name": "drawemoji",
+        "revision_name": "drawemoji-00001-jep",
+        "project_id": "emoji-gacha",
+        "service_name": "drawemoji",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2025-07-04T00:34:25.122604Z",
+    "severity": "WARNING",
+    "labels": {
+      "firebase-functions-hash": "15d599b17bc84431f2ceeba38bbd89548d15c75f",
+      "instanceId": "0069c7a988fed75d00f87ed720ae439d226a0986ac07463008bf085250e6546af02cc676cb0473a0babdfab47d386c90a6e15fbb7da46698798417e739e29ffbfdb8f1b710deb39aada2217f62121b",
+      "goog-managed-by": "cloudfunctions",
+      "deployment-callable": "true"
+    },
+    "logName": "projects/emoji-gacha/logs/run.googleapis.com%2Frequests",
+    "trace": "projects/emoji-gacha/traces/bdeb85b7183e2c0c53fa19f09e4508ba",
+    "receiveTimestamp": "2025-07-04T00:34:25.249059611Z",
+    "spanId": "f3792e79804ac83b"
+  },
+  {
+    "insertId": "686721910001faba4d106fbc",
+    "jsonPayload": {
+      "verifications": {
+        "app": "MISSING",
+        "auth": "VALID"
+      },
+      "message": "Callable request verification passed"
+    },
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "service_name": "drawemoji",
+        "revision_name": "drawemoji-00001-jep",
+        "project_id": "emoji-gacha",
+        "configuration_name": "drawemoji",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2025-07-04T00:34:25.129722Z",
+    "severity": "DEBUG",
+    "labels": {
+      "execution_id": "o30usn3g366d",
+      "instanceId": "0069c7a988fed75d00f87ed720ae439d226a0986ac07463008bf085250e6546af02cc676cb0473a0babdfab47d386c90a6e15fbb7da46698798417e739e29ffbfdb8f1b710deb39aada2217f62121b",
+      "deployment-callable": "true",
+      "firebase-functions-hash": "15d599b17bc84431f2ceeba38bbd89548d15c75f",
+      "goog-managed-by": "cloudfunctions",
+      "firebase-log-type": "callable-request-verification",
+      "run.googleapis.com/base_image_versions": "us-docker.pkg.dev/serverless-runtimes/google-22-full/runtimes/nodejs22:nodejs22_20250615_22_16_0_RC00"
+    },
+    "logName": "projects/emoji-gacha/logs/run.googleapis.com%2Fstdout",
+    "trace": "projects/emoji-gacha/traces/bdeb85b7183e2c0c53fa19f09e4508ba",
+    "receiveTimestamp": "2025-07-04T00:34:25.133709177Z",
+    "spanId": "17544104922776782907"
+  },
+  {
+    "insertId": "686722cd0004c203cc1a47f8",
+    "httpRequest": {
+      "requestMethod": "OPTIONS",
+      "requestUrl": "https://us-central1-emoji-gacha.cloudfunctions.net/drawEmoji",
+      "requestSize": "731",
+      "status": 204,
+      "responseSize": "258",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+      "remoteIp": "59.6.188.48",
+      "referer": "http://localhost:3000/",
+      "serverIp": "216.239.36.54",
+      "latency": "0.004227488s",
+      "protocol": "HTTP/1.1"
+    },
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "project_id": "emoji-gacha",
+        "revision_name": "drawemoji-00001-jep",
+        "location": "us-central1",
+        "service_name": "drawemoji",
+        "configuration_name": "drawemoji"
+      }
+    },
+    "timestamp": "2025-07-04T00:39:41.300286Z",
+    "severity": "INFO",
+    "labels": {
+      "deployment-callable": "true",
+      "instanceId": "0069c7a988fed75d00f87ed720ae439d226a0986ac07463008bf085250e6546af02cc676cb0473a0babdfab47d386c90a6e15fbb7da46698798417e739e29ffbfdb8f1b710deb39aada2217f62121b",
+      "firebase-functions-hash": "15d599b17bc84431f2ceeba38bbd89548d15c75f",
+      "goog-managed-by": "cloudfunctions"
+    },
+    "logName": "projects/emoji-gacha/logs/run.googleapis.com%2Frequests",
+    "trace": "projects/emoji-gacha/traces/700e0a7c9807248c24fdda7275828bc9",
+    "receiveTimestamp": "2025-07-04T00:39:41.318047438Z",
+    "spanId": "29a07438c6084c30",
+    "traceSampled": true
+  },
+  {
+    "insertId": "686722cd00080d6ded01c7b9",
+    "httpRequest": {
+      "requestMethod": "POST",
+      "requestUrl": "https://us-central1-emoji-gacha.cloudfunctions.net/drawEmoji",
+      "requestSize": "2047",
+      "status": 401,
+      "responseSize": "298",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+      "remoteIp": "59.6.188.48",
+      "referer": "http://localhost:3000/",
+      "serverIp": "216.239.36.54",
+      "latency": "0.006577205s",
+      "protocol": "HTTP/1.1"
+    },
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "location": "us-central1",
+        "configuration_name": "drawemoji",
+        "service_name": "drawemoji",
+        "project_id": "emoji-gacha",
+        "revision_name": "drawemoji-00001-jep"
+      }
+    },
+    "timestamp": "2025-07-04T00:39:41.519071Z",
+    "severity": "WARNING",
+    "labels": {
+      "deployment-callable": "true",
+      "goog-managed-by": "cloudfunctions",
+      "firebase-functions-hash": "15d599b17bc84431f2ceeba38bbd89548d15c75f",
+      "instanceId": "0069c7a988fed75d00f87ed720ae439d226a0986ac07463008bf085250e6546af02cc676cb0473a0babdfab47d386c90a6e15fbb7da46698798417e739e29ffbfdb8f1b710deb39aada2217f62121b"
+    },
+    "logName": "projects/emoji-gacha/logs/run.googleapis.com%2Frequests",
+    "trace": "projects/emoji-gacha/traces/1caf3a29e37a204e24fdda727582836e",
+    "receiveTimestamp": "2025-07-04T00:39:41.654236280Z",
+    "spanId": "84a16a95dfa95471"
+  },
+  {
+    "insertId": "686722cd000808901945abda",
+    "jsonPayload": {
+      "verifications": {
+        "app": "MISSING",
+        "auth": "VALID"
+      },
+      "message": "Callable request verification passed"
+    },
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "revision_name": "drawemoji-00001-jep",
+        "configuration_name": "drawemoji",
+        "service_name": "drawemoji",
+        "project_id": "emoji-gacha",
+        "location": "us-central1"
+      }
+    },
+    "timestamp": "2025-07-04T00:39:41.526480Z",
+    "severity": "DEBUG",
+    "labels": {
+      "run.googleapis.com/base_image_versions": "us-docker.pkg.dev/serverless-runtimes/google-22-full/runtimes/nodejs22:nodejs22_20250615_22_16_0_RC00",
+      "deployment-callable": "true",
+      "goog-managed-by": "cloudfunctions",
+      "execution_id": "o37mxgnt57ag",
+      "firebase-functions-hash": "15d599b17bc84431f2ceeba38bbd89548d15c75f",
+      "firebase-log-type": "callable-request-verification",
+      "instanceId": "0069c7a988fed75d00f87ed720ae439d226a0986ac07463008bf085250e6546af02cc676cb0473a0babdfab47d386c90a6e15fbb7da46698798417e739e29ffbfdb8f1b710deb39aada2217f62121b"
+    },
+    "logName": "projects/emoji-gacha/logs/run.googleapis.com%2Fstdout",
+    "trace": "projects/emoji-gacha/traces/1caf3a29e37a204e24fdda727582836e",
+    "receiveTimestamp": "2025-07-04T00:39:41.533746802Z",
+    "spanId": "9557037076191990897"
+  },
+  {
+    "insertId": "6867238d00023dfaf9310e6e",
+    "httpRequest": {
+      "requestMethod": "OPTIONS",
+      "requestUrl": "https://us-central1-emoji-gacha.cloudfunctions.net/drawEmoji",
+      "requestSize": "715",
+      "status": 204,
+      "responseSize": "258",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+      "remoteIp": "59.6.188.48",
+      "referer": "http://localhost:3000/",
+      "serverIp": "216.239.36.54",
+      "latency": "0.003871225s",
+      "protocol": "HTTP/1.1"
+    },
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "configuration_name": "drawemoji",
+        "service_name": "drawemoji",
+        "revision_name": "drawemoji-00001-jep",
+        "location": "us-central1",
+        "project_id": "emoji-gacha"
+      }
+    },
+    "timestamp": "2025-07-04T00:42:53.133036Z",
+    "severity": "INFO",
+    "labels": {
+      "deployment-callable": "true",
+      "instanceId": "0069c7a988fed75d00f87ed720ae439d226a0986ac07463008bf085250e6546af02cc676cb0473a0babdfab47d386c90a6e15fbb7da46698798417e739e29ffbfdb8f1b710deb39aada2217f62121b",
+      "goog-managed-by": "cloudfunctions",
+      "firebase-functions-hash": "15d599b17bc84431f2ceeba38bbd89548d15c75f"
+    },
+    "logName": "projects/emoji-gacha/logs/run.googleapis.com%2Frequests",
+    "trace": "projects/emoji-gacha/traces/bb0eece2f633b9b02239aaef24978f38",
+    "receiveTimestamp": "2025-07-04T00:42:53.152477539Z",
+    "spanId": "ee348c07ca326a2b",
+    "traceSampled": true
+  },
+  {
+    "insertId": "6867238d0005921c0b8c75a8",
+    "httpRequest": {
+      "requestMethod": "POST",
+      "requestUrl": "https://us-central1-emoji-gacha.cloudfunctions.net/drawEmoji",
+      "requestSize": "2048",
+      "status": 401,
+      "responseSize": "298",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+      "remoteIp": "59.6.188.48",
+      "referer": "http://localhost:3000/",
+      "serverIp": "216.239.36.54",
+      "latency": "0.006336423s",
+      "protocol": "HTTP/1.1"
+    },
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "service_name": "drawemoji",
+        "revision_name": "drawemoji-00001-jep",
+        "location": "us-central1",
+        "configuration_name": "drawemoji",
+        "project_id": "emoji-gacha"
+      }
+    },
+    "timestamp": "2025-07-04T00:42:53.356817Z",
+    "severity": "WARNING",
+    "labels": {
+      "goog-managed-by": "cloudfunctions",
+      "deployment-callable": "true",
+      "instanceId": "0069c7a988fed75d00f87ed720ae439d226a0986ac07463008bf085250e6546af02cc676cb0473a0babdfab47d386c90a6e15fbb7da46698798417e739e29ffbfdb8f1b710deb39aada2217f62121b",
+      "firebase-functions-hash": "15d599b17bc84431f2ceeba38bbd89548d15c75f"
+    },
+    "logName": "projects/emoji-gacha/logs/run.googleapis.com%2Frequests",
+    "trace": "projects/emoji-gacha/traces/5a4ff9f6bfa4ded92239aaef24978b25",
+    "receiveTimestamp": "2025-07-04T00:42:53.486634586Z",
+    "spanId": "5e6beac6b994d16d"
+  },
+  {
+    "insertId": "6867238d00058dca6bbf9516",
+    "jsonPayload": {
+      "verifications": {
+        "auth": "VALID",
+        "app": "MISSING"
+      },
+      "message": "Callable request verification passed"
+    },
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "configuration_name": "drawemoji",
+        "service_name": "drawemoji",
+        "location": "us-central1",
+        "project_id": "emoji-gacha",
+        "revision_name": "drawemoji-00001-jep"
+      }
+    },
+    "timestamp": "2025-07-04T00:42:53.363978Z",
+    "severity": "DEBUG",
+    "labels": {
+      "goog-managed-by": "cloudfunctions",
+      "execution_id": "o3bqy96htbjv",
+      "firebase-log-type": "callable-request-verification",
+      "run.googleapis.com/base_image_versions": "us-docker.pkg.dev/serverless-runtimes/google-22-full/runtimes/nodejs22:nodejs22_20250615_22_16_0_RC00",
+      "firebase-functions-hash": "15d599b17bc84431f2ceeba38bbd89548d15c75f",
+      "instanceId": "0069c7a988fed75d00f87ed720ae439d226a0986ac07463008bf085250e6546af02cc676cb0473a0babdfab47d386c90a6e15fbb7da46698798417e739e29ffbfdb8f1b710deb39aada2217f62121b",
+      "deployment-callable": "true"
+    },
+    "logName": "projects/emoji-gacha/logs/run.googleapis.com%2Fstdout",
+    "trace": "projects/emoji-gacha/traces/5a4ff9f6bfa4ded92239aaef24978b25",
+    "receiveTimestamp": "2025-07-04T00:42:53.368615234Z",
+    "spanId": "6803789801311228269"
+  }
+]

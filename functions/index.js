@@ -3,7 +3,7 @@ const admin = require("firebase-admin");
 admin.initializeApp();
 
 const db = admin.firestore();
-const emojiData = require("../emoji-gacha/src/data/emojiData.json");
+const emojiData = require("./emojiData.json");
 
 exports.drawEmoji = functions.https.onCall(async (data, context) => {
   // [보안] 함수 시작 부분에서 context.auth 객체를 확인하여, 인증된 사용자가 아닐 경우 에러 반환 로직 추가
