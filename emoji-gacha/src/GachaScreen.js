@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { doc, getDoc, setDoc } from 'firebase/firestore';
 import { db } from './firebase';
 import { getFunctions, httpsCallable } from 'firebase/functions';
+import { getAuth, getIdToken } from 'firebase/auth';
 import GachaModal from './GachaModal';
 import './GachaScreen.css';
 
@@ -73,6 +74,11 @@ const GachaScreen = ({ setIsGachaMode }) => {
         setIsProcessing(true);
 
         try {
+            // ================== CCTV 설치 ==================
+            // 서버에 전화 걸기 직전, 내 상태를 확인합니다.
+            console.log("뽑기 직전 클라이언트 인증 상태:", getAuth().currentUser); 
+            // ===============================================
+
             const functions = getFunctions();
             const drawEmojiFunction = httpsCallable(functions, 'drawEmoji');
             const result = await drawEmojiFunction({ isAdPull });

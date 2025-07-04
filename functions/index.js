@@ -1,11 +1,18 @@
 const functions = require("firebase-functions");
-const admin = require("firebase-admin");
-admin.initializeApp();
+const {initializeApp} = require("firebase-admin/app");
+const {getFirestore} = require("firebase-admin/firestore");
+const logger = require("firebase-functions/logger"); // logger를 사용하기 위해 추가
 
-const db = admin.firestore();
+initializeApp();
+
 const emojiData = require("./emojiData.json");
 
 exports.drawEmoji = functions.https.onCall(async (data, context) => {
+    // ================== CCTV 설치 ==================
+    // 함수가 호출되었을 때, 전달받은 인증 정보를 확인합니다.
+    logger.info("함수 호출됨! 전달받은 인증 정보(context.auth):", context.auth);
+    // ===============================================
+
   // [보안] 함수 시작 부분에서 context.auth 객체를 확인하여, 인증된 사용자가 아닐 경우 에러 반환 로직 추가
   if (!context.auth) {
     throw new functions.https.HttpsError(
