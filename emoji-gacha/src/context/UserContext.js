@@ -33,9 +33,9 @@ export const UserProvider = ({ children }) => {
                         setCollectedEmojis(docSnap.data().collectedEmojis || []);
                     }
                     setIsLoading(false); // 유저 데이터까지 받아오면 로딩 완료
+                    setAuthIsReady(true); // 인증 및 데이터 로드 모두 준비 완료
                 });
                 
-                setAuthIsReady(true); // 인증 준비 완료
                 return () => unsubscribeSnapshot(); // 클린업
 
             } else {

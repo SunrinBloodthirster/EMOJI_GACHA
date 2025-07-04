@@ -1,4 +1,7 @@
 {
+  "firestore": {
+    "rules": "firestore.rules"
+  },
   "functions": [
     {
       "source": "functions",
@@ -11,5 +14,28 @@
         "*.local"
       ]
     }
-  ]
+  ],
+  "hosting": {
+    "public": "emoji-gacha/build",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ],
+    "headers": [
+      {
+        "source" : "**",
+        "headers" : [ {
+          "key" : "Cross-Origin-Opener-Policy",
+          "value" : "same-origin-allow-popups"
+        } ]
+      }
+    ]
+  }
 }

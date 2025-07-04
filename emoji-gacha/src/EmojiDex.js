@@ -27,7 +27,8 @@ const EmojiDex = () => {
   const raritiesOrder = useMemo(() => ['Legendary', 'Epic', 'Rare', 'Uncommon', 'Common'], []); // 등급 순서 정의 및 메모이제이션
 
   const filteredEmojis = useMemo(() => {
-    let emojisToFilter = allEmojis;
+    if (!allEmojis || !allEmojis.emojis) return [];
+    let emojisToFilter = allEmojis.emojis;
 
     if (selectedRarityFilter !== 'All') {
       emojisToFilter = emojisToFilter.filter(emoji => emoji.rarity === selectedRarityFilter);
@@ -40,11 +41,11 @@ const EmojiDex = () => {
     return emojisToFilter;
   }, [selectedRarityFilter, showCollectedOnly, collectedEmojis, allEmojis]);
 
-  // 등급별로 이모지를 그룹화 (모바일 캐러셀용)
   const groupedEmojisByRarity = useMemo(() => {
     const grouped = {};
+    if (!allEmojis || !allEmojis.emojis) return grouped;
     raritiesOrder.forEach(rarity => {
-      let emojisInRarity = allEmojis.filter(emoji => emoji.rarity === rarity);
+      let emojisInRarity = allEmojis.emojis.filter(emoji => emoji.rarity === rarity);
       if (showCollectedOnly) {
         emojisInRarity = emojisInRarity.filter(emoji => collectedEmojis.includes(emoji.id));
       }
@@ -95,7 +96,7 @@ const EmojiDex = () => {
   const handleEmojiClick = (emojiId, isCollected) => {
     if (!isCollected) return; // 미수집 이모지는 클릭해도 아무것도 하지 않음
 
-    const emoji = allEmojis.find(e => e.id === emojiId);
+    const emoji = allEmojis.emojis.find(e => e.id === emojiId);
 
     if (isMobileView) {
       if (touchedEmojiId === emojiId) {

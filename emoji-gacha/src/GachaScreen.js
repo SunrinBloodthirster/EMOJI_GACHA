@@ -74,30 +74,20 @@ const GachaScreen = ({ setIsGachaMode }) => {
         setIsProcessing(true);
 
         try {
-            // ================== CCTV 설치 ==================
-            // 서버에 전화 걸기 직전, 내 상태를 확인합니다.
-            console.log("뽑기 직전 클라이언트 인증 상태:", getAuth().currentUser); 
-            // ===============================================
-
             const functions = getFunctions();
             const drawEmojiFunction = httpsCallable(functions, 'drawEmoji');
             const result = await drawEmojiFunction({ isAdPull });
-            
+
+            // Set the pulled emoji and open the modal
             setPulledEmoji(result.data);
             setIsGachaModalOpen(true);
 
-            // 무료 뽑기인 경우에만 클라이언트에서 lastPullTimestamp 업데이트
+            // If the pull was not ad-based, update free pull availability
             if (!isAdPull) {
-              const userRef = doc(db, 'users', user.uid);
-              await setDoc(userRef, {
-                lastPullTimestamp: new Date(),
-                lastPulledEmojiId: result.data.id // 마지막으로 뽑은 이모지 ID 저장
-              }, { merge: true }); // 문서가 없으면 생성, 있으면 병합
               setIsFreePullAvailable(false);
             }
 
         } catch (error) {
-            console.error("뽑기 실패:", error);
             alert(`뽑기 실패: ${error.message}`);
         } finally {
             setIsProcessing(false);

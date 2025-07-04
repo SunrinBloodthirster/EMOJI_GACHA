@@ -1,9 +1,8 @@
-import { initializeApp } from 'firebase/app';
-import { getAuth, GoogleAuthProvider } from 'firebase/auth';
-import { getFirestore } from 'firebase/firestore';
+import { initializeApp } from "firebase/app";
+import { getAuth, GoogleAuthProvider, connectAuthEmulator } from "firebase/auth";
+import { getFirestore, connectFirestoreEmulator } from "firebase/firestore";
+import { getFunctions, connectFunctionsEmulator } from "firebase/functions";
 
-// TODO: Replace with your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,
   authDomain: process.env.REACT_APP_AUTH_DOMAIN,
@@ -14,10 +13,17 @@ const firebaseConfig = {
   measurementId: process.env.REACT_APP_MEASUREMENT_ID
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
 const db = getFirestore(app);
+const functions = getFunctions(app, 'us-central1');
 
-export { auth, provider, db };
+if (window.location.hostname === 'localhost') {
+  console.log('개발 환경입니다. Firebase 에뮬레이터에 연결합니다.');
+  connectAuthEmulator(auth, "http://localhost:9099");
+  connectFirestoreEmulator(db, 'localhost', 8080);
+  connectFunctionsEmulator(functions, "localhost", 5001);
+}
+
+export { auth, provider, db, functions };
